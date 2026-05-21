@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CXQCGBWSN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9CXQCGBWSN');
+</script>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Debt Avalanche vs Snowball Calculator — DebtFreePathways</title>
+<meta name="description" content="Compare debt avalanche and debt snowball methods to find the best payoff strategy.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://debtfreepathways.com/debt-avalanche.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DebtFreePathways">
+<meta property="og:title" content="Debt Avalanche vs Snowball Calculator — DebtFreePathways">
+<meta property="og:description" content="Compare debt avalanche and debt snowball methods to find the best payoff strategy.">
+<meta property="og:url" content="https://debtfreepathways.com/debt-avalanche.html">
+<meta property="og:image" content="https://debtfreepathways.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Debt Avalanche vs Snowball Calculator — DebtFreePathways">
+<meta name="twitter:description" content="Compare debt avalanche and debt snowball methods to find the best payoff strategy.">
+<meta name="twitter:image" content="https://debtfreepathways.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="/"><span class="nav-dot"></span>DebtFreePathways</a>
+  <ul class="nav-links">
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <button class="nav-back" id="nav-back" onclick="window.location.href='/'">← <span id="nav-back-label">Back to home</span></button>
+  <button class="nav-cta" onclick="window.location.href='index.html#tools'">Browse Tools</button>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <ul class="nav-mobile-links">
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <button class="nav-mobile-cta" onclick="window.location.href='index.html#tools'">Browse Tools</button>
+</div>
+
+
+<main>
+<div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="breadcrumb">
+        <span href="/">Home</span>
+        <span class="breadcrumb-sep">/</span>
+        <span href="/#tools">Calculators</span>
+        <span class="breadcrumb-sep">/</span>
+        <span style="color:rgba(255,255,255,.75)">Debt Avalanche vs Snowball</span>
+      </div>
+      <h1>Debt Avalanche vs Snowball Calculator</h1>
+      <p class="tool-hero-sub">Add all your debts, set your monthly budget, and instantly see which repayment strategy saves you more money — or pays off faster.</p>
+      <div class="tool-hero-tags">
+        <span class="tool-hero-tag">❄️ Avalanche Method</span>
+        <span class="tool-hero-tag">⛄ Snowball Method</span>
+        <span class="tool-hero-tag">💳 Multiple Debts</span>
+        <span class="tool-hero-tag">📅 Payoff Order</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tool-layout">
+      <div class="tool-main">
+
+        <!-- DEBT INPUT CARD -->
+        <div class="calc-card">
+          <div class="calc-card-title"><div class="calc-card-icon">💳</div>Your debts</div>
+          <div class="da-debt-list" id="da-debt-list">
+            <div class="da-debt-row">
+              <div class="input-group"><label>Debt name</label><div class="input-wrap"><input type="text" class="da-name" value="Credit Card" oninput="daCalc()"></div></div>
+              <div class="input-group"><label>Balance ($)</label><div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" class="da-balance" value="8500" min="0" oninput="daCalc()"></div></div>
+              <div class="input-group"><label>Interest rate (%)</label><div class="input-wrap has-suffix"><input type="number" class="da-rate" value="21.9" step="0.1" min="0" oninput="daCalc()"><span class="input-suffix">%</span></div></div>
+              <div class="input-group"><label>Min. payment ($)</label><div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" class="da-minpay" value="170" min="0" oninput="daCalc()"></div></div>
+              <button class="da-remove-btn" onclick="daRemoveRow(this)" title="Remove">×</button>
+            </div>
+            <div class="da-debt-row">
+              <div class="input-group"><label>Debt name</label><div class="input-wrap"><input type="text" class="da-name" value="Car Loan" oninput="daCalc()"></div></div>
+              <div class="input-group"><label>Balance ($)</label><div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" class="da-balance" value="12000" min="0" oninput="daCalc()"></div></div>
+              <div class="input-group"><label>Interest rate (%)</label><div class="input-wrap has-suffix"><input type="number" class="da-rate" value="7.5" step="0.1" min="0" oninput="daCalc()"><span class="input-suffix">%</span></div></div>
+              <div class="input-group"><label>Min. payment ($)</label><div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" class="da-minpay" value="280" min="0" oninput="daCalc()"></div></div>
+              <button class="da-remove-btn" onclick="daRemoveRow(this)" title="Remove">×</button>
+            </div>
+            <div class="da-debt-row">
+              <div class="input-group"><label>Debt name</label><div class="input-wrap"><input type="text" class="da-name" value="Student Loan" oninput="daCalc()"></div></div>
+              <div class="input-group"><label>Balance ($)</label><div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" class="da-balance" value="22000" min="0" oninput="daCalc()"></div></div>
+              <div class="input-group"><label>Interest rate (%)</label><div class="input-wrap has-suffix"><input type="number" class="da-rate" value="5.8" step="0.1" min="0" oninput="daCalc()"><span class="input-suffix">%</span></div></div>
+              <div class="input-group"><label>Min. payment ($)</label><div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" class="da-minpay" value="240" min="0" oninput="daCalc()"></div></div>
+              <button class="da-remove-btn" onclick="daRemoveRow(this)" title="Remove">×</button>
+            </div>
+          </div>
+          <button class="da-add-btn" onclick="daAddRow()">+ Add another debt</button>
+
+          <div style="margin-top:20px;margin-bottom:0">
+            <div class="input-group">
+              <label>Total monthly payment budget</label>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="da-budget" value="850" min="0" oninput="daCalc()"></div>
+              <div class="input-hint">Must be ≥ sum of all minimum payments</div>
+              <div class="input-hint" id="da-budget-error" style="color:#c0392b;display:none">⚠️ Budget is less than the total minimum payments (<span id="da-min-total"></span>). Please increase your budget.</div>
+            </div>
+          </div>
+          <button class="calc-btn" style="margin-top:20px" onclick="daCalc()">Compare strategies</button>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="results-panel" id="da-results-panel">
+
+          <!-- Savings banner -->
+          <div class="da-savings-banner" id="da-savings-banner">
+            <div class="da-savings-icon">🏆</div>
+            <div>
+              <div class="da-savings-title" id="da-savings-title">Avalanche saves you more money</div>
+              <div class="da-savings-sub" id="da-savings-sub">Compared to Snowball method</div>
+            </div>
+            <div class="da-savings-amount" id="da-savings-amount">—</div>
+          </div>
+
+          <!-- Side-by-side comparison -->
+          <div class="da-compare-grid">
+            <div class="da-method-card avalanche">
+              <div class="da-method-card-header">
+                <div class="da-method-icon">❄️</div>
+                <div><div class="da-method-name">Avalanche</div><div class="da-method-sub">Highest rate first</div></div>
+                <div class="da-winner-chip avalanche-win" id="da-av-winner" style="display:none">WINNER</div>
+              </div>
+              <div class="da-stat"><div class="da-stat-label">Months to debt-free</div><div class="da-stat-val purple" id="da-av-months">—</div></div>
+              <div class="da-stat"><div class="da-stat-label">Total interest paid</div><div class="da-stat-val" id="da-av-interest">—</div></div>
+              <div class="da-stat"><div class="da-stat-label">Total paid</div><div class="da-stat-val" id="da-av-total">—</div></div>
+              <div class="da-payoff-order">
+                <div class="da-payoff-order-title">Payoff order</div>
+                <div id="da-av-order"></div>
+              </div>
+            </div>
+            <div class="da-method-card snowball">
+              <div class="da-method-card-header">
+                <div class="da-method-icon">⛄</div>
+                <div><div class="da-method-name">Snowball</div><div class="da-method-sub">Smallest balance first</div></div>
+                <div class="da-winner-chip snowball-win" id="da-sb-winner" style="display:none">WINNER</div>
+              </div>
+              <div class="da-stat"><div class="da-stat-label">Months to debt-free</div><div class="da-stat-val green" id="da-sb-months">—</div></div>
+              <div class="da-stat"><div class="da-stat-label">Total interest paid</div><div class="da-stat-val" id="da-sb-interest">—</div></div>
+              <div class="da-stat"><div class="da-stat-label">Total paid</div><div class="da-stat-val" id="da-sb-total">—</div></div>
+              <div class="da-payoff-order">
+                <div class="da-payoff-order-title">Payoff order</div>
+                <div id="da-sb-order"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts card -->
+          <div class="charts-card">
+            <div class="charts-tabs">
+              <button class="chart-tab active" data-tab="balance" onclick="daSwitchTab('balance')">Balance over time</button>
+              <button class="chart-tab" data-tab="interest" onclick="daSwitchTab('interest')">Cumulative interest</button>
+            </div>
+            <div class="chart-panel active" id="da-tab-balance">
+              <canvas id="da-balance-canvas" style="width:100%;height:200px"></canvas>
+              <div class="bar-legend" style="margin-top:8px">
+                <div class="bar-leg-item"><div class="bar-leg-dot" style="background:#7C3AED"></div>Avalanche</div>
+                <div class="bar-leg-item"><div class="bar-leg-dot" style="background:#0DBF7E"></div>Snowball</div>
+              </div>
+            </div>
+            <div class="chart-panel" id="da-tab-interest">
+              <canvas id="da-interest-canvas" style="width:100%;height:200px"></canvas>
+              <div class="bar-legend" style="margin-top:8px">
+                <div class="bar-leg-item"><div class="bar-leg-dot" style="background:#7C3AED"></div>Avalanche</div>
+                <div class="bar-leg-item"><div class="bar-leg-dot" style="background:#0DBF7E"></div>Snowball</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer"><p><strong>Disclaimer:</strong> Results are estimates based on fixed monthly budgets and may differ from actual lender terms. For informational purposes only.</p></div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="calc-card" style="margin-top:20px">
+          <div class="calc-card-title"><div class="calc-card-icon">❓</div>Which strategy is right for you?</div>
+          <div class="faq-list" style="max-width:100%">
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the Avalanche method?<span class="faq-icon">+</span></button><div class="faq-a">You pay minimums on all debts, then put any extra money toward the debt with the highest interest rate. Once that's paid off, you roll that payment to the next highest-rate debt. This method saves the most money in interest over time.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the Snowball method?<span class="faq-icon">+</span></button><div class="faq-a">You pay minimums on all debts, then focus extra money on the debt with the smallest balance. Once that's gone, you roll the payment to the next smallest. This gives you quick wins and psychological momentum.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Which method is better?<span class="faq-icon">+</span></button><div class="faq-a">The Avalanche method almost always saves more money. But the Snowball method can be better if motivation is your challenge — eliminating debts faster boosts momentum. If the interest savings are similar, Snowball's motivational edge can be worth it.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="tool-sidebar">
+        <div class="sidebar-widget" id="da-strategy-widget" style="display:none">
+          <div class="sidebar-widget-title">📊 Strategy summary</div>
+          <div class="stat-row"><div class="stat-row-label">Total debts</div><div class="stat-row-val" id="da-sw-count">—</div></div>
+          <div class="stat-row"><div class="stat-row-label">Total balance</div><div class="stat-row-val" id="da-sw-balance">—</div></div>
+          <div class="stat-row"><div class="stat-row-label">Monthly budget</div><div class="stat-row-val" id="da-sw-budget">—</div></div>
+          <div class="stat-row"><div class="stat-row-label">Extra per month</div><div class="stat-row-val" id="da-sw-extra">—</div></div>
+        </div>
+        <div class="motive-widget" id="da-motive-widget" style="display:none">
+          <div class="motive-icon">💡</div>
+          <div class="motive-text" id="da-motive-text">Enter your debts and budget to compare strategies.</div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">🧠 Strategy guide</div>
+          <div class="stat-row"><div class="stat-row-label">Best for saving money</div><div class="stat-row-val" style="color:#7C3AED">Avalanche</div></div>
+          <div class="stat-row"><div class="stat-row-label">Best for motivation</div><div class="stat-row-val" style="color:var(--green-dark)">Snowball</div></div>
+          <div class="stat-row"><div class="stat-row-label">Avg. difference</div><div class="stat-row-val">$500–$3K</div></div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">🔗 Related tools</div>
+          <div class="related-grid" style="grid-template-columns:1fr">
+            <div class="related-card" href="/debt-payoff-calculator/"><div class="related-icon">💳</div><div><div class="related-name">Debt Payoff Calculator</div><div class="related-desc">Single debt, full breakdown</div></div></div>
+            <div class="related-card" href="/interest-rate-comparator/"><div class="related-icon">📉</div><div><div class="related-name">Rate Comparator</div><div class="related-desc">Compare two loan offers</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a href="/debt-payoff-calculator/">Debt Payoff</a></li><li><a href="/mortgage-calculator/">Mortgage</a></li><li><a href="/loan-amortization-calculator/">Loan Amortization</a></li><li><a href="/interest-rate-comparator/">Interest Compare</a></li><li><a href="/debt-avalanche-vs-snowball/">Debt Avalanche</a></li><li><a href="/emergency-fund-calculator/">Emergency Fund</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-use/">Terms of Use</a></li><li><a href="/disclaimer/">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════
+     PAGE: EMERGENCY FUND CALCULATOR
+═══════════════════════════════ -->
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>

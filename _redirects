@@ -1,1 +1,15 @@
-/* /index.html 200
+/debt-payoff-calculator/         /debt-payoff.html         200
+/mortgage-calculator/            /mortgage.html            200
+/loan-amortization-calculator/   /loan-amortization.html   200
+/interest-rate-comparator/       /interest-rate-comparator.html 200
+/debt-avalanche-vs-snowball/     /debt-avalanche.html      200
+/emergency-fund-calculator/      /emergency-fund.html      200
+/about/                          /about.html               200
+/contact/                        /contact.html             200
+/privacy-policy/                 /privacy.html             200
+/terms-of-use/                   /terms.html               200
+/disclaimer/                     /disclaimer.html          200
+/blog/                           /blog.html                200
+/blog/debt-avalanche-vs-snowball/ /blog-debt-avalanche-vs-snowball.html 200
+/blog/emergency-fund/            /blog-emergency-fund.html 200
+/blog/extra-mortgage-payments/   /blog-extra-mortgage-payments.html 200
