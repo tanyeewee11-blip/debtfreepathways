@@ -606,7 +606,7 @@ td.col-balance{font-weight:500}
   <ul class="nav-links">
     <li><a onclick="showPage('home');scrollToId('tools')">Calculators</a></li>
     <li><a onclick="showPage('home');scrollToId('how')">How It Works</a></li>
-    <li><a>Blog</a></li>
+    <li><a onclick="showPage('blog')">Blog</a></li>
   </ul>
   <button class="nav-back" id="nav-back" onclick="showPage('home')">← <span id="nav-back-label">Back to home</span></button>
   <button class="nav-cta" onclick="showPage('home');scrollToId('tools')">Browse Tools</button>
@@ -620,7 +620,7 @@ td.col-balance{font-weight:500}
   <ul class="nav-mobile-links">
     <li><a onclick="showPage('home');scrollToId('tools');closeMobileMenu()">Calculators</a></li>
     <li><a onclick="showPage('home');scrollToId('how');closeMobileMenu()">How It Works</a></li>
-    <li><a onclick="closeMobileMenu()">Blog</a></li>
+    <li><a onclick="showPage('blog');closeMobileMenu()">Blog</a></li>
   </ul>
   <button class="nav-mobile-cta" onclick="showPage('home');scrollToId('tools');closeMobileMenu()">Browse Tools</button>
 </div>
@@ -769,11 +769,11 @@ td.col-balance{font-weight:500}
       </div>
       <div>
         <div class="footer-col-title">Company</div>
-        <ul class="footer-links"><li><a>About</a></li><li><a>Blog</a></li><li><a>Contact</a></li></ul>
+        <ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul>
       </div>
       <div>
         <div class="footer-col-title">Legal</div>
-        <ul class="footer-links"><li><a>Privacy Policy</a></li><li><a>Terms of Use</a></li><li><a>Disclaimer</a></li></ul>
+        <ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1002,8 +1002,8 @@ td.col-balance{font-weight:500}
     <div class="footer-inner">
       <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
       <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a>Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a>Debt Avalanche</a></li><li><a>Emergency Fund</a></li></ul></div>
-      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a>About</a></li><li><a>Blog</a></li><li><a>Contact</a></li></ul></div>
-      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a>Privacy Policy</a></li><li><a>Terms of Use</a></li><li><a>Disclaimer</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
   </footer>
@@ -1342,8 +1342,8 @@ td.col-balance{font-weight:500}
     <div class="footer-inner">
       <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
       <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a onclick="showPage('loan-amortization')">Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a>Debt Avalanche</a></li><li><a>Emergency Fund</a></li></ul></div>
-      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a>About</a></li><li><a>Blog</a></li><li><a>Contact</a></li></ul></div>
-      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a>Privacy Policy</a></li><li><a>Terms of Use</a></li><li><a>Disclaimer</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
   </footer>
@@ -1643,8 +1643,8 @@ td.col-balance{font-weight:500}
     <div class="footer-inner">
       <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
       <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a onclick="showPage('loan-amortization')">Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a>Debt Avalanche</a></li><li><a>Emergency Fund</a></li></ul></div>
-      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a>About</a></li><li><a>Blog</a></li><li><a>Contact</a></li></ul></div>
-      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a>Privacy Policy</a></li><li><a>Terms of Use</a></li><li><a>Disclaimer</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
   </footer>
@@ -1920,8 +1920,8 @@ td.col-balance{font-weight:500}
     <div class="footer-inner">
       <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
       <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a onclick="showPage('loan-amortization')">Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a onclick="showPage('debt-avalanche')">Debt Avalanche</a></li><li><a onclick="showPage('emergency-fund')">Emergency Fund</a></li></ul></div>
-      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a>About</a></li><li><a>Blog</a></li><li><a>Contact</a></li></ul></div>
-      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a>Privacy Policy</a></li><li><a>Terms of Use</a></li><li><a>Disclaimer</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
   </footer>
@@ -2110,8 +2110,8 @@ td.col-balance{font-weight:500}
     <div class="footer-inner">
       <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
       <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a onclick="showPage('loan-amortization')">Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a onclick="showPage('debt-avalanche')">Debt Avalanche</a></li><li><a onclick="showPage('emergency-fund')">Emergency Fund</a></li></ul></div>
-      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a>About</a></li><li><a>Blog</a></li><li><a>Contact</a></li></ul></div>
-      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a>Privacy Policy</a></li><li><a>Terms of Use</a></li><li><a>Disclaimer</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
   </footer>
@@ -2325,8 +2325,329 @@ td.col-balance{font-weight:500}
     <div class="footer-inner">
       <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
       <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a onclick="showPage('loan-amortization')">Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a onclick="showPage('debt-avalanche')">Debt Avalanche</a></li><li><a onclick="showPage('emergency-fund')">Emergency Fund</a></li></ul></div>
-      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a>About</a></li><li><a>Blog</a></li><li><a>Contact</a></li></ul></div>
-      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a>Privacy Policy</a></li><li><a>Terms of Use</a></li><li><a>Disclaimer</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</div>
+
+<!-- ABOUT PAGE -->
+<div class="page" id="page-about">
+  <div class="calc-layout">
+    <div class="calc-main" style="max-width:720px;margin:0 auto;padding:40px 24px">
+      <div class="breadcrumb"><span onclick="showPage('home')">Home</span> / <span>About</span></div>
+      <h1 style="font-size:2rem;margin-bottom:8px">About DebtFreePathways</h1>
+      <p style="color:var(--gray-500);margin-bottom:32px">Free financial calculators, built for real people.</p>
+      <p>DebtFreePathways was built with one goal: give everyone access to the same financial tools that used to require a financial advisor or expensive software.</p>
+      <p style="margin-top:16px">We offer six free calculators — debt payoff, mortgage, loan amortization, interest rate comparison, debt avalanche vs snowball, and emergency fund — all running entirely in your browser. No account needed, no data collected, no ads cluttering your results.</p>
+      <p style="margin-top:16px">Whether you're trying to pay off a credit card, figure out your mortgage payment, or build an emergency fund, our tools give you clear, accurate numbers so you can make better financial decisions.</p>
+      <h2 style="font-size:1.3rem;margin-top:40px;margin-bottom:12px">Our principles</h2>
+      <ul style="line-height:2;padding-left:20px">
+        <li><strong>Free, always.</strong> Every calculator is completely free. No premium plan, no paywall.</li>
+        <li><strong>Private by design.</strong> All calculations happen in your browser. We never store or share your data.</li>
+        <li><strong>No fluff.</strong> Just clear inputs and honest results.</li>
+        <li><strong>Not financial advice.</strong> Our tools help you understand your numbers — for advice tailored to your situation, consult a qualified financial advisor.</li>
+      </ul>
+      <div style="margin-top:40px;padding:24px;background:var(--gray-50);border-radius:12px">
+        <p style="margin:0">Have a question or feedback? <a onclick="showPage('contact')" style="color:var(--primary);cursor:pointer;text-decoration:underline">Get in touch</a>.</p>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-grid">
+      <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a onclick="showPage('loan-amortization')">Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a onclick="showPage('debt-avalanche')">Debt Avalanche</a></li><li><a onclick="showPage('emergency-fund')">Emergency Fund</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</div>
+
+<!-- CONTACT PAGE -->
+<div class="page" id="page-contact">
+  <div class="calc-layout">
+    <div class="calc-main" style="max-width:720px;margin:0 auto;padding:40px 24px">
+      <div class="breadcrumb"><span onclick="showPage('home')">Home</span> / <span>Contact</span></div>
+      <h1 style="font-size:2rem;margin-bottom:8px">Contact Us</h1>
+      <p style="color:var(--gray-500);margin-bottom:32px">We'd love to hear from you.</p>
+      <p>Have a question, suggestion, or found a bug? Send us an email and we'll get back to you as soon as we can.</p>
+      <div style="margin-top:32px;padding:32px;background:var(--gray-50);border-radius:16px;text-align:center">
+        <div style="font-size:2rem;margin-bottom:12px">✉️</div>
+        <p style="font-weight:600;font-size:1.1rem;margin-bottom:4px">Email us at</p>
+        <a href="mailto:hello@debtfreepathways.com" style="color:var(--primary);font-size:1.1rem;text-decoration:none;font-weight:600">hello@debtfreepathways.com</a>
+        <p style="color:var(--gray-500);margin-top:16px;font-size:0.9rem">We typically respond within 1–2 business days.</p>
+      </div>
+      <h2 style="font-size:1.2rem;margin-top:40px;margin-bottom:12px">Common questions</h2>
+      <p>Before reaching out, you might find your answer in our <a onclick="showPage('home');scrollToId('faq')" style="color:var(--primary);cursor:pointer;text-decoration:underline">FAQ section</a> on the homepage.</p>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-grid">
+      <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a onclick="showPage('loan-amortization')">Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a onclick="showPage('debt-avalanche')">Debt Avalanche</a></li><li><a onclick="showPage('emergency-fund')">Emergency Fund</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</div>
+
+<!-- PRIVACY POLICY PAGE -->
+<div class="page" id="page-privacy">
+  <div class="calc-layout">
+    <div class="calc-main" style="max-width:720px;margin:0 auto;padding:40px 24px">
+      <div class="breadcrumb"><span onclick="showPage('home')">Home</span> / <span>Privacy Policy</span></div>
+      <h1 style="font-size:2rem;margin-bottom:8px">Privacy Policy</h1>
+      <p style="color:var(--gray-500);margin-bottom:32px">Last updated: May 2025</p>
+      <h2 style="font-size:1.2rem;margin-top:32px;margin-bottom:8px">We do not collect your data</h2>
+      <p>DebtFreePathways does not collect, store, or transmit any personal or financial information you enter into our calculators. All calculations happen entirely within your browser. Nothing is sent to our servers.</p>
+      <h2 style="font-size:1.2rem;margin-top:32px;margin-bottom:8px">What we don't collect</h2>
+      <ul style="line-height:2;padding-left:20px">
+        <li>No financial data (balances, interest rates, payment amounts)</li>
+        <li>No personal information (name, email, address)</li>
+        <li>No account or login information (we don't have accounts)</li>
+        <li>No payment information</li>
+      </ul>
+      <h2 style="font-size:1.2rem;margin-top:32px;margin-bottom:8px">Cookies</h2>
+      <p>We do not use tracking cookies or third-party analytics cookies. We may use essential cookies required for the website to function correctly.</p>
+      <h2 style="font-size:1.2rem;margin-top:32px;margin-bottom:8px">Third-party services</h2>
+      <p>Our website may display advertising served by Google AdSense. Google may use cookies to serve ads based on your prior visits to this or other websites. You can opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" style="color:var(--primary)">Google's Ads Settings</a>.</p>
+      <h2 style="font-size:1.2rem;margin-top:32px;margin-bottom:8px">Contact</h2>
+      <p>If you have any questions about this Privacy Policy, contact us at <a href="mailto:hello@debtfreepathways.com" style="color:var(--primary)">hello@debtfreepathways.com</a>.</p>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-grid">
+      <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a onclick="showPage('loan-amortization')">Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a onclick="showPage('debt-avalanche')">Debt Avalanche</a></li><li><a onclick="showPage('emergency-fund')">Emergency Fund</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</div>
+
+<!-- TERMS OF USE PAGE -->
+<div class="page" id="page-terms">
+  <div class="calc-layout">
+    <div class="calc-main" style="max-width:720px;margin:0 auto;padding:40px 24px">
+      <div class="breadcrumb"><span onclick="showPage('home')">Home</span> / <span>Terms of Use</span></div>
+      <h1 style="font-size:2rem;margin-bottom:8px">Terms of Use</h1>
+      <p style="color:var(--gray-500);margin-bottom:32px">Last updated: May 2025</p>
+      <p>By using DebtFreePathways ("the website"), you agree to the following terms. If you do not agree, please do not use the website.</p>
+      <h2 style="font-size:1.2rem;margin-top:32px;margin-bottom:8px">1. Informational purposes only</h2>
+      <p>All calculators and content on this website are provided for educational and informational purposes only. Results are estimates and do not constitute financial, legal, tax, or investment advice. Always consult a qualified financial advisor before making financial decisions.</p>
+      <h2 style="font-size:1.2rem;margin-top:32px;margin-bottom:8px">2. No warranties</h2>
+      <p>This website is provided "as is" without any warranties of any kind, express or implied. We do not guarantee the accuracy, completeness, or suitability of any information or calculator results for your specific situation.</p>
+      <h2 style="font-size:1.2rem;margin-top:32px;margin-bottom:8px">3. Limitation of liability</h2>
+      <p>DebtFreePathways shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of this website or reliance on its content.</p>
+      <h2 style="font-size:1.2rem;margin-top:32px;margin-bottom:8px">4. Acceptable use</h2>
+      <p>You agree to use this website only for lawful purposes and in a manner that does not infringe the rights of others or restrict their use of the website.</p>
+      <h2 style="font-size:1.2rem;margin-top:32px;margin-bottom:8px">5. Changes to these terms</h2>
+      <p>We reserve the right to update these Terms of Use at any time. Continued use of the website after changes constitutes acceptance of the new terms.</p>
+      <h2 style="font-size:1.2rem;margin-top:32px;margin-bottom:8px">6. Contact</h2>
+      <p>Questions about these terms? Contact us at <a href="mailto:hello@debtfreepathways.com" style="color:var(--primary)">hello@debtfreepathways.com</a>.</p>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-grid">
+      <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a onclick="showPage('loan-amortization')">Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a onclick="showPage('debt-avalanche')">Debt Avalanche</a></li><li><a onclick="showPage('emergency-fund')">Emergency Fund</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</div>
+
+<!-- DISCLAIMER PAGE -->
+<div class="page" id="page-disclaimer">
+  <div class="calc-layout">
+    <div class="calc-main" style="max-width:720px;margin:0 auto;padding:40px 24px">
+      <div class="breadcrumb"><span onclick="showPage('home')">Home</span> / <span>Disclaimer</span></div>
+      <h1 style="font-size:2rem;margin-bottom:8px">Disclaimer</h1>
+      <p style="color:var(--gray-500);margin-bottom:32px">Last updated: May 2025</p>
+      <p>The information and calculator results provided on DebtFreePathways are for educational and informational purposes only. They do not constitute financial, legal, tax, or investment advice.</p>
+      <p style="margin-top:16px">Calculator results are estimates based on the inputs you provide and standard financial formulas. Actual figures may differ based on your lender's specific terms, fees, variable rates, or other factors not captured by the calculator.</p>
+      <p style="margin-top:16px">Always consult a qualified financial advisor, lender, or other professional before making any financial decisions.</p>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-grid">
+      <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a onclick="showPage('loan-amortization')">Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a onclick="showPage('debt-avalanche')">Debt Avalanche</a></li><li><a onclick="showPage('emergency-fund')">Emergency Fund</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</div>
+
+<!-- BLOG PAGE -->
+<div class="page" id="page-blog">
+  <div class="calc-layout">
+    <div class="calc-main" style="max-width:720px;margin:0 auto;padding:40px 24px">
+      <div class="breadcrumb"><span onclick="showPage('home')">Home</span> / <span>Blog</span></div>
+      <h1 style="font-size:2rem;margin-bottom:8px">Blog</h1>
+      <p style="color:var(--gray-500);margin-bottom:40px">Personal finance tips and guides to help you get debt-free faster.</p>
+      <div onclick="showPage('blog-debt-avalanche-vs-snowball')" style="cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+        <div style="font-size:0.8rem;color:var(--gray-400);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.05em">Debt Strategy · 8 min read</div>
+        <h2 style="font-size:1.3rem;margin-bottom:8px">Debt Avalanche vs Debt Snowball: Which Method Is Right for You?</h2>
+        <p style="color:var(--gray-500);line-height:1.6">Both methods work — but one could save you thousands more. We break down the math and psychology behind each strategy so you can choose the right one for your situation.</p>
+        <div style="margin-top:16px;color:var(--primary);font-weight:600;font-size:0.9rem">Read more →</div>
+      </div>
+      <div onclick="showPage('blog-emergency-fund')" style="cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+        <div style="font-size:0.8rem;color:var(--gray-400);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.05em">Savings · 6 min read</div>
+        <h2 style="font-size:1.3rem;margin-bottom:8px">How Much Should You Have in Your Emergency Fund?</h2>
+        <p style="color:var(--gray-500);line-height:1.6">Three months or six? The right answer depends on your income, job stability, and family situation. Here's how to calculate the number that's right for you.</p>
+        <div style="margin-top:16px;color:var(--primary);font-weight:600;font-size:0.9rem">Read more →</div>
+      </div>
+      <div onclick="showPage('blog-extra-mortgage-payments')" style="cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+        <div style="font-size:0.8rem;color:var(--gray-400);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.05em">Mortgage · 7 min read</div>
+        <h2 style="font-size:1.3rem;margin-bottom:8px">What Happens When You Pay Extra on Your Mortgage Each Month?</h2>
+        <p style="color:var(--gray-500);line-height:1.6">Even $100 extra per month can save you tens of thousands in interest and shave years off your loan. Here's exactly how it works — with real numbers.</p>
+        <div style="margin-top:16px;color:var(--primary);font-weight:600;font-size:0.9rem">Read more →</div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-grid">
+      <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a onclick="showPage('loan-amortization')">Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a onclick="showPage('debt-avalanche')">Debt Avalanche</a></li><li><a onclick="showPage('emergency-fund')">Emergency Fund</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</div>
+
+<!-- BLOG POST 1: Avalanche vs Snowball -->
+<div class="page" id="page-blog-debt-avalanche-vs-snowball">
+  <div class="calc-layout">
+    <div class="calc-main" style="max-width:720px;margin:0 auto;padding:40px 24px">
+      <div class="breadcrumb"><span onclick="showPage('home')">Home</span> / <span onclick="showPage('blog')">Blog</span> / <span>Avalanche vs Snowball</span></div>
+      <div style="font-size:0.8rem;color:var(--gray-400);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em">Debt Strategy · 8 min read</div>
+      <h1 style="font-size:2rem;margin-bottom:16px">Debt Avalanche vs Debt Snowball: Which Method Is Right for You?</h1>
+      <p style="color:var(--gray-500);margin-bottom:40px">Both methods work — but one could save you thousands more.</p>
+      <p>If you have multiple debts to pay off, you've probably heard of two popular strategies: the <strong>debt avalanche</strong> and the <strong>debt snowball</strong>. Both involve paying minimums on all your debts, then throwing any extra money at one specific debt at a time. The difference is which debt you target first.</p>
+      <h2 style="font-size:1.3rem;margin-top:40px;margin-bottom:12px">The Debt Avalanche Method</h2>
+      <p>The avalanche method targets your <strong>highest interest rate debt first</strong>, regardless of the balance. Once that's paid off, you roll that payment to the next highest-rate debt, and so on.</p>
+      <p style="margin-top:12px"><strong>Example:</strong> You have three debts — a credit card at 22% APR, a personal loan at 12%, and a car loan at 6%. With the avalanche, you'd attack the credit card first.</p>
+      <p style="margin-top:12px"><strong>The upside:</strong> You pay less total interest over time. The math is unambiguous — eliminating your most expensive debt first is the fastest way to reduce the total cost of your debt.</p>
+      <p style="margin-top:12px"><strong>The downside:</strong> If your highest-rate debt also has a large balance, it can take a long time before you pay off your first debt. That can feel discouraging.</p>
+      <h2 style="font-size:1.3rem;margin-top:40px;margin-bottom:12px">The Debt Snowball Method</h2>
+      <p>The snowball method targets your <strong>smallest balance first</strong>, regardless of the interest rate. Once that's cleared, you roll that freed-up payment to the next smallest balance.</p>
+      <p style="margin-top:12px"><strong>Example:</strong> Same three debts. With the snowball, you'd pay off the car loan first if it has the smallest balance.</p>
+      <p style="margin-top:12px"><strong>The upside:</strong> You get quick wins. Paying off a debt completely gives you a real psychological boost and frees up cash faster early on. Research shows this momentum helps people stick to their plan.</p>
+      <p style="margin-top:12px"><strong>The downside:</strong> You'll typically pay more total interest than the avalanche method, because you're ignoring interest rates.</p>
+      <h2 style="font-size:1.3rem;margin-top:40px;margin-bottom:12px">Which one should you choose?</h2>
+      <p>If you're purely focused on minimising total interest paid, choose the <strong>avalanche</strong>. The savings can be substantial — often $500 to $3,000 or more depending on your debt load.</p>
+      <p style="margin-top:12px">If motivation is your biggest challenge — if you've tried paying off debt before and lost steam — choose the <strong>snowball</strong>. The psychological wins of eliminating debts completely can make a real difference in whether you actually follow through.</p>
+      <p style="margin-top:12px">The best method is the one you'll actually stick with.</p>
+      <div style="margin-top:40px;padding:24px;background:var(--gray-50);border-radius:12px">
+        <p style="font-weight:600;margin-bottom:8px">Try it yourself</p>
+        <p style="margin-bottom:16px">Enter your debts and see exactly how much each strategy costs you — side by side.</p>
+        <button class="btn-primary" onclick="showPage('debt-avalanche')" style="font-size:0.9rem;padding:10px 20px">Open Avalanche vs Snowball Calculator →</button>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-grid">
+      <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a onclick="showPage('loan-amortization')">Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a onclick="showPage('debt-avalanche')">Debt Avalanche</a></li><li><a onclick="showPage('emergency-fund')">Emergency Fund</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</div>
+
+<!-- BLOG POST 2: Emergency Fund -->
+<div class="page" id="page-blog-emergency-fund">
+  <div class="calc-layout">
+    <div class="calc-main" style="max-width:720px;margin:0 auto;padding:40px 24px">
+      <div class="breadcrumb"><span onclick="showPage('home')">Home</span> / <span onclick="showPage('blog')">Blog</span> / <span>Emergency Fund</span></div>
+      <div style="font-size:0.8rem;color:var(--gray-400);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em">Savings · 6 min read</div>
+      <h1 style="font-size:2rem;margin-bottom:16px">How Much Should You Have in Your Emergency Fund?</h1>
+      <p style="color:var(--gray-500);margin-bottom:40px">Three months or six? Here's how to find the number that's right for your situation.</p>
+      <p>Financial advisors have recommended keeping an emergency fund for decades — and for good reason. An emergency fund is the difference between a car repair being a minor inconvenience and going into credit card debt to cover it.</p>
+      <p style="margin-top:12px">But how much is enough? The standard advice is "three to six months of expenses," which isn't very helpful when you're trying to set an actual savings goal.</p>
+      <h2 style="font-size:1.3rem;margin-top:40px;margin-bottom:12px">The three-month baseline</h2>
+      <p>Three months of essential expenses is the minimum most financial experts recommend. It's enough to cover a short job loss, a major medical bill, or a significant home repair without going into debt.</p>
+      <p style="margin-top:12px">To calculate your three-month number, add up your essential monthly expenses: rent or mortgage, food, utilities, transportation, insurance, and minimum debt payments. Multiply by three.</p>
+      <h2 style="font-size:1.3rem;margin-top:40px;margin-bottom:12px">When you need more</h2>
+      <p>Six months or more makes sense if any of the following apply to you:</p>
+      <ul style="line-height:2;padding-left:20px;margin-top:12px">
+        <li>You're self-employed or have variable income</li>
+        <li>You work in an industry with frequent layoffs</li>
+        <li>You're the sole income earner in your household</li>
+        <li>You have dependents (children, elderly parents)</li>
+        <li>You have a chronic health condition with ongoing costs</li>
+      </ul>
+      <h2 style="font-size:1.3rem;margin-top:40px;margin-bottom:12px">Where to keep it</h2>
+      <p>Your emergency fund should be in a <strong>high-yield savings account (HYSA)</strong> — separate from your everyday checking account so you're not tempted to dip into it, but accessible within one or two business days if you need it.</p>
+      <p style="margin-top:12px">Don't invest your emergency fund in stocks or other assets that can lose value. The whole point is that the money is stable and available when you need it most.</p>
+      <h2 style="font-size:1.3rem;margin-top:40px;margin-bottom:12px">Building it from scratch</h2>
+      <p>If you're starting from zero, the goal can feel overwhelming. Start with a smaller milestone: $1,000. That covers most minor emergencies. Then work toward one month of expenses, then three, then six.</p>
+      <p style="margin-top:12px">Even saving $50–$100 a month gets you there eventually — and once it's built, you won't have to think about it again.</p>
+      <div style="margin-top:40px;padding:24px;background:var(--gray-50);border-radius:12px">
+        <p style="font-weight:600;margin-bottom:8px">Calculate your goal</p>
+        <p style="margin-bottom:16px">Enter your monthly expenses and see exactly how much you need and how long it'll take to save it.</p>
+        <button class="btn-primary" onclick="showPage('emergency-fund')" style="font-size:0.9rem;padding:10px 20px">Open Emergency Fund Calculator →</button>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-grid">
+      <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a onclick="showPage('loan-amortization')">Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a onclick="showPage('debt-avalanche')">Debt Avalanche</a></li><li><a onclick="showPage('emergency-fund')">Emergency Fund</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</div>
+
+<!-- BLOG POST 3: Extra Mortgage Payments -->
+<div class="page" id="page-blog-extra-mortgage-payments">
+  <div class="calc-layout">
+    <div class="calc-main" style="max-width:720px;margin:0 auto;padding:40px 24px">
+      <div class="breadcrumb"><span onclick="showPage('home')">Home</span> / <span onclick="showPage('blog')">Blog</span> / <span>Extra Mortgage Payments</span></div>
+      <div style="font-size:0.8rem;color:var(--gray-400);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em">Mortgage · 7 min read</div>
+      <h1 style="font-size:2rem;margin-bottom:16px">What Happens When You Pay Extra on Your Mortgage Each Month?</h1>
+      <p style="color:var(--gray-500);margin-bottom:40px">Even $100 extra per month can save you tens of thousands. Here's exactly how it works.</p>
+      <p>Most people make their mortgage payment each month and don't think much about it. But there's a powerful lever hiding in plain sight: paying a little extra each month toward your principal can dramatically reduce how much you pay overall — and how long you're paying it.</p>
+      <h2 style="font-size:1.3rem;margin-top:40px;margin-bottom:12px">Why extra payments have such a big impact</h2>
+      <p>A standard mortgage is front-loaded with interest. In the early years of a 30-year loan, the vast majority of each payment goes toward interest, not principal. Extra payments go directly to principal, which reduces the balance on which future interest is calculated.</p>
+      <p style="margin-top:12px">This creates a compounding effect in reverse: a smaller balance means less interest charged each month, which means more of your regular payment goes to principal, which shrinks the balance faster. A relatively small extra payment early in the loan has an outsized effect.</p>
+      <h2 style="font-size:1.3rem;margin-top:40px;margin-bottom:12px">Real numbers</h2>
+      <p>Take a $350,000 mortgage at 6.8% interest over 30 years. The monthly principal and interest payment is around $2,290.</p>
+      <ul style="line-height:2;padding-left:20px;margin-top:12px">
+        <li><strong>$100/month extra</strong> saves roughly $40,000 in interest and pays off the loan about 3.5 years early</li>
+        <li><strong>$200/month extra</strong> saves roughly $70,000 and pays off about 6 years early</li>
+        <li><strong>$500/month extra</strong> saves roughly $130,000 and pays off about 11 years early</li>
+      </ul>
+      <h2 style="font-size:1.3rem;margin-top:40px;margin-bottom:12px">How to do it</h2>
+      <p>Most lenders allow extra principal payments without penalty. When you make the payment, specify that the extra amount should be applied to <strong>principal only</strong> — not to next month's payment. Check with your lender on how to designate this, as the process varies.</p>
+      <p style="margin-top:12px">Another simple approach: make one extra full payment per year. Apply a tax refund, bonus, or other windfall directly to principal. On a 30-year loan, this alone can cut your payoff time by four to five years.</p>
+      <h2 style="font-size:1.3rem;margin-top:40px;margin-bottom:12px">Should you always pay extra?</h2>
+      <p>Not necessarily. If your mortgage rate is low (say, under 4%) and you could earn more by investing that money, investing might make more financial sense. But at today's rates above 6%, paying down your mortgage is effectively a guaranteed return equal to your interest rate — which is hard to beat risk-free.</p>
+      <p style="margin-top:12px">The right answer depends on your specific rate, your other financial goals, and your risk tolerance.</p>
+      <div style="margin-top:40px;padding:24px;background:var(--gray-50);border-radius:12px">
+        <p style="font-weight:600;margin-bottom:8px">See your numbers</p>
+        <p style="margin-bottom:16px">Enter your loan details and see exactly how much extra payments would save you.</p>
+        <button class="btn-primary" onclick="showPage('mortgage')" style="font-size:0.9rem;padding:10px 20px">Open Mortgage Calculator →</button>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-grid">
+      <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a onclick="showPage('debt-payoff')">Debt Payoff</a></li><li><a onclick="showPage('mortgage')">Mortgage</a></li><li><a onclick="showPage('loan-amortization')">Loan Amortization</a></li><li><a onclick="showPage('interest-rate-comparator')">Interest Compare</a></li><li><a onclick="showPage('debt-avalanche')">Debt Avalanche</a></li><li><a onclick="showPage('emergency-fund')">Emergency Fund</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('blog')">Blog</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a onclick="showPage('privacy')">Privacy Policy</a></li><li><a onclick="showPage('terms')">Terms of Use</a></li><li><a onclick="showPage('disclaimer')">Disclaimer</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
   </footer>
@@ -2451,7 +2772,16 @@ const PAGE_META = {
       "featureList": ["Emergency fund goal calculation", "Monthly expense breakdown", "Savings timeline", "Milestone tracker", "Coverage month selector"],
       "provider": { "@type": "Organization", "name": "DebtFreePathways", "url": "https://debtfreepathways.com/" }
     }
-  }
+  },
+  'about': { title: 'About — DebtFreePathways', description: 'Free personal finance calculators built for real people. No sign-up, no data collected.', canonical: 'https://debtfreepathways.com/about/', navLabel: 'About' },
+  'contact': { title: 'Contact — DebtFreePathways', description: 'Get in touch with DebtFreePathways.', canonical: 'https://debtfreepathways.com/contact/', navLabel: 'Contact' },
+  'privacy': { title: 'Privacy Policy — DebtFreePathways', description: 'DebtFreePathways does not collect or store any personal or financial data.', canonical: 'https://debtfreepathways.com/privacy-policy/', navLabel: 'Privacy Policy' },
+  'terms': { title: 'Terms of Use — DebtFreePathways', description: 'Terms and conditions for using DebtFreePathways.', canonical: 'https://debtfreepathways.com/terms-of-use/', navLabel: 'Terms of Use' },
+  'disclaimer': { title: 'Disclaimer — DebtFreePathways', description: 'Calculator results are estimates for informational purposes only, not financial advice.', canonical: 'https://debtfreepathways.com/disclaimer/', navLabel: 'Disclaimer' },
+  'blog': { title: 'Blog — DebtFreePathways', description: 'Personal finance tips and guides to help you get debt-free faster.', canonical: 'https://debtfreepathways.com/blog/', navLabel: 'Blog' },
+  'blog-debt-avalanche-vs-snowball': { title: 'Debt Avalanche vs Debt Snowball: Which Method Is Right for You? — DebtFreePathways', description: 'Both methods work — but one could save you thousands more.', canonical: 'https://debtfreepathways.com/blog/debt-avalanche-vs-snowball/', navLabel: 'Blog' },
+  'blog-emergency-fund': { title: 'How Much Should You Have in Your Emergency Fund? — DebtFreePathways', description: "Three months or six? Here's how to calculate the right amount for your situation.", canonical: 'https://debtfreepathways.com/blog/emergency-fund/', navLabel: 'Blog' },
+  'blog-extra-mortgage-payments': { title: 'What Happens When You Pay Extra on Your Mortgage? — DebtFreePathways', description: "Even $100 extra per month can save you tens of thousands. Here's how it works.", canonical: 'https://debtfreepathways.com/blog/extra-mortgage-payments/', navLabel: 'Blog' }
 };
 
 /* ═══════════════════════════════════════
