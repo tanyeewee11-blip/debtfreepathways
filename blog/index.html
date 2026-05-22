@@ -47,7 +47,7 @@
     <li><a href="/blog/">Blog</a></li>
   </ul>
   <button class="nav-back" id="nav-back" onclick="window.location.href='/'">← <span id="nav-back-label">Back to home</span></button>
-  <button class="nav-cta" onclick="window.location.href='index.html#tools'">Browse Tools</button>
+  <button class="nav-cta" onclick="window.location.href='/#tools'">Browse Tools</button>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
     <span></span><span></span><span></span>
   </button>
@@ -60,7 +60,7 @@
     <li><a href="/#how">How It Works</a></li>
     <li><a href="/blog/">Blog</a></li>
   </ul>
-  <button class="nav-mobile-cta" onclick="window.location.href='index.html#tools'">Browse Tools</button>
+  <button class="nav-mobile-cta" onclick="window.location.href='/#tools'">Browse Tools</button>
 </div>
 
 
@@ -70,19 +70,19 @@
       <div class="breadcrumb" style="color:var(--gray-400)"><span href="/" style="color:var(--gray-500)">Home</span> <span style="color:var(--gray-300)">/</span> <span style="color:var(--gray-400)">Blog</span></div>
       <h1 style="font-size:2rem;margin-bottom:8px">Blog</h1>
       <p style="color:var(--gray-500);margin-bottom:40px">Personal finance tips and guides to help you get debt-free faster.</p>
-      <div href="/blog/debt-avalanche-vs-snowball/" style="cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+      <div onclick="window.location.href='/blog/debt-avalanche-vs-snowball/'" style="cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
         <div style="font-size:0.8rem;color:var(--gray-400);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.05em">Debt Strategy · 8 min read</div>
         <h2 style="font-size:1.3rem;margin-bottom:8px">Debt Avalanche vs Debt Snowball: Which Method Is Right for You?</h2>
         <p style="color:var(--gray-500);line-height:1.6">Both methods work — but one could save you thousands more. We break down the math and psychology behind each strategy so you can choose the right one for your situation.</p>
         <div style="margin-top:16px;color:var(--primary);font-weight:600;font-size:0.9rem">Read more →</div>
       </div>
-      <div href="/blog/emergency-fund/" style="cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+      <div onclick="window.location.href='/blog/emergency-fund/'" style="cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
         <div style="font-size:0.8rem;color:var(--gray-400);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.05em">Savings · 6 min read</div>
         <h2 style="font-size:1.3rem;margin-bottom:8px">How Much Should You Have in Your Emergency Fund?</h2>
         <p style="color:var(--gray-500);line-height:1.6">Three months or six? The right answer depends on your income, job stability, and family situation. Here's how to calculate the number that's right for you.</p>
         <div style="margin-top:16px;color:var(--primary);font-weight:600;font-size:0.9rem">Read more →</div>
       </div>
-      <div href="/blog/extra-mortgage-payments/" style="cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
+      <div onclick="window.location.href='/blog/extra-mortgage-payments/'" style="cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'" onmouseout="this.style.boxShadow='none'">
         <div style="font-size:0.8rem;color:var(--gray-400);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.05em">Mortgage · 7 min read</div>
         <h2 style="font-size:1.3rem;margin-bottom:8px">What Happens When You Pay Extra on Your Mortgage Each Month?</h2>
         <p style="color:var(--gray-500);line-height:1.6">Even $100 extra per month can save you tens of thousands in interest and shave years off your loan. Here's exactly how it works — with real numbers.</p>
@@ -90,7 +90,9 @@
       </div>
     </div>
   </div>
-  <footer class="footer">
+</main>
+
+<footer class="footer">
     <div class="footer-grid">
       <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
       <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a href="/debt-payoff-calculator/">Debt Payoff</a></li><li><a href="/mortgage-calculator/">Mortgage</a></li><li><a href="/loan-amortization-calculator/">Loan Amortization</a></li><li><a href="/interest-rate-comparator/">Interest Compare</a></li><li><a href="/debt-avalanche-vs-snowball/">Debt Avalanche</a></li><li><a href="/emergency-fund-calculator/">Emergency Fund</a></li></ul></div>
@@ -99,7 +101,6 @@
     </div>
     <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
   </footer>
-</main>
 
 <script src="/main.js"></script>
 </body>
