@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CXQCGBWSN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9CXQCGBWSN');
+</script>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Debt Payoff Calculator — DebtFreePathways</title>
+<meta name="description" content="Calculate how long it will take to pay off your debt and how much interest you'll pay.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://debtfreepathways.com/debt-payoff.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DebtFreePathways">
+<meta property="og:title" content="Debt Payoff Calculator — DebtFreePathways">
+<meta property="og:description" content="Calculate how long it will take to pay off your debt and how much interest you'll pay.">
+<meta property="og:url" content="https://debtfreepathways.com/debt-payoff.html">
+<meta property="og:image" content="https://debtfreepathways.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Debt Payoff Calculator — DebtFreePathways">
+<meta name="twitter:description" content="Calculate how long it will take to pay off your debt and how much interest you'll pay.">
+<meta name="twitter:image" content="https://debtfreepathways.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="/"><span class="nav-dot"></span>DebtFreePathways</a>
+  <ul class="nav-links">
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <button class="nav-back" id="nav-back" onclick="window.location.href='/'">← <span id="nav-back-label">Back to home</span></button>
+  <button class="nav-cta" onclick="window.location.href='index.html#tools'">Browse Tools</button>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <ul class="nav-mobile-links">
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <button class="nav-mobile-cta" onclick="window.location.href='index.html#tools'">Browse Tools</button>
+</div>
+
+
+<main>
+<div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="breadcrumb">
+        <span href="/">Home</span>
+        <span class="breadcrumb-sep">/</span>
+        <span href="/#tools">Calculators</span>
+        <span class="breadcrumb-sep">/</span>
+        <span style="color:rgba(255,255,255,.75)">Debt Payoff Calculator</span>
+      </div>
+      <h1>Debt Payoff Calculator</h1>
+      <p class="tool-hero-sub">Find out exactly when you'll be debt-free and how much interest you'll pay — or save — depending on your strategy.</p>
+      <div class="tool-hero-tags">
+        <span class="tool-hero-tag">💳 Credit Card</span>
+        <span class="tool-hero-tag">🚗 Auto Loan</span>
+        <span class="tool-hero-tag">💊 Medical Debt</span>
+        <span class="tool-hero-tag">📚 Student Loan</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tool-layout">
+      <div class="tool-main">
+        <div class="calc-card">
+          <div class="calc-card-title"><div class="calc-card-icon">💳</div>Your debt details</div>
+          <div class="input-grid">
+            <div class="input-group">
+              <label>Total balance owed</label>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="dp-balance" value="15000" min="0" oninput="dpCalc()"></div>
+              <div class="input-hint">Current outstanding balance</div>
+            </div>
+            <div class="input-group">
+              <label>Annual interest rate (APR)</label>
+              <div class="input-wrap has-suffix"><input type="number" id="dp-rate" value="19.9" step="0.1" min="0" max="100" oninput="dpCalc()"><span class="input-suffix">%</span></div>
+              <div class="input-hint">Found on your statement</div>
+            </div>
+            <div class="input-group">
+              <label>Monthly payment</label>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="dp-payment" value="400" min="0" oninput="dpCalc()"></div>
+              <div class="input-hint">Minimum or planned payment</div>
+            </div>
+            <div class="input-group">
+              <label>Debt type</label>
+              <div class="input-wrap">
+                <select id="dp-type" onchange="dpCalc()">
+                  <option value="credit">Credit card</option>
+                  <option value="auto">Auto loan</option>
+                  <option value="personal">Personal loan</option>
+                  <option value="medical">Medical debt</option>
+                  <option value="student">Student loan</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="slider-row">
+            <label>Interest rate <span class="slider-val" id="rate-slider-val">19.9%</span></label>
+            <input type="range" id="rate-slider" min="1" max="36" step="0.1" value="19.9" oninput="syncRateSlider(this.value)">
+          </div>
+          <div class="extra-toggle" onclick="toggleExtra()">
+            <div>
+              <div class="extra-toggle-label">💡 Add extra monthly payment</div>
+              <div class="extra-toggle-sub">See how much faster you'll pay off with extra cash</div>
+            </div>
+            <div class="toggle-switch" id="extra-switch"><div class="toggle-knob"></div></div>
+          </div>
+          <div class="extra-input-row" id="extra-input-row">
+            <div class="input-group">
+              <label>Extra monthly payment</label>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="dp-extra" value="100" min="0" oninput="dpCalc()"></div>
+              <div class="input-hint">Even $50/month extra can save thousands in interest</div>
+            </div>
+          </div>
+          <button class="calc-btn" onclick="dpCalc()">Calculate payoff plan</button>
+        </div>
+
+        <div class="results-panel" id="results-panel">
+          <div class="results-strip">
+            <div class="results-strip-title">Your payoff summary</div>
+            <div class="metrics-row">
+              <div class="metric-box"><div class="metric-val green" id="res-months">—</div><div class="metric-label">Months to<br>debt-free</div></div>
+              <div class="metric-box"><div class="metric-val red" id="res-interest">—</div><div class="metric-label">Total interest<br>paid</div></div>
+              <div class="metric-box"><div class="metric-val" id="res-total">—</div><div class="metric-label">Total amount<br>paid</div></div>
+            </div>
+            <div class="payoff-date-badge">
+              <span class="payoff-date-label">📅 Estimated payoff date</span>
+              <span class="payoff-date-val" id="res-date">—</span>
+            </div>
+            <div class="savings-banner" id="savings-banner">
+              <div class="savings-banner-text">💚 By paying extra each month, you'll save:</div>
+              <div class="savings-banner-val" id="savings-val">—</div>
+            </div>
+            <div class="progress-wrap">
+              <div class="progress-label">
+                <span>Principal <span id="progress-pct-label">0%</span></span>
+                <span>Interest <span id="progress-int-label">0%</span></span>
+              </div>
+              <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-bar" style="width:0%"></div></div>
+            </div>
+          </div>
+
+          <div class="charts-card">
+            <div class="charts-tabs">
+              <button class="chart-tab active" onclick="dpSwitchTab('donut')">Principal vs Interest</button>
+              <button class="chart-tab" onclick="dpSwitchTab('bar')">Year-by-Year</button>
+              <button class="chart-tab" onclick="dpSwitchTab('timeline')">Balance Over Time</button>
+            </div>
+            <div class="chart-panel active" id="dp-tab-donut">
+              <div class="donut-wrap">
+                <div class="donut-svg-wrap">
+                  <svg id="donut-svg" width="160" height="160" viewBox="0 0 160 160"></svg>
+                  <div class="donut-center"><div class="donut-center-val" id="donut-center-val">—</div><div class="donut-center-label">total paid</div></div>
+                </div>
+                <div class="donut-legend">
+                  <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div><div><div class="legend-name">Principal</div><div class="legend-val" id="leg-principal">—</div><div class="legend-pct" id="leg-principal-pct">—</div></div></div>
+                  <div class="legend-item"><div class="legend-dot" style="background:#e84040"></div><div><div class="legend-name">Interest paid</div><div class="legend-val" id="leg-interest">—</div><div class="legend-pct" id="leg-interest-pct">—</div></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="chart-panel" id="dp-tab-bar">
+              <div class="bar-chart-wrap"><div class="bar-chart" id="dp-bar-chart"></div></div>
+              <div class="bar-legend">
+                <div class="bar-leg-item"><div class="bar-leg-dot" style="background:var(--green)"></div>Principal</div>
+                <div class="bar-leg-item"><div class="bar-leg-dot" style="background:#e84040"></div>Interest</div>
+              </div>
+            </div>
+            <div class="chart-panel" id="dp-tab-timeline">
+              <div class="timeline-wrap"><canvas id="dp-timeline-canvas"></canvas></div>
+              <div class="timeline-legend">
+                <div class="tl-leg-item"><div class="tl-leg-line" style="background:var(--blue)"></div>Balance (standard)</div>
+                <div class="tl-leg-item" id="tl-leg-extra" style="display:none"><div class="tl-leg-line" style="background:var(--green)"></div>Balance (with extra)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="compare-card" id="compare-card">
+            <div class="compare-title">Standard vs. extra payment — side-by-side</div>
+            <table class="compare-table">
+              <thead><tr><th>Metric</th><th><span class="tag-standard">Standard</span></th><th><span class="tag-extra">+ Extra</span></th><th>You save</th></tr></thead>
+              <tbody>
+                <tr><td class="label-cell">Monthly payment</td><td id="cmp-pay-std">—</td><td id="cmp-pay-ext">—</td><td>—</td></tr>
+                <tr><td class="label-cell">Payoff time</td><td id="cmp-time-std">—</td><td id="cmp-time-ext">—</td><td id="cmp-time-save">—</td></tr>
+                <tr><td class="label-cell">Total interest</td><td id="cmp-int-std">—</td><td id="cmp-int-ext">—</td><td id="cmp-int-save" style="color:var(--green-dark);font-weight:700">—</td></tr>
+                <tr class="highlight-row"><td class="label-cell">Total paid</td><td id="cmp-total-std">—</td><td id="cmp-total-ext">—</td><td id="cmp-total-save" style="font-weight:700">—</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="table-card" id="dp-table-card">
+          <div class="table-card-header">
+            <div class="table-card-title">📅 Amortization schedule</div>
+            <div class="table-actions">
+              <div class="table-view-toggle">
+                <button class="tvt-btn active" id="dp-view-monthly" onclick="dpSwitchTableView('monthly')">Monthly</button>
+                <button class="tvt-btn" id="dp-view-yearly" onclick="dpSwitchTableView('yearly')">Yearly</button>
+              </div>
+              <button class="table-toggle-btn" id="dp-table-toggle-btn" onclick="dpToggleTable()">Show ↓</button>
+            </div>
+          </div>
+          <div class="table-scroll" id="dp-table-scroll">
+            <table><thead><tr><th>#</th><th>Payment</th><th>Principal</th><th>Interest</th><th>Balance</th></tr></thead><tbody id="dp-amort-body"></tbody></table>
+          </div>
+        </div>
+
+        <div class="tips-card">
+          <div class="tips-title">💡 Tips to pay off debt faster</div>
+          <div class="tip-item"><div class="tip-num">1</div><div class="tip-text"><strong>Round up your payment.</strong> If minimum is $347, pay $400. The extra $53/month compounds dramatically — saving potentially thousands over the loan life.</div></div>
+          <div class="tip-item"><div class="tip-num">2</div><div class="tip-text"><strong>Make bi-weekly payments.</strong> Paying half your monthly amount every two weeks = 13 full payments/year instead of 12. One free extra payment annually.</div></div>
+          <div class="tip-item"><div class="tip-num">3</div><div class="tip-text"><strong>Apply windfalls directly.</strong> Tax refunds, bonuses, or gifts applied straight to principal can shave months off your payoff timeline immediately.</div></div>
+          <div class="tip-item"><div class="tip-num">4</div><div class="tip-text"><strong>Consider a balance transfer.</strong> Moving high-interest credit card debt to a 0% intro APR card saves hundreds if paid within the promo period.</div></div>
+        </div>
+
+        <div class="calc-card">
+          <div class="calc-card-title">Related calculators</div>
+          <div class="related-grid">
+            <div class="related-card" href="/mortgage-calculator/"><div class="related-icon">🏠</div><div class="related-name">Mortgage Calculator</div><div class="related-desc">Monthly payment & amortization</div></div>
+            <div class="related-card" href="/loan-amortization-calculator/"><div class="related-icon">📊</div><div class="related-name">Loan Amortization</div><div class="related-desc">Full principal/interest breakdown</div></div>
+            <div class="related-card"><div class="related-icon">❄️</div><div class="related-name">Debt Avalanche vs Snowball</div><div class="related-desc">Find your best strategy</div></div>
+            <div class="related-card"><div class="related-icon">🛡️</div><div class="related-name">Emergency Fund</div><div class="related-desc">How much should you save?</div></div>
+          </div>
+        </div>
+        <div class="disclaimer"><p><strong>Disclaimer:</strong> This calculator is for educational and informational purposes only. Results are estimates based on the information provided and assume fixed interest rates and consistent payments. Actual payoff dates and interest amounts may vary. This is not financial advice.</p></div>
+      </div>
+
+      <div class="tool-sidebar">
+        <div class="countdown-widget" id="dp-countdown-widget" style="display:none">
+          <div class="countdown-label">Months remaining</div>
+          <div class="countdown-val" id="dp-cw-months">—</div>
+          <div class="countdown-sub">until you're debt-free</div>
+          <div class="countdown-date" id="dp-cw-date">—</div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">📊 Average US debt stats</div>
+          <div class="stat-row"><div class="stat-row-label">Avg. credit card balance per household</div><div class="stat-row-val">$6,501</div></div>
+          <div class="stat-row"><div class="stat-row-label">Avg. credit card APR</div><div class="stat-row-val">20.74%</div></div>
+          <div class="stat-row"><div class="stat-row-label">Avg. monthly debt payment</div><div class="stat-row-val">$1,583</div></div>
+        </div>
+        <div class="motive-widget" id="dp-motive-widget" style="display:none">
+          <div class="motive-icon">🔥</div>
+          <div class="motive-text" id="dp-motive-text">Enter your details to see your personalized payoff insight.</div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">⚡ Quick facts</div>
+          <div class="stat-row"><div class="stat-row-label">Paying $50 extra/month on $10K at 20% APR saves</div><div class="stat-row-val">$2,300+</div></div>
+          <div class="stat-row"><div class="stat-row-label">Bi-weekly payments reduce a 5-year loan by</div><div class="stat-row-val">~5 months</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a href="/debt-payoff-calculator/">Debt Payoff</a></li><li><a href="/mortgage-calculator/">Mortgage</a></li><li><a>Loan Amortization</a></li><li><a href="/interest-rate-comparator/">Interest Compare</a></li><li><a>Debt Avalanche</a></li><li><a>Emergency Fund</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-use/">Terms of Use</a></li><li><a href="/disclaimer/">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════
+     PAGE: MORTGAGE CALCULATOR
+═══════════════════════════════ -->
+</main>
+
+<script src="/main.js"></script>
+</body>
+</html>

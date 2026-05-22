@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CXQCGBWSN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9CXQCGBWSN');
+</script>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Loan Amortization Calculator — DebtFreePathways</title>
+<meta name="description" content="See your full loan amortization schedule with an interactive chart.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://debtfreepathways.com/loan-amortization.html">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DebtFreePathways">
+<meta property="og:title" content="Loan Amortization Calculator — DebtFreePathways">
+<meta property="og:description" content="See your full loan amortization schedule with an interactive chart.">
+<meta property="og:url" content="https://debtfreepathways.com/loan-amortization.html">
+<meta property="og:image" content="https://debtfreepathways.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Loan Amortization Calculator — DebtFreePathways">
+<meta name="twitter:description" content="See your full loan amortization schedule with an interactive chart.">
+<meta name="twitter:image" content="https://debtfreepathways.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="/"><span class="nav-dot"></span>DebtFreePathways</a>
+  <ul class="nav-links">
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <button class="nav-back" id="nav-back" onclick="window.location.href='/'">← <span id="nav-back-label">Back to home</span></button>
+  <button class="nav-cta" onclick="window.location.href='index.html#tools'">Browse Tools</button>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <ul class="nav-mobile-links">
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <button class="nav-mobile-cta" onclick="window.location.href='index.html#tools'">Browse Tools</button>
+</div>
+
+
+<main>
+<div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="breadcrumb">
+        <span href="/">Home</span>
+        <span class="breadcrumb-sep">/</span>
+        <span href="/#tools">Calculators</span>
+        <span class="breadcrumb-sep">/</span>
+        <span style="color:rgba(255,255,255,.75)">Loan Amortization Calculator</span>
+      </div>
+      <h1>Loan Amortization Calculator</h1>
+      <p class="tool-hero-sub">See exactly how every payment splits between principal and interest — month by month, year by year — for any loan.</p>
+      <div class="tool-hero-tags">
+        <span class="tool-hero-tag">🚗 Auto Loan</span>
+        <span class="tool-hero-tag">🏠 Mortgage</span>
+        <span class="tool-hero-tag">📚 Student Loan</span>
+        <span class="tool-hero-tag">💼 Personal Loan</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tool-layout">
+      <div class="tool-main">
+
+        <!-- INPUT CARD -->
+        <div class="calc-card">
+          <div class="calc-card-title"><div class="calc-card-icon">📊</div>Loan details</div>
+
+          <!-- Loan type tabs -->
+          <div class="loan-type-tabs" id="la-type-tabs">
+            <button class="loan-type-tab active" onclick="laSetType('personal',this)">Personal</button>
+            <button class="loan-type-tab" onclick="laSetType('auto',this)">Auto</button>
+            <button class="loan-type-tab" onclick="laSetType('student',this)">Student</button>
+            <button class="loan-type-tab" onclick="laSetType('mortgage',this)">Mortgage</button>
+            <button class="loan-type-tab" onclick="laSetType('business',this)">Business</button>
+          </div>
+
+          <div class="input-grid">
+            <div class="input-group">
+              <label>Loan amount</label>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="la-amount" value="25000" min="0" oninput="laCalc()"></div>
+              <div class="input-hint" id="la-amount-hint">Total principal borrowed</div>
+            </div>
+            <div class="input-group">
+              <label>Loan term</label>
+              <div class="input-wrap">
+                <select id="la-term" onchange="laCalc()" style="padding-right:32px">
+                  <option value="12">1 year (12 mo)</option>
+                  <option value="24">2 years (24 mo)</option>
+                  <option value="36" selected>3 years (36 mo)</option>
+                  <option value="48">4 years (48 mo)</option>
+                  <option value="60">5 years (60 mo)</option>
+                  <option value="72">6 years (72 mo)</option>
+                  <option value="84">7 years (84 mo)</option>
+                  <option value="120">10 years (120 mo)</option>
+                  <option value="180">15 years (180 mo)</option>
+                  <option value="240">20 years (240 mo)</option>
+                  <option value="360">30 years (360 mo)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rate slider -->
+          <div class="slider-row">
+            <label>Annual interest rate (APR) <span class="slider-val" id="la-rate-slider-val">7.50%</span></label>
+            <input type="range" id="la-rate-slider" min="0.5" max="36" step="0.1" value="7.5" style="--pct:19.7%" oninput="syncLaRateSlider(this.value)">
+            <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--gray-300);margin-top:4px"><span>0.5%</span><span>36%</span></div>
+          </div>
+          <div class="input-group" style="margin-bottom:20px">
+            <label>Or type exact rate</label>
+            <div class="input-wrap has-suffix"><input type="number" id="la-rate" value="7.5" step="0.01" min="0" max="100" oninput="syncLaSliderFromInput()"><span class="input-suffix">%</span></div>
+          </div>
+
+          <!-- Extra payment toggle -->
+          <div class="extra-toggle" onclick="laToggleExtra()">
+            <div>
+              <div class="extra-toggle-label">Add extra monthly payment</div>
+              <div class="extra-toggle-sub">See how paying more reduces total interest</div>
+            </div>
+            <div class="toggle-switch" id="la-extra-switch"><div class="toggle-knob"></div></div>
+          </div>
+          <div class="extra-input-row" id="la-extra-input-row">
+            <div class="input-group">
+              <label>Extra monthly payment</label>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="la-extra" value="100" min="0" oninput="laCalc()"></div>
+              <div class="input-hint">Added on top of your regular payment each month</div>
+            </div>
+          </div>
+
+          <!-- Start date -->
+          <div class="input-group" style="margin-bottom:24px">
+            <label>Loan start date</label>
+            <div class="input-wrap"><input type="month" id="la-start" oninput="laCalc()"></div>
+            <div class="input-hint">Used to show exact payoff date</div>
+          </div>
+
+          <button class="calc-btn" onclick="laCalc()">Calculate Amortization</button>
+        </div>
+
+        <!-- RESULTS PANEL -->
+        <div class="results-panel" id="la-results-panel">
+          <div class="results-strip">
+            <div class="results-strip-title">Loan summary</div>
+            <div class="metrics-row-4">
+              <div class="metric-box"><div class="metric-val" id="la-monthly">—</div><div class="metric-label">Monthly payment</div></div>
+              <div class="metric-box"><div class="metric-val red" id="la-total-interest">—</div><div class="metric-label">Total interest</div></div>
+              <div class="metric-box"><div class="metric-val" id="la-total-cost">—</div><div class="metric-label">Total cost</div></div>
+              <div class="metric-box"><div class="metric-val green" id="la-interest-pct">—</div><div class="metric-label">Interest %</div></div>
+            </div>
+            <div class="payoff-date-badge">
+              <span class="payoff-date-label">🎉 Loan paid off</span>
+              <span class="payoff-date-val" id="la-payoff-date">—</span>
+            </div>
+            <div class="savings-banner" id="la-savings-banner">
+              <div class="savings-banner-text">With extra payments, you'll save <strong id="la-savings-int">—</strong> in interest and pay off <strong id="la-savings-time">—</strong> sooner</div>
+              <div class="savings-banner-val" id="la-savings-total">—</div>
+            </div>
+            <div class="progress-wrap">
+              <div class="progress-label"><span>Principal</span><span>Interest</span></div>
+              <div class="progress-bar-bg"><div class="progress-bar-fill" id="la-progress-bar" style="width:0%"></div></div>
+            </div>
+          </div>
+
+          <!-- CHARTS -->
+          <div class="charts-card">
+            <div class="charts-tabs">
+              <button class="chart-tab active" onclick="laSwitchTab('breakdown')">Payment breakdown</button>
+              <button class="chart-tab" onclick="laSwitchTab('bar')">Year by year</button>
+              <button class="chart-tab" onclick="laSwitchTab('balance')">Balance over time</button>
+            </div>
+
+            <!-- Breakdown donut -->
+            <div class="chart-panel active" id="la-tab-breakdown">
+              <div class="donut-wrap">
+                <div class="donut-svg-wrap">
+                  <svg id="la-donut-svg" width="160" height="160" viewBox="0 0 160 160"></svg>
+                  <div class="donut-center">
+                    <div class="donut-center-val" id="la-donut-center">—</div>
+                    <div class="donut-center-label">total cost</div>
+                  </div>
+                </div>
+                <div class="donut-legend">
+                  <div class="legend-item">
+                    <div class="legend-dot" style="background:#0DBF7E"></div>
+                    <div><div class="legend-name">Principal</div><div class="legend-val" id="la-leg-principal">—</div><div class="legend-pct" id="la-leg-principal-pct"></div></div>
+                  </div>
+                  <div class="legend-item">
+                    <div class="legend-dot" style="background:#E84040"></div>
+                    <div><div class="legend-name">Total interest</div><div class="legend-val" id="la-leg-interest">—</div><div class="legend-pct" id="la-leg-interest-pct"></div></div>
+                  </div>
+                  <div class="legend-item" id="la-leg-extra-item" style="display:none">
+                    <div class="legend-dot" style="background:#F5A623"></div>
+                    <div><div class="legend-name">Interest saved (extra pmts)</div><div class="legend-val" id="la-leg-extra-saved" style="color:#09a06a">—</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bar chart -->
+            <div class="chart-panel" id="la-tab-bar">
+              <div class="bar-chart-wrap"><div class="bar-chart" id="la-bar-chart"></div></div>
+              <div class="bar-legend">
+                <div class="bar-leg-item"><div class="bar-leg-dot" style="background:#E84040"></div>Interest</div>
+                <div class="bar-leg-item"><div class="bar-leg-dot" style="background:#0DBF7E"></div>Principal</div>
+              </div>
+            </div>
+
+            <!-- Balance timeline -->
+            <div class="chart-panel" id="la-tab-balance">
+              <div class="timeline-wrap"><canvas id="la-balance-canvas"></canvas></div>
+              <div class="timeline-legend">
+                <div class="tl-leg-item"><div class="tl-leg-line" style="background:#1A6FE8"></div>Standard</div>
+                <div class="tl-leg-item" id="la-tl-leg-extra" style="display:none"><div class="tl-leg-line" style="background:#0DBF7E"></div>With extra payments</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Compare card -->
+          <div class="compare-card" id="la-compare-card">
+            <div class="compare-title">📊 Standard vs. Extra payments</div>
+            <table class="compare-table">
+              <thead><tr><th>Metric</th><th><span class="tag-standard">Standard</span></th><th><span class="tag-extra">+ Extra</span></th><th>You save</th></tr></thead>
+              <tbody>
+                <tr><td class="label-cell">Payoff time</td><td id="la-cmp-time-std">—</td><td id="la-cmp-time-ext">—</td><td id="la-cmp-time-save" style="color:var(--green-dark);font-weight:600">—</td></tr>
+                <tr><td class="label-cell">Total interest</td><td id="la-cmp-int-std">—</td><td id="la-cmp-int-ext">—</td><td id="la-cmp-int-save" style="color:var(--green-dark);font-weight:600">—</td></tr>
+                <tr class="highlight-row"><td class="label-cell">Total paid</td><td id="la-cmp-total-std">—</td><td id="la-cmp-total-ext">—</td><td id="la-cmp-total-save">—</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- AMORTIZATION TABLE -->
+        <div class="table-card" id="la-table-card">
+          <div class="table-card-header">
+            <div class="table-card-title">Full amortization schedule</div>
+            <div class="table-actions">
+              <div class="table-view-toggle">
+                <button class="tvt-btn active" id="la-view-monthly" onclick="laSwitchTableView('monthly')">Monthly</button>
+                <button class="tvt-btn" id="la-view-yearly" onclick="laSwitchTableView('yearly')">Yearly</button>
+              </div>
+              <button class="table-toggle-btn" id="la-table-toggle-btn" onclick="laToggleTable()">Show ↓</button>
+            </div>
+          </div>
+          <div class="table-scroll" id="la-table-scroll">
+            <table>
+              <thead><tr>
+                <th>Month</th><th>Payment</th>
+                <th class="col-principal">Principal</th>
+                <th class="col-interest">Interest</th>
+                <th class="col-balance">Balance</th>
+                <th class="col-principal">Equity</th>
+              </tr></thead>
+              <tbody id="la-amort-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SEO CONTENT -->
+        <div class="calc-card" style="background:var(--gray-50);border-color:var(--gray-100)">
+          <div class="calc-card-title" style="font-size:15px">What is loan amortization?</div>
+          <p style="font-size:14px;color:var(--gray-700);line-height:1.75;margin-bottom:14px">Loan amortization is the process of paying off a debt through regular, scheduled payments over time. Each payment covers two things: <strong>interest</strong> (the cost of borrowing) and <strong>principal</strong> (the actual debt reduction). Early in the loan, most of your payment goes to interest. Over time, the balance shifts — more goes to principal.</p>
+          <p style="font-size:14px;color:var(--gray-700);line-height:1.75;margin-bottom:14px">This is why the <strong>amortization schedule</strong> matters: it shows you exactly how each payment is divided, month by month, so you can see your loan's true cost and find the best payoff strategy.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px">
+            <div class="tip-item"><div class="tip-num">1</div><div class="tip-text"><strong>Extra payments hit principal directly</strong> — even small additions early on can save thousands in interest.</div></div>
+            <div class="tip-item"><div class="tip-num">2</div><div class="tip-text"><strong>Shorter terms = lower total cost</strong> — a 3-year loan costs far less in interest than a 5-year loan at the same rate.</div></div>
+            <div class="tip-item"><div class="tip-num">3</div><div class="tip-text"><strong>Rate matters most early</strong> — a 1% rate difference on a 5-year, $30K loan changes total interest by ~$800.</div></div>
+            <div class="tip-item"><div class="tip-num">4</div><div class="tip-text"><strong>Check your payoff date</strong> — knowing the exact date makes it feel real and helps you stay motivated.</div></div>
+          </div>
+        </div>
+
+        <!-- RELATED -->
+        <div class="calc-card">
+          <div class="calc-card-title">Related calculators</div>
+          <div class="related-grid">
+            <div class="related-card" href="/debt-payoff-calculator/"><div class="related-icon">💳</div><div class="related-name">Debt Payoff Calculator</div><div class="related-desc">Pay off credit cards & debt faster</div></div>
+            <div class="related-card" href="/mortgage-calculator/"><div class="related-icon">🏠</div><div class="related-name">Mortgage Calculator</div><div class="related-desc">Home loan payments & amortization</div></div>
+            <div class="related-card" href="/interest-rate-comparator/"><div class="related-icon">📉</div><div class="related-name">Interest Rate Comparator</div><div class="related-desc">Which loan rate saves you more?</div></div>
+            <div class="related-card"><div class="related-icon">🛡️</div><div class="related-name">Emergency Fund</div><div class="related-desc">Build your financial safety net</div></div>
+          </div>
+        </div>
+
+        <div class="disclaimer"><p><strong>Disclaimer:</strong> This loan amortization calculator is for educational and informational purposes only. Results assume fixed interest rates and equal monthly payments. Actual loan terms, fees, and costs may vary by lender. This is not financial or legal advice. Always review your loan agreement carefully before signing.</p></div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="tool-sidebar">
+
+        <div class="countdown-widget" id="la-countdown-widget" style="display:none">
+          <div class="countdown-label">Monthly payment</div>
+          <div class="countdown-val" id="la-cw-payment" style="font-size:28px">—</div>
+          <div class="countdown-sub">fixed monthly</div>
+          <div class="countdown-date" id="la-cw-payoff">Payoff: —</div>
+        </div>
+
+        <div class="sidebar-widget" id="la-interest-breakdown-widget" style="display:none">
+          <div class="sidebar-widget-title">💡 Your loan breakdown</div>
+          <div class="stat-row"><div class="stat-row-label">Principal</div><div class="stat-row-val" id="la-sw-principal">—</div></div>
+          <div class="stat-row"><div class="stat-row-label">Total interest</div><div class="stat-row-val" style="color:#c0392b" id="la-sw-interest">—</div></div>
+          <div class="stat-row"><div class="stat-row-label">Interest as % of principal</div><div class="stat-row-val" id="la-sw-pct">—</div></div>
+          <div class="stat-row"><div class="stat-row-label">Effective monthly cost</div><div class="stat-row-val" id="la-sw-monthly">—</div></div>
+        </div>
+
+        <div class="motive-widget" id="la-motive-widget" style="display:none">
+          <div class="motive-icon">📊</div>
+          <div class="motive-text" id="la-motive-text">Enter your loan details to see your personalized amortization insight.</div>
+        </div>
+
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">📈 Typical loan rates (2025)</div>
+          <div class="stat-row"><div class="stat-row-label">Personal loan (good credit)</div><div class="stat-row-val">8–12%</div></div>
+          <div class="stat-row"><div class="stat-row-label">Auto loan (new car)</div><div class="stat-row-val">6–8%</div></div>
+          <div class="stat-row"><div class="stat-row-label">Student loan (federal)</div><div class="stat-row-val">5–7%</div></div>
+          <div class="stat-row"><div class="stat-row-label">30-yr mortgage</div><div class="stat-row-val">~6.8%</div></div>
+        </div>
+
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">⚡ Quick facts</div>
+          <div class="stat-row"><div class="stat-row-label">$100/mo extra on a $25K, 5yr, 8% loan saves</div><div class="stat-row-val">~$780</div></div>
+          <div class="stat-row"><div class="stat-row-label">3yr vs 5yr: $30K at 7% saves</div><div class="stat-row-val">~$2.5K</div></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a href="/debt-payoff-calculator/">Debt Payoff</a></li><li><a href="/mortgage-calculator/">Mortgage</a></li><li><a href="/loan-amortization-calculator/">Loan Amortization</a></li><li><a href="/interest-rate-comparator/">Interest Compare</a></li><li><a>Debt Avalanche</a></li><li><a>Emergency Fund</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-use/">Terms of Use</a></li><li><a href="/disclaimer/">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════
+     PAGE: INTEREST RATE COMPARATOR
+═══════════════════════════════ -->
+</main>
+
+<script src="/main.js"></script>
+</body>
+</html>
