@@ -132,9 +132,25 @@ const PAGE_META = {
    PAGE ROUTING
 ═══════════════════════════════════════ */
 function showPage(id) {
-  // Multi-page version: navigate to the corresponding HTML file
-  const filename = id === 'home' ? 'index.html' : id + '.html';
-  window.location.href = filename;
+  const urlMap = {
+    'home': '/',
+    'debt-payoff': '/debt-payoff-calculator/',
+    'mortgage': '/mortgage-calculator/',
+    'loan-amortization': '/loan-amortization-calculator/',
+    'interest-rate-comparator': '/interest-rate-comparator/',
+    'debt-avalanche': '/debt-avalanche-vs-snowball/',
+    'emergency-fund': '/emergency-fund-calculator/',
+    'about': '/about/',
+    'contact': '/contact/',
+    'privacy': '/privacy-policy/',
+    'terms': '/terms-of-use/',
+    'disclaimer': '/disclaimer/',
+    'blog': '/blog/',
+    'blog-debt-avalanche-vs-snowball': '/blog/debt-avalanche-vs-snowball/',
+    'blog-emergency-fund': '/blog/emergency-fund/',
+    'blog-extra-mortgage-payments': '/blog/extra-mortgage-payments/',
+  };
+  window.location.href = urlMap[id] || '/';
 }
 function scrollToId(id) {
   setTimeout(() => { const el = document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth'}); }, 60);
@@ -1464,21 +1480,20 @@ document.getElementById('schema-page').textContent = JSON.stringify({
 ═══════════════════════════════════════ */
 (function() {
   const path = window.location.pathname;
-  const filename = path.split('/').pop().replace('.html', '') || 'index';
   const pageMap = {
-    'debt-payoff': () => dpCalc(),
-    'mortgage': () => mgCalc(),
-    'loan-amortization': () => laCalc(),
-    'interest-rate-comparator': () => ircCalc(),
-    'debt-avalanche': () => daCalc(),
-    'emergency-fund': () => { efResetState(); efCalc(); }
+    '/debt-payoff-calculator/': () => dpCalc(),
+    '/mortgage-calculator/': () => mgCalc(),
+    '/loan-amortization-calculator/': () => laCalc(),
+    '/interest-rate-comparator/': () => ircCalc(),
+    '/debt-avalanche-vs-snowball/': () => daCalc(),
+    '/emergency-fund-calculator/': () => { efResetState(); efCalc(); }
   };
-  if (pageMap[filename]) {
-    try { pageMap[filename](); } catch(e) {}
+  if (pageMap[path]) {
+    try { pageMap[path](); } catch(e) {}
   }
-  // Show/hide nav-back button based on current page
+  // Show/hide nav-back button: hide only on home
   const navBack = document.getElementById('nav-back');
   if (navBack) {
-    navBack.classList.toggle('show', filename !== 'index' && filename !== '');
+    navBack.classList.toggle('show', path !== '/' && path !== '/index.html');
   }
 })();
