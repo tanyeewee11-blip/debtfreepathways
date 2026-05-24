@@ -56,6 +56,54 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the debt payoff calculator work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enter your debt balance, interest rate (APR), and monthly payment. The calculator uses standard amortization math to show exactly how many months until you are debt-free and how much total interest you will pay. Change the monthly payment to see how paying more accelerates your payoff date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much extra should I pay each month?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Even a small extra amount makes a significant difference. On a $10,000 balance at 20% APR, paying $50 extra per month saves over $3,000 in interest and cuts nearly 2 years off your payoff time. Use the calculator to find the extra payment that fits your budget."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I pay off debt or save money first?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If your debt carries a high interest rate (above 7–8%), paying it off first is usually the better financial move — it is a guaranteed return equal to the interest rate. Build a small emergency buffer of $1,000 first, then focus aggressively on high-rate debt before investing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the fastest way to pay off debt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The fastest methods are the debt avalanche (pay highest-rate debt first — saves the most money) and the debt snowball (pay smallest balance first — builds motivation fastest). Both require paying more than the minimum each month. Use our Debt Avalanche vs Snowball Calculator to compare both strategies with your numbers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does paying off debt early hurt my credit score?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Paying off installment loans (personal loans, car loans) early can cause a small temporary dip because it closes an active account. However, the improvement to your debt-to-income ratio and reduced utilisation generally outweigh this. Paying off credit card balances never hurts your score."
+          }
+        }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -311,6 +359,18 @@
 <!-- ═══════════════════════════════
      PAGE: MORTGAGE CALCULATOR
 ═══════════════════════════════ -->
+
+      <!-- FAQ Section -->
+      <div class="calc-card" style="margin-top:32px">
+        <div class="calc-card-title"><div class="calc-card-icon">❓</div>Debt payoff FAQs</div>
+        <div class="faq-list" style="max-width:100%">
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How does the debt payoff calculator work?<span class="faq-icon">+</span></button><div class="faq-a">Enter your debt balance, interest rate (APR), and monthly payment. The calculator uses standard amortization math to show exactly how many months until you are debt-free and how much total interest you will pay. Change the monthly payment to see how paying more accelerates your payoff date.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much extra should I pay each month?<span class="faq-icon">+</span></button><div class="faq-a">Even a small extra amount makes a significant difference. On a $10,000 balance at 20% APR, paying $50 extra per month saves over $3,000 in interest and cuts nearly 2 years off your payoff time. Use the calculator to find the extra payment that fits your budget.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Should I pay off debt or save money first?<span class="faq-icon">+</span></button><div class="faq-a">If your debt carries a high interest rate (above 7–8%), paying it off first is usually the better financial move — it is a guaranteed return equal to the interest rate. Build a small emergency buffer of $1,000 first, then focus aggressively on high-rate debt before investing.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the fastest way to pay off debt?<span class="faq-icon">+</span></button><div class="faq-a">The fastest methods are the debt avalanche (pay highest-rate debt first — saves the most money) and the debt snowball (pay smallest balance first — builds motivation fastest). Both require paying more than the minimum each month. Use our Debt Avalanche vs Snowball Calculator to compare both strategies with your numbers.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Does paying off debt early hurt my credit score?<span class="faq-icon">+</span></button><div class="faq-a">Paying off installment loans (personal loans, car loans) early can cause a small temporary dip because it closes an active account. However, the improvement to your debt-to-income ratio and reduced utilisation generally outweigh this. Paying off credit card balances never hurts your score.</div></div>
+        </div>
+      </div>
 </main>
 
 <script src="/main.js"></script>

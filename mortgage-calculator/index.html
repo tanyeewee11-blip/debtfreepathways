@@ -56,6 +56,54 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does the mortgage calculator include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This calculator covers your full monthly payment: principal and interest based on your loan amount and rate, estimated property taxes, homeowners insurance, and PMI if your down payment is below 20%. It also generates a complete amortization schedule showing how each payment is split over the life of the loan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is PMI and when can I remove it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PMI (Private Mortgage Insurance) is required when your down payment is less than 20% of the home's purchase price. It typically costs 0.5–1.5% of the loan amount annually. You can request PMI removal once your loan balance drops to 80% of the original home value, or it is automatically cancelled at 78% under federal law."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much house can I afford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A common guideline is to keep your total housing payment (mortgage, taxes, insurance, HOA) below 28% of your gross monthly income. On a $7,000/month gross income, that is $1,960/month. Use this calculator to find the loan amount that keeps you within that range at current interest rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does my down payment affect my mortgage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A larger down payment reduces your loan amount, which lowers your monthly payment and total interest paid. It also eliminates PMI once you reach 20% down. However, putting more than 20% down has diminishing returns — the extra capital may generate better returns invested elsewhere."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between interest rate and APR on a mortgage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The interest rate determines your monthly payment. The APR (Annual Percentage Rate) includes the interest rate plus lender fees and closing costs, giving you a more complete picture of the loan's true cost. Always compare APRs — not just rates — when evaluating mortgage offers from different lenders."
+          }
+        }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -425,6 +473,18 @@
 <!-- ═══════════════════════════════
      PAGE: LOAN AMORTIZATION CALCULATOR
 ═══════════════════════════════ -->
+
+      <!-- FAQ Section -->
+      <div class="calc-card" style="margin-top:32px">
+        <div class="calc-card-title"><div class="calc-card-icon">❓</div>Mortgage calculator FAQs</div>
+        <div class="faq-list" style="max-width:100%">
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What does the mortgage calculator include?<span class="faq-icon">+</span></button><div class="faq-a">This calculator covers your full monthly payment: principal and interest based on your loan amount and rate, estimated property taxes, homeowners insurance, and PMI if your down payment is below 20%. It also generates a complete amortization schedule showing how each payment is split over the life of the loan.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is PMI and when can I remove it?<span class="faq-icon">+</span></button><div class="faq-a">PMI (Private Mortgage Insurance) is required when your down payment is less than 20% of the home's purchase price. It typically costs 0.5–1.5% of the loan amount annually. You can request PMI removal once your loan balance drops to 80% of the original home value, or it is automatically cancelled at 78% under federal law.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much house can I afford?<span class="faq-icon">+</span></button><div class="faq-a">A common guideline is to keep your total housing payment (mortgage, taxes, insurance, HOA) below 28% of your gross monthly income. On a $7,000/month gross income, that is $1,960/month. Use this calculator to find the loan amount that keeps you within that range at current interest rates.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How does my down payment affect my mortgage?<span class="faq-icon">+</span></button><div class="faq-a">A larger down payment reduces your loan amount, which lowers your monthly payment and total interest paid. It also eliminates PMI once you reach 20% down. However, putting more than 20% down has diminishing returns — the extra capital may generate better returns invested elsewhere.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the difference between interest rate and APR on a mortgage?<span class="faq-icon">+</span></button><div class="faq-a">The interest rate determines your monthly payment. The APR (Annual Percentage Rate) includes the interest rate plus lender fees and closing costs, giving you a more complete picture of the loan's true cost. Always compare APRs — not just rates — when evaluating mortgage offers from different lenders.</div></div>
+        </div>
+      </div>
 </main>
 
 <script src="/main.js"></script>

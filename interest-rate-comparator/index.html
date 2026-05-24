@@ -56,6 +56,54 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the interest rate comparator used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use it to compare two loan options side by side — for example, a personal loan vs a balance transfer card, or two mortgage offers from different lenders. Enter the rate, loan amount, and term for each option to see the monthly payment difference and total interest saved over the life of each loan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I compare interest rate or APR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Always compare APR (Annual Percentage Rate) when evaluating loans. APR includes the interest rate plus lender fees and origination costs, giving you a true apples-to-apples comparison. A loan with a lower rate but high fees may actually cost more than one with a slightly higher rate and minimal fees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a 1% rate difference actually cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On a $300,000 30-year mortgage, a 1% rate difference changes your monthly payment by about $170 and your total interest by roughly $61,000 over the life of the loan. On a $20,000 personal loan over 5 years, a 1% difference costs about $550 in total interest. Small rate differences add up significantly on large or long loans."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I refinance to get a lower rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Refinancing makes financial sense when the monthly savings exceed the closing costs within your planned ownership period. Calculate your break-even point: divide total closing costs by your monthly savings. If you plan to stay longer than that break-even period, refinancing is worth it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a fixed or variable rate better?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fixed rates give you payment certainty for the full loan term — ideal for long-term loans like mortgages. Variable rates start lower but can rise over time, making them riskier on longer loans. For short-term loans you plan to pay off quickly, a variable rate may save money. For 15–30 year mortgages, most borrowers prefer the stability of a fixed rate."
+          }
+        }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -363,6 +411,18 @@
 <!-- ═══════════════════════════════
      PAGE: DEBT AVALANCHE VS SNOWBALL
 ═══════════════════════════════ -->
+
+      <!-- FAQ Section -->
+      <div class="calc-card" style="margin-top:32px">
+        <div class="calc-card-title"><div class="calc-card-icon">❓</div>Interest rate comparator FAQs</div>
+        <div class="faq-list" style="max-width:100%">
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the interest rate comparator used for?<span class="faq-icon">+</span></button><div class="faq-a">Use it to compare two loan options side by side — for example, a personal loan vs a balance transfer card, or two mortgage offers from different lenders. Enter the rate, loan amount, and term for each option to see the monthly payment difference and total interest saved over the life of each loan.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Should I compare interest rate or APR?<span class="faq-icon">+</span></button><div class="faq-a">Always compare APR (Annual Percentage Rate) when evaluating loans. APR includes the interest rate plus lender fees and origination costs, giving you a true apples-to-apples comparison. A loan with a lower rate but high fees may actually cost more than one with a slightly higher rate and minimal fees.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does a 1% rate difference actually cost?<span class="faq-icon">+</span></button><div class="faq-a">On a $300,000 30-year mortgage, a 1% rate difference changes your monthly payment by about $170 and your total interest by roughly $61,000 over the life of the loan. On a $20,000 personal loan over 5 years, a 1% difference costs about $550 in total interest. Small rate differences add up significantly on large or long loans.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">When should I refinance to get a lower rate?<span class="faq-icon">+</span></button><div class="faq-a">Refinancing makes financial sense when the monthly savings exceed the closing costs within your planned ownership period. Calculate your break-even point: divide total closing costs by your monthly savings. If you plan to stay longer than that break-even period, refinancing is worth it.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is a fixed or variable rate better?<span class="faq-icon">+</span></button><div class="faq-a">Fixed rates give you payment certainty for the full loan term — ideal for long-term loans like mortgages. Variable rates start lower but can rise over time, making them riskier on longer loans. For short-term loans you plan to pay off quickly, a variable rate may save money. For 15–30 year mortgages, most borrowers prefer the stability of a fixed rate.</div></div>
+        </div>
+      </div>
 </main>
 
 <script src="/main.js"></script>

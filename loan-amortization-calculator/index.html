@@ -56,6 +56,54 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a loan amortization schedule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An amortization schedule is a complete table showing every payment on your loan, broken down into how much goes to interest and how much reduces your principal balance. It also shows your remaining balance after each payment, from the first month to the final payoff."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do early payments go mostly to interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each month, interest is calculated on your remaining balance. When the balance is highest (early in the loan), the interest charge is highest — leaving less of your fixed payment for principal. As the balance decreases, the interest portion shrinks and more goes to principal. This is why extra payments early in a loan save the most money."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do extra payments affect my amortization schedule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any extra payment applied to principal directly reduces the balance on which future interest is calculated. This shortens your loan term and reduces total interest paid. Even one extra payment per year can save years off a 30-year mortgage. Use this calculator to model different extra payment scenarios."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of loans use amortization schedules?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most fixed-rate loans use standard amortization: mortgages, auto loans, personal loans, and student loans. Credit cards do not use amortization schedules because the balance and minimum payment change each month. Adjustable-rate mortgages follow an amortization schedule during the fixed-rate period."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I pay off a loan early without penalty?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most modern personal loans and mortgages do not have prepayment penalties. However, some older loans or certain lender types may charge a fee for paying off early. Always check your loan agreement or call your servicer before making a large lump-sum payment."
+          }
+        }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -386,6 +434,18 @@
 <!-- ═══════════════════════════════
      PAGE: INTEREST RATE COMPARATOR
 ═══════════════════════════════ -->
+
+      <!-- FAQ Section -->
+      <div class="calc-card" style="margin-top:32px">
+        <div class="calc-card-title"><div class="calc-card-icon">❓</div>Loan amortization FAQs</div>
+        <div class="faq-list" style="max-width:100%">
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is a loan amortization schedule?<span class="faq-icon">+</span></button><div class="faq-a">An amortization schedule is a complete table showing every payment on your loan, broken down into how much goes to interest and how much reduces your principal balance. It also shows your remaining balance after each payment, from the first month to the final payoff.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Why do early payments go mostly to interest?<span class="faq-icon">+</span></button><div class="faq-a">Each month, interest is calculated on your remaining balance. When the balance is highest (early in the loan), the interest charge is highest — leaving less of your fixed payment for principal. As the balance decreases, the interest portion shrinks and more goes to principal. This is why extra payments early in a loan save the most money.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do extra payments affect my amortization schedule?<span class="faq-icon">+</span></button><div class="faq-a">Any extra payment applied to principal directly reduces the balance on which future interest is calculated. This shortens your loan term and reduces total interest paid. Even one extra payment per year can save years off a 30-year mortgage. Use this calculator to model different extra payment scenarios.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What types of loans use amortization schedules?<span class="faq-icon">+</span></button><div class="faq-a">Most fixed-rate loans use standard amortization: mortgages, auto loans, personal loans, and student loans. Credit cards do not use amortization schedules because the balance and minimum payment change each month. Adjustable-rate mortgages follow an amortization schedule during the fixed-rate period.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can I pay off a loan early without penalty?<span class="faq-icon">+</span></button><div class="faq-a">Most modern personal loans and mortgages do not have prepayment penalties. However, some older loans or certain lender types may charge a fee for paying off early. Always check your loan agreement or call your servicer before making a large lump-sum payment.</div></div>
+        </div>
+      </div>
 </main>
 
 <script src="/main.js"></script>
