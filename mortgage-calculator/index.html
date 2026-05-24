@@ -104,6 +104,30 @@
   ]
 }
 </script>
+
+<style>
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  padding: 9px 18px;
+  border: 1px solid var(--gray-200, #e5e7eb);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--gray-600, #4b5563);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+.share-btn:hover {
+  border-color: #0DBF7E;
+  color: #0DBF7E;
+  background: #f0fdf8;
+}
+</style>
 </head>
 <body>
 
@@ -258,6 +282,7 @@
 
           <div class="results-strip">
             <div class="results-strip-title">Your mortgage summary</div>
+            <button class="share-btn" id="mg-share-btn" onclick="mgShareResult()">📋 Copy result</button>
             <div class="metrics-row-4">
               <div class="metric-box">
                 <div class="metric-val green" id="mg-monthly-pi">—</div>

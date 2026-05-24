@@ -285,6 +285,13 @@ function dpCalc(){
   const rate=+document.getElementById('dp-rate').value||0;
   const payment=+document.getElementById('dp-payment').value||0;
   const extra=dpExtraOn?(+document.getElementById('dp-extra').value||0):0;
+
+  // Input validation hints
+  const rateHint = document.getElementById('dp-rate-hint');
+  const payHint = document.getElementById('dp-payment-hint');
+  if (rateHint) rateHint.style.display = rate > 50 ? 'block' : 'none';
+  if (payHint) payHint.style.display = (balance > 0 && payment > 0 && payment <= balance * rate / 1200) ? 'block' : 'none';
+
   dpSched=calcAmort(balance,rate,payment);
   dpSchedExtra=extra>0?calcAmort(balance,rate,payment+extra):null;
   const panel=document.getElementById('results-panel');
@@ -1478,7 +1485,7 @@ document.getElementById('schema-page').textContent = JSON.stringify({
    MULTI-PAGE AUTO-INIT
    Detect current page from filename and run the right calculator
 ═══════════════════════════════════════ */
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
   const path = window.location.pathname;
   const pageMap = {
     '/debt-payoff-calculator/': () => dpCalc(),
@@ -1491,9 +1498,346 @@ document.getElementById('schema-page').textContent = JSON.stringify({
   if (pageMap[path]) {
     try { pageMap[path](); } catch(e) {}
   }
-  // Show/hide nav-back button: hide only on home
   const navBack = document.getElementById('nav-back');
   if (navBack) {
     navBack.classList.toggle('show', path !== '/' && path !== '/index.html');
   }
+});
+
+
+/* ═══════════════════════════════════════
+   READING PROGRESS BAR
+═══════════════════════════════════════ */
+(function() {
+  const path = window.location.pathname;
+  const isBlogPost = path.startsWith('/blog/') && path !== '/blog/';
+  if (!isBlogPost) return;
+
+  const bar = document.createElement('div');
+  bar.id = 'reading-progress';
+  bar.style.cssText = [
+    'position:fixed',
+    'top:0',
+    'left:0',
+    'width:0%',
+    'height:3px',
+    'background:#0DBF7E',
+    'z-index:9999',
+    'transition:width 0.1s linear',
+    'border-radius:0 2px 2px 0'
+  ].join(';');
+  document.body.appendChild(bar);
+
+  function updateProgress() {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+    bar.style.width = pct + '%';
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+})();
+
+
+/* ═══════════════════════════════════════
+   EMPTY STATE HINTS
+═══════════════════════════════════════ */
+function showEmptyHint(panelId, message) {
+  const panel = document.getElementById(panelId);
+  if (!panel) return;
+  let hint = panel.querySelector('.results-empty-hint');
+  if (!hint) {
+    hint = document.createElement('div');
+    hint.className = 'results-empty-hint';
+    hint.innerHTML = '<div class="hint-arrow">↑</div><div>' + message + '</div>';
+    panel.insertBefore(hint, panel.firstChild);
+  }
+  hint.style.display = 'flex';
+}
+function hideEmptyHint(panelId) {
+  const panel = document.getElementById(panelId);
+  if (!panel) return;
+  const hint = panel.querySelector('.results-empty-hint');
+  if (hint) hint.style.display = 'none';
+}
+
+/* ═══════════════════════════════════════
+   SHARE / COPY RESULT
+═══════════════════════════════════════ */
+function copyResult(text, btnId) {
+  navigator.clipboard.writeText(text).then(function() {
+    const btn = document.getElementById(btnId);
+    if (!btn) return;
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✅ Copied!';
+    btn.style.background = '#0DBF7E';
+    btn.style.color = '#fff';
+    btn.style.borderColor = '#0DBF7E';
+    setTimeout(function() {
+      btn.innerHTML = orig;
+      btn.style.background = '';
+      btn.style.color = '';
+      btn.style.borderColor = '';
+    }, 2000);
+  }).catch(function() {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    const btn = document.getElementById(btnId);
+    if (btn) {
+      const orig = btn.innerHTML;
+      btn.innerHTML = '✅ Copied!';
+      setTimeout(function() { btn.innerHTML = orig; }, 2000);
+    }
+  });
+}
+
+function dpShareResult() {
+  const months = document.getElementById('res-months').textContent.trim();
+  const interest = document.getElementById('res-interest').textContent.trim();
+  const date = document.getElementById('res-date').textContent.trim();
+  const savings = document.getElementById('savings-val').textContent.trim();
+  let text = 'My Debt Payoff Plan (via DebtFreePathways.com)\n';
+  text += '━━━━━━━━━━━━━━━━━━━━━━━━\n';
+  text += '📅 Debt-free in: ' + months + ' months (' + date + ')\n';
+  text += '💸 Total interest: ' + interest + '\n';
+  if (savings && savings !== '—') text += '💚 Interest saved with extra payments: ' + savings + '\n';
+  text += '\nCalculate yours free at debtfreepathways.com/debt-payoff-calculator/';
+  copyResult(text, 'dp-share-btn');
+}
+
+function mgShareResult() {
+  const monthly = document.getElementById('mg-monthly-total').textContent.trim();
+  const pi = document.getElementById('mg-monthly-pi').textContent.trim();
+  const interest = document.getElementById('mg-total-interest').textContent.trim();
+  const total = document.getElementById('mg-total-cost').textContent.trim();
+  let text = 'My Mortgage Estimate (via DebtFreePathways.com)\n';
+  text += '━━━━━━━━━━━━━━━━━━━━━━━━\n';
+  text += '🏠 Monthly payment (all-in): ' + monthly + '\n';
+  text += '   Principal & interest: ' + pi + '\n';
+  text += '💸 Total interest over loan: ' + interest + '\n';
+  text += '💰 Total cost: ' + total + '\n';
+  text += '\nCalculate yours free at debtfreepathways.com/mortgage-calculator/';
+  copyResult(text, 'mg-share-btn');
+}
+
+/* ═══════════════════════════════════════
+   BLOG TABLE OF CONTENTS
+═══════════════════════════════════════ */
+(function() {
+  const path = window.location.pathname;
+  const isBlogPost = path.startsWith('/blog/') && path !== '/blog/';
+  if (!isBlogPost) return;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const headings = document.querySelectorAll('.calc-main h2');
+    if (headings.length < 3) return;
+
+    // Add IDs to headings for anchor links
+    headings.forEach(function(h, i) {
+      const id = 'section-' + i;
+      h.id = id;
+    });
+
+    // Build TOC
+    const toc = document.createElement('div');
+    toc.id = 'toc';
+    toc.style.cssText = [
+      'background:var(--gray-50,#f9fafb)',
+      'border:1px solid var(--gray-100,#f0f0f0)',
+      'border-radius:12px',
+      'padding:20px 24px',
+      'margin:24px 0 32px',
+      'font-size:0.875rem'
+    ].join(';');
+
+    const tocTitle = document.createElement('div');
+    tocTitle.textContent = 'In this article';
+    tocTitle.style.cssText = 'font-weight:600;margin-bottom:12px;color:var(--gray-700,#374151);font-size:0.9rem';
+    toc.appendChild(tocTitle);
+
+    const ul = document.createElement('ul');
+    ul.style.cssText = 'list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px';
+
+    headings.forEach(function(h, i) {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = '#section-' + i;
+      a.textContent = h.textContent;
+      a.style.cssText = [
+        'color:var(--gray-600,#4b5563)',
+        'text-decoration:none',
+        'display:flex',
+        'align-items:center',
+        'gap:8px',
+        'transition:color 0.15s',
+        'line-height:1.4'
+      ].join(';');
+      a.innerHTML = '<span style="color:#0DBF7E;font-size:0.75rem">▸</span>' + h.textContent;
+      a.addEventListener('mouseover', function() { a.style.color = '#0DBF7E'; });
+      a.addEventListener('mouseout', function() { a.style.color = 'var(--gray-600,#4b5563)'; });
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.getElementById('section-' + i);
+        if (target) {
+          const y = target.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      });
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+
+    toc.appendChild(ul);
+
+    // Insert TOC after the intro paragraph (after h1 + first p)
+    const main = document.querySelector('.calc-main');
+    if (!main) return;
+    const h1 = main.querySelector('h1');
+    if (!h1) return;
+
+    // Find the first h2 and insert before it
+    const firstH2 = main.querySelector('h2');
+    if (firstH2) {
+      main.insertBefore(toc, firstH2);
+    }
+
+    // Highlight active section on scroll
+    const links = toc.querySelectorAll('a');
+    window.addEventListener('scroll', function() {
+      let current = 0;
+      headings.forEach(function(h, i) {
+        if (window.scrollY >= h.offsetTop - 120) current = i;
+      });
+      links.forEach(function(a, i) {
+        const arrow = a.querySelector('span');
+        if (i === current) {
+          a.style.color = '#0DBF7E';
+          a.style.fontWeight = '500';
+          if (arrow) arrow.style.transform = 'scale(1.3)';
+        } else {
+          a.style.color = 'var(--gray-600,#4b5563)';
+          a.style.fontWeight = '400';
+          if (arrow) arrow.style.transform = 'scale(1)';
+        }
+      });
+    }, { passive: true });
+  });
+})();
+
+/* ═══════════════════════════════════════
+   SMART NEXT STEP RECOMMENDATIONS
+═══════════════════════════════════════ */
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    const path = window.location.pathname;
+
+    const nextSteps = {
+      '/debt-payoff-calculator/': {
+        title: 'Next: find the best payoff strategy',
+        desc: 'Compare avalanche vs snowball to see which saves you more interest.',
+        cta: 'Compare strategies →',
+        href: '/debt-avalanche-vs-snowball/',
+        icon: '❄️'
+      },
+      '/debt-avalanche-vs-snowball/': {
+        title: 'Next: track your full payoff plan',
+        desc: 'See your exact debt-free date and total interest with the Debt Payoff Calculator.',
+        cta: 'Calculate payoff →',
+        href: '/debt-payoff-calculator/',
+        icon: '💳'
+      },
+      '/mortgage-calculator/': {
+        title: 'Next: see the full payment breakdown',
+        desc: 'View a month-by-month amortization schedule for your mortgage.',
+        cta: 'See amortization →',
+        href: '/loan-amortization-calculator/',
+        icon: '📊'
+      },
+      '/loan-amortization-calculator/': {
+        title: 'Next: compare two loan offers',
+        desc: 'See which loan saves you more money over time with the Interest Rate Comparator.',
+        cta: 'Compare loans →',
+        href: '/interest-rate-comparator/',
+        icon: '📉'
+      },
+      '/interest-rate-comparator/': {
+        title: 'Next: calculate your full mortgage payment',
+        desc: 'See your complete monthly cost including taxes, insurance, and PMI.',
+        cta: 'Calculate mortgage →',
+        href: '/mortgage-calculator/',
+        icon: '🏠'
+      },
+      '/emergency-fund-calculator/': {
+        title: 'Next: build a debt payoff plan',
+        desc: 'Once your emergency fund is set, tackle your debt with a clear payoff strategy.',
+        cta: 'Plan your payoff →',
+        href: '/debt-payoff-calculator/',
+        icon: '💳'
+      }
+    };
+
+    const step = nextSteps[path];
+    if (!step) return;
+
+    const card = document.createElement('div');
+    card.style.cssText = [
+      'margin:32px 0 0',
+      'padding:20px 24px',
+      'background:linear-gradient(135deg,#f0fdf8 0%,#e6f9f2 100%)',
+      'border:1px solid #9FE1CB',
+      'border-radius:12px',
+      'display:flex',
+      'align-items:center',
+      'justify-content:space-between',
+      'gap:16px',
+      'flex-wrap:wrap'
+    ].join(';');
+
+    card.innerHTML = '<div style="display:flex;align-items:center;gap:12px">' +
+      '<span style="font-size:1.8rem">' + step.icon + '</span>' +
+      '<div>' +
+        '<div style="font-weight:600;font-size:0.9rem;color:#085041;margin-bottom:3px">' + step.title + '</div>' +
+        '<div style="font-size:0.85rem;color:#0F6E56">' + step.desc + '</div>' +
+      '</div>' +
+    '</div>' +
+    '<a href="' + step.href + '" style="' + [
+      'display:inline-block',
+      'background:#0DBF7E',
+      'color:#fff',
+      'border-radius:8px',
+      'padding:10px 20px',
+      'font-size:0.875rem',
+      'font-weight:500',
+      'text-decoration:none',
+      'white-space:nowrap',
+      'transition:background 0.15s'
+    ].join(';') + '">' + step.cta + '</a>';
+
+    card.querySelector('a').addEventListener('mouseover', function() {
+      this.style.background = '#0aad6e';
+    });
+    card.querySelector('a').addEventListener('mouseout', function() {
+      this.style.background = '#0DBF7E';
+    });
+
+    // Insert before FAQ section or before footer
+    const faqSection = document.querySelector('.calc-card');
+    const footer = document.querySelector('footer');
+    const main = document.querySelector('.calc-main, .calc-layout');
+
+    if (faqSection) {
+      faqSection.parentNode.insertBefore(card, faqSection);
+    } else if (footer && footer.parentNode) {
+      footer.parentNode.insertBefore(card, footer);
+    } else if (main) {
+      main.appendChild(card);
+    }
+  });
 })();
