@@ -1009,26 +1009,40 @@ function ircCalc() {
 
 function ircDrawBarChart(aLabel, bLabel, pmtA, pmtB, intA, intB, principal) {
   const el = document.getElementById('irc-bar-chart');
+  if (!el) return;
   const maxPmt = Math.max(pmtA, pmtB);
   const maxInt = Math.max(intA, intB);
   const maxTotal = Math.max(principal + intA, principal + intB);
-  const BAR_MAX = 160;
-  const bar = (val, max, color) =>
-    `<div class="irc-bar-row"><div class="irc-bar-row-label" style="font-size:10px;color:var(--gray-400)">${''}</div><div class="irc-bar-fill" style="background:${color};width:${Math.round((val/max)*BAR_MAX)}px"></div><div class="irc-bar-val">${fmt(val)}</div></div>`;
-  const group = (label, badge, pmtVal, intVal, totalVal, color) => `
-    <div class="irc-bar-group">
-      <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:8px">${label}</div>
-      <div style="font-size:10px;color:var(--gray-400);margin-bottom:2px">Monthly</div>
-      ${bar(pmtVal, maxPmt, color)}
-      <div style="font-size:10px;color:var(--gray-400);margin:8px 0 2px">Total interest</div>
-      ${bar(intVal, maxInt, color+'99')}
-      <div style="font-size:10px;color:var(--gray-400);margin:8px 0 2px">Total cost</div>
-      ${bar(totalVal, maxTotal, color+'55')}
-    </div>`;
+  // Use percentage-based bars so they never overflow
+  const bar = (val, max, color) => {
+    const pct = max > 0 ? Math.round((val / max) * 100) : 0;
+    return `<div class="irc-bar-row" style="display:flex;align-items:center;gap:10px;margin-bottom:4px">` +
+      `<div style="flex:1;background:var(--gray-100,#f3f4f6);border-radius:4px;height:22px;overflow:hidden">` +
+        `<div style="background:${color};width:${pct}%;height:100%;border-radius:4px;transition:width 0.4s ease"></div>` +
+      `</div>` +
+      `<div style="min-width:70px;text-align:right;font-size:13px;font-weight:500;white-space:nowrap">${fmt(val)}</div>` +
+    `</div>`;
+  };
+  const group = (label, pmtVal, intVal, totalVal, color) =>
+    `<div class="irc-bar-group" style="flex:1;min-width:0">` +
+      `<div style="font-size:13px;font-weight:700;color:var(--navy,#0f172a);margin-bottom:12px;text-align:center">${label}</div>` +
+      `<div style="font-size:11px;color:var(--gray-400,#9ca3af);margin-bottom:4px">Monthly</div>` +
+      bar(pmtVal, maxPmt, color) +
+      `<div style="font-size:11px;color:var(--gray-400,#9ca3af);margin:10px 0 4px">Total interest</div>` +
+      bar(intVal, maxInt, color + '99') +
+      `<div style="font-size:11px;color:var(--gray-400,#9ca3af);margin:10px 0 4px">Total cost</div>` +
+      bar(totalVal, maxTotal, color + '55') +
+    `</div>`;
+
+  el.style.cssText = 'display:flex;gap:16px;align-items:flex-start;padding:16px 0 8px;width:100%';
   el.innerHTML =
-    group(aLabel, 'A', pmtA, intA, principal + intA, '#1A6FE8') +
-    '<div style="width:1px;background:var(--gray-200);height:200px;align-self:center"></div>' +
-    group(bLabel, 'B', pmtB, intB, principal + intB, '#F5A623');
+    group(aLabel, pmtA, intA, principal + intA, '#1A6FE8') +
+    '<div style="width:1px;background:var(--gray-200,#e5e7eb);align-self:stretch;margin:24px 0"></div>' +
+    group(bLabel, pmtB, intB, principal + intB, '#F5A623') +
+    '<div style="text-align:center;width:100%;margin-top:8px;position:absolute;bottom:-24px;left:0;font-size:11px;color:var(--gray-400)">' +
+    '<span style="display:inline-flex;align-items:center;gap:6px;margin-right:12px"><span style="width:10px;height:10px;background:#1A6FE8;border-radius:2px;display:inline-block"></span>' + aLabel + '</span>' +
+    '<span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;background:#F5A623;border-radius:2px;display:inline-block"></span>' + bLabel + '</span>' +
+    '</div>';
 }
 
 function ircDrawTwoLine(canvasId, dataA, dataB) {
