@@ -683,9 +683,6 @@ td.col-balance{font-weight:500}
     padding: 0;
   }
   .blog-sidebar {
-    position: static;
-    padding: 0 24px 40px;
-    border-top: 1px solid var(--gray-100, #f3f4f6);
-    margin-top: 8px;
+    display: none;
   }
 }
