@@ -1856,15 +1856,15 @@ function mgShareResult() {
   });
 })();
 
+
 /* ═══════════════════════════════════════
    BLOG SIDEBAR — RELATED ARTICLES
 ═══════════════════════════════════════ */
 (function() {
-  const path = window.location.pathname;
-  if (!path.startsWith('/blog/') || path === '/blog/') return;
+  var path = window.location.pathname;
+  if (path.indexOf('/blog/') !== 0 || path === '/blog/') return;
 
-  // All blog posts with metadata
-  const allPosts = [
+  var allPosts = [
     { slug: 'debt-avalanche-vs-snowball', title: 'Debt Avalanche vs Snowball: Which Method Wins?', tag: 'Debt Strategy', topics: ['debt','payoff','strategy'] },
     { slug: 'emergency-fund', title: 'How Much Should You Have in Your Emergency Fund?', tag: 'Savings', topics: ['savings','emergency','fund'] },
     { slug: 'extra-mortgage-payments', title: 'What Happens When You Pay Extra on Your Mortgage?', tag: 'Mortgage', topics: ['mortgage','payments','interest'] },
@@ -1872,91 +1872,89 @@ function mgShareResult() {
     { slug: 'how-to-read-amortization-schedule', title: 'How to Read a Mortgage Amortization Schedule', tag: 'Mortgage', topics: ['mortgage','amortization','schedule'] },
     { slug: 'what-credit-card-interest-costs', title: 'What Credit Card Interest Really Costs You', tag: 'Debt Payoff', topics: ['credit','card','interest','debt'] },
     { slug: 'what-is-apr', title: 'What Is APR and How Does It Affect Your Loan?', tag: 'Education', topics: ['apr','rate','loan','education'] },
-    { slug: 'good-debt-vs-bad-debt', title: 'Good Debt vs Bad Debt: What's the Difference?', tag: 'Education', topics: ['debt','education','loan'] },
+    { slug: 'good-debt-vs-bad-debt', title: 'Good Debt vs Bad Debt: What\'s the Difference?', tag: 'Education', topics: ['debt','education','loan'] },
     { slug: 'credit-score-mortgage-rate', title: 'How Your Credit Score Affects Your Mortgage Rate', tag: 'Mortgage', topics: ['credit','score','mortgage','rate'] },
     { slug: '15-year-vs-30-year-mortgage', title: '15-Year vs 30-Year Mortgage: Which Is Right?', tag: 'Mortgage', topics: ['mortgage','term','rate'] },
     { slug: 'renting-vs-buying', title: 'Renting vs Buying a Home: A Financial Breakdown', tag: 'Home Buying', topics: ['mortgage','buying','renting','home'] },
     { slug: 'personal-loan-vs-credit-card', title: 'Personal Loan vs Credit Card: Which to Use?', tag: 'Borrowing', topics: ['loan','credit','card','borrowing'] },
     { slug: '50-30-20-budget-rule', title: 'The 50/30/20 Budget Rule Explained', tag: 'Budgeting', topics: ['budget','savings','debt'] },
     { slug: 'how-to-refinance-mortgage', title: 'How to Refinance Your Mortgage: Step-by-Step', tag: 'Mortgage', topics: ['mortgage','refinance','rate'] },
-    { slug: 'signs-ready-to-buy-a-house', title: '7 Signs You're Ready to Buy a House', tag: 'Home Buying', topics: ['mortgage','buying','home','credit'] },
+    { slug: 'signs-ready-to-buy-a-house', title: '7 Signs You\'re Ready to Buy a House', tag: 'Home Buying', topics: ['mortgage','buying','home','credit'] },
     { slug: 'how-to-pay-off-credit-card-debt', title: 'How to Pay Off Credit Card Debt: A Plan', tag: 'Debt Payoff', topics: ['debt','credit','card','payoff'] },
     { slug: 'debt-to-income-ratio', title: 'What Is a Good Debt-to-Income Ratio?', tag: 'Borrowing', topics: ['debt','income','ratio','mortgage'] },
     { slug: 'how-to-build-credit', title: 'How to Build Credit From Scratch', tag: 'Credit', topics: ['credit','score','build'] },
     { slug: 'fixed-vs-variable-rate-mortgage', title: 'Fixed vs Variable Rate Mortgage: Which to Choose?', tag: 'Mortgage', topics: ['mortgage','rate','fixed','variable'] },
-    { slug: 'how-much-house-can-i-afford', title: 'How Much House Can I Afford? A Clear Guide', tag: 'Home Buying', topics: ['mortgage','home','buying','afford'] },
+    { slug: 'how-much-house-can-i-afford', title: 'How Much House Can I Afford? A Clear Guide', tag: 'Home Buying', topics: ['mortgage','home','buying','afford'] }
   ];
 
-  // Calculators to show in sidebar
-  const calculators = [
+  var calculators = [
     { href: '/debt-payoff-calculator/', icon: '💳', title: 'Debt Payoff Calculator', desc: 'See your debt-free date' },
     { href: '/mortgage-calculator/', icon: '🏠', title: 'Mortgage Calculator', desc: 'Calculate your full payment' },
-    { href: '/emergency-fund-calculator/', icon: '🛡️', title: 'Emergency Fund', desc: 'Find your target amount' },
+    { href: '/emergency-fund-calculator/', icon: '🛡️', title: 'Emergency Fund', desc: 'Find your target amount' }
   ];
 
-  // Get current slug
-  const currentSlug = path.replace('/blog/', '').replace(/\/$/, '');
+  var currentSlug = path.replace('/blog/', '').replace(/\/$/, '');
+  var currentPost = allPosts.find(function(p) { return p.slug === currentSlug; });
+  var currentTopics = currentPost ? currentPost.topics : [];
 
-  // Find current post topics
-  const currentPost = allPosts.find(p => p.slug === currentSlug);
-  const currentTopics = currentPost ? currentPost.topics : [];
-
-  // Score other posts by topic overlap
-  const scored = allPosts
-    .filter(p => p.slug !== currentSlug)
-    .map(p => {
-      const overlap = p.topics.filter(t => currentTopics.includes(t)).length;
-      return { ...p, score: overlap };
+  var scored = allPosts
+    .filter(function(p) { return p.slug !== currentSlug; })
+    .map(function(p) {
+      var overlap = p.topics.filter(function(t) { return currentTopics.indexOf(t) !== -1; }).length;
+      return { slug: p.slug, title: p.title, tag: p.tag, score: overlap };
     })
-    .sort((a, b) => b.score - a.score)
+    .sort(function(a, b) { return b.score - a.score; })
     .slice(0, 6);
 
-  // Build sidebar HTML
-  let relatedHTML = scored.map(p =>
-    `<a class="sidebar-article" href="/blog/${p.slug}/">
-      <div class="sidebar-article-tag">${p.tag}</div>
-      <p class="sidebar-article-title">${p.title}</p>
-    </a>`
-  ).join('');
+  var relatedHTML = scored.map(function(p) {
+    return '<a class="sidebar-article" href="/blog/' + p.slug + '/">' +
+      '<div class="sidebar-article-tag">' + p.tag + '</div>' +
+      '<p class="sidebar-article-title">' + p.title + '</p>' +
+      '</a>';
+  }).join('');
 
-  let calcHTML = calculators.map(c =>
-    `<a class="sidebar-calculator-card" href="${c.href}">
-      <div class="sidebar-calculator-card-icon">${c.icon}</div>
-      <div class="sidebar-calculator-card-title">${c.title}</div>
-      <p class="sidebar-calculator-card-desc">${c.desc}</p>
-    </a>`
-  ).join('');
+  var calcHTML = calculators.map(function(c) {
+    return '<a class="sidebar-calculator-card" href="' + c.href + '">' +
+      '<div class="sidebar-calculator-card-icon">' + c.icon + '</div>' +
+      '<div class="sidebar-calculator-card-title">' + c.title + '</div>' +
+      '<p class="sidebar-calculator-card-desc">' + c.desc + '</p>' +
+      '</a>';
+  }).join('');
 
-  const sidebarHTML = `
-    <aside class="blog-sidebar">
-      <div class="sidebar-section-title">Related Articles</div>
-      ${relatedHTML}
-      <div class="sidebar-divider"></div>
-      <div class="sidebar-section-title">Free Calculators</div>
-      ${calcHTML}
-    </aside>`;
-
-  // Inject sidebar by wrapping calc-main content
-  document.addEventListener('DOMContentLoaded', function() {
-    const calcMain = document.querySelector('.calc-main');
+  function injectSidebar() {
+    var calcMain = document.querySelector('.calc-main');
     if (!calcMain) return;
 
-    // Update calc-main styles for two-column layout
-    calcMain.style.maxWidth = '';
-    calcMain.style.margin = '';
-    calcMain.style.padding = '40px 0 40px 24px';
+    // Create sidebar element
+    var sidebar = document.createElement('aside');
+    sidebar.className = 'blog-sidebar';
+    sidebar.innerHTML =
+      '<div class="sidebar-section-title">Related Articles</div>' +
+      relatedHTML +
+      '<div class="sidebar-divider"></div>' +
+      '<div class="sidebar-section-title">Free Calculators</div>' +
+      calcHTML;
 
-    // Create outer blog wrapper
-    const wrap = document.createElement('div');
+    // Create wrapper div
+    var wrap = document.createElement('div');
     wrap.className = 'blog-page-wrap';
 
     // Insert wrap before calcMain
     calcMain.parentNode.insertBefore(wrap, calcMain);
 
-    // Move calcMain into wrap
-    wrap.appendChild(calcMain);
+    // Update calcMain padding
+    calcMain.style.maxWidth = '';
+    calcMain.style.margin = '';
+    calcMain.style.padding = '40px 0 40px 24px';
 
-    // Add sidebar into wrap
-    wrap.insertAdjacentHTML('beforeend', sidebarHTML);
-  });
+    // Move calcMain into wrap, then add sidebar
+    wrap.appendChild(calcMain);
+    wrap.appendChild(sidebar);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', injectSidebar);
+  } else {
+    injectSidebar();
+  }
 })();
