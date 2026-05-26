@@ -1936,29 +1936,27 @@ function mgShareResult() {
       ${calcHTML}
     </aside>`;
 
-  // Inject sidebar by restructuring the layout
+  // Inject sidebar by wrapping calc-main content
   document.addEventListener('DOMContentLoaded', function() {
-    const calcLayout = document.querySelector('.calc-layout');
     const calcMain = document.querySelector('.calc-main');
-    if (!calcLayout || !calcMain) return;
+    if (!calcMain) return;
 
-    // Replace calc-layout with blog-page-wrap
-    calcLayout.className = '';
-    calcLayout.style.cssText = '';
+    // Update calc-main styles for two-column layout
+    calcMain.style.maxWidth = '';
+    calcMain.style.margin = '';
+    calcMain.style.padding = '40px 0 40px 24px';
 
-    // Create wrapper
+    // Create outer blog wrapper
     const wrap = document.createElement('div');
     wrap.className = 'blog-page-wrap';
 
-    // Move calc-main into wrap
-    calcMain.style.maxWidth = '';
-    calcMain.style.margin = '';
-    calcMain.style.padding = '40px 0';
+    // Insert wrap before calcMain
+    calcMain.parentNode.insertBefore(wrap, calcMain);
 
-    calcLayout.insertBefore(wrap, calcMain);
+    // Move calcMain into wrap
     wrap.appendChild(calcMain);
 
-    // Add sidebar
+    // Add sidebar into wrap
     wrap.insertAdjacentHTML('beforeend', sidebarHTML);
   });
 })();
