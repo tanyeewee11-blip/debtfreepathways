@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9CXQCGBWSN"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -14,31 +13,123 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<title>Contact — DebtFreePathways</title>
-<meta name="description" content="Get in touch with DebtFreePathways.">
+<title>Contact Us — DebtFreePathways</title>
+<meta name="description" content="Get in touch with DebtFreePathways. Send us a question, bug report, or feedback about our free financial calculators and guides.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://debtfreepathways.com/contact.html">
+<link rel="canonical" href="https://debtfreepathways.com/contact/">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="DebtFreePathways">
-<meta property="og:title" content="Contact — DebtFreePathways">
-<meta property="og:description" content="Get in touch with DebtFreePathways.">
-<meta property="og:url" content="https://debtfreepathways.com/contact.html">
-<meta property="og:image" content="https://debtfreepathways.com/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contact — DebtFreePathways">
-<meta name="twitter:description" content="Get in touch with DebtFreePathways.">
-<meta name="twitter:image" content="https://debtfreepathways.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+<style>
+.contact-form-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 32px;
+}
+.contact-info-card {
+  background: var(--gray-50, #f9fafb);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-reason {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.contact-reason-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #EAF3DE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.contact-reason-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--gray-800, #1f2937);
+  margin: 0 0 2px;
+}
+.contact-reason-desc {
+  font-size: 0.82rem;
+  color: var(--gray-500, #6b7280);
+  margin: 0;
+  line-height: 1.5;
+}
+.form-group {
+  margin-bottom: 16px;
+}
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-700, #374151);
+  margin-bottom: 6px;
+}
+.form-input, .form-textarea, .form-select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--gray-200, #e5e7eb);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--gray-800, #1f2937);
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  box-sizing: border-box;
+  outline: none;
+}
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  border-color: #0DBF7E;
+  box-shadow: 0 0 0 3px rgba(13,191,126,0.12);
+}
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.form-submit {
+  width: 100%;
+  padding: 12px;
+  background: #0DBF7E;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.form-submit:hover { background: #0aad6e; }
+.form-submit:disabled { background: var(--gray-300); cursor: not-allowed; }
+.success-msg {
+  display: none;
+  background: #EAF3DE;
+  border: 1px solid #9FE1CB;
+  border-radius: 10px;
+  padding: 20px 24px;
+  text-align: center;
+  margin-top: 16px;
+}
+.success-msg-icon { font-size: 2rem; margin-bottom: 8px; }
+.success-msg-title { font-weight: 600; color: #085041; margin: 0 0 4px; }
+.success-msg-sub { font-size: 0.875rem; color: #0F6E56; margin: 0; }
+@media (max-width: 700px) {
+  .contact-form-wrap { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="/"><span class="nav-dot"></span>DebtFreePathways</a>
   <ul class="nav-links">
@@ -53,7 +144,6 @@
   </button>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="nav-mobile-menu" id="nav-mobile-menu">
   <ul class="nav-mobile-links">
     <li><a href="/#tools">Calculators</a></li>
@@ -63,24 +153,106 @@
   <button class="nav-mobile-cta" onclick="window.location.href='/#tools'">Browse Tools</button>
 </div>
 
-
 <main>
 <div class="calc-layout">
-    <div class="calc-main" style="max-width:720px;margin:0 auto;padding:40px 24px">
-      <div class="breadcrumb" style="color:var(--gray-400)"><span href="/" style="color:var(--gray-500)">Home</span> <span style="color:var(--gray-300)">/</span> <span style="color:var(--gray-400)">Contact</span></div>
-      <h1 style="font-size:2rem;margin-bottom:8px">Contact Us</h1>
-      <p style="color:var(--gray-500);margin-bottom:32px">We'd love to hear from you.</p>
-      <p>Have a question, suggestion, or found a bug? Send us an email and we'll get back to you as soon as we can.</p>
-      <div style="margin-top:32px;padding:32px;background:var(--gray-50);border-radius:16px;text-align:center">
-        <div style="font-size:2rem;margin-bottom:12px">✉️</div>
-        <p style="font-weight:600;font-size:1.1rem;margin-bottom:4px">Email us at</p>
-        <a href="mailto:hello@debtfreepathways.com" style="color:var(--primary);font-size:1.1rem;text-decoration:none;font-weight:600">hello@debtfreepathways.com</a>
-        <p style="color:var(--gray-500);margin-top:16px;font-size:0.9rem">We typically respond within 1–2 business days.</p>
+  <div class="calc-main" style="max-width:720px;margin:0 auto;padding:40px 24px">
+
+    <div class="breadcrumb" style="color:var(--gray-400)"><a href="/" style="color:var(--gray-500)">Home</a> <span style="color:var(--gray-300)">/</span> <span style="color:var(--gray-400)">Contact</span></div>
+    <h1 style="font-size:2rem;margin-bottom:8px">Get in Touch</h1>
+    <p style="color:var(--gray-500);margin-bottom:0">We read every message and typically reply within 1–2 business days.</p>
+
+    <div class="contact-form-wrap">
+
+      <!-- Left: reasons to contact -->
+      <div class="contact-info-card">
+        <p style="font-size:0.8rem;font-weight:600;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.06em;margin:0">How we can help</p>
+
+        <div class="contact-reason">
+          <div class="contact-reason-icon">🐛</div>
+          <div>
+            <p class="contact-reason-title">Report a bug</p>
+            <p class="contact-reason-desc">Calculator giving unexpected results? Something not loading correctly? Let us know and we will fix it.</p>
+          </div>
+        </div>
+
+        <div class="contact-reason">
+          <div class="contact-reason-icon">💡</div>
+          <div>
+            <p class="contact-reason-title">Suggest a feature</p>
+            <p class="contact-reason-desc">Have an idea for a new calculator or a topic you would like us to cover? We want to hear it.</p>
+          </div>
+        </div>
+
+        <div class="contact-reason">
+          <div class="contact-reason-icon">✏️</div>
+          <div>
+            <p class="contact-reason-title">Content feedback</p>
+            <p class="contact-reason-desc">Found something inaccurate in one of our guides? Help us keep our content correct and up to date.</p>
+          </div>
+        </div>
+
+        <div class="contact-reason">
+          <div class="contact-reason-icon">🤝</div>
+          <div>
+            <p class="contact-reason-title">General enquiry</p>
+            <p class="contact-reason-desc">Anything else — we are happy to hear from you.</p>
+          </div>
+        </div>
+
+        <div style="border-top:1px solid var(--gray-100);padding-top:16px;margin-top:4px">
+          <p style="font-size:0.8rem;color:var(--gray-400);margin:0">You can also email us directly at</p>
+          <a href="mailto:hello@debtfreepathways.com" style="font-size:0.875rem;color:#0DBF7E;font-weight:500;text-decoration:none">hello@debtfreepathways.com</a>
+        </div>
       </div>
-      <h2 style="font-size:1.2rem;margin-top:40px;margin-bottom:12px">Common questions</h2>
-      <p>Before reaching out, you might find your answer in our <a href="/#faq" style="color:var(--primary);cursor:pointer;text-decoration:underline">FAQ section</a> on the homepage.</p>
+
+      <!-- Right: contact form -->
+      <div>
+        <form id="contact-form" onsubmit="handleSubmit(event)">
+          <input type="hidden" name="access_key" value="7a4e7076-bf45-4ac9-81f2-af3e70dbcc9b">
+          <input type="hidden" name="subject" value="New message from DebtFreePathways contact form">
+          <input type="hidden" name="from_name" value="DebtFreePathways Contact Form">
+          <input type="checkbox" name="botcheck" style="display:none">
+
+          <div class="form-group">
+            <label class="form-label" for="name">Your name</label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email address</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="jane@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="topic">Topic</label>
+            <select class="form-select" id="topic" name="topic" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option value="Bug report">Bug report</option>
+              <option value="Feature suggestion">Feature suggestion</option>
+              <option value="Content feedback">Content feedback</option>
+              <option value="General enquiry">General enquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+          </div>
+
+          <button class="form-submit" type="submit" id="submit-btn">Send message</button>
+        </form>
+
+        <div class="success-msg" id="success-msg">
+          <div class="success-msg-icon">✅</div>
+          <p class="success-msg-title">Message sent!</p>
+          <p class="success-msg-sub">Thanks for reaching out. We will get back to you within 1–2 business days.</p>
+        </div>
+      </div>
+
     </div>
+
   </div>
+</div>
   <footer class="footer">
     <div class="footer-inner">
       <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
@@ -88,10 +260,34 @@
       <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></div>
       <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-use/">Terms of Use</a></li><li><a href="/disclaimer/">Disclaimer</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+    <div class="footer-bottom"><span>&copy; <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
   </footer>
 </main>
 
 <script src="/main.js"></script>
+<script>
+async function handleSubmit(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  const formData = new FormData(e.target);
+  const res = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: formData
+  });
+  const data = await res.json();
+
+  if (data.success) {
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  } else {
+    btn.disabled = false;
+    btn.textContent = 'Send message';
+    alert('Something went wrong. Please try again or email us directly at hello@debtfreepathways.com');
+  }
+}
+</script>
 </body>
 </html>
