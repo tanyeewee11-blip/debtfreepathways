@@ -256,6 +256,7 @@ function drawTimelineCanvas(canvasId, sched, schedExtra) {
    HERO CALC
 ═══════════════════════════════════════ */
 function heroCalc() {
+  if (!document.getElementById('hc-debt')) return;
   const debt=+document.getElementById('hc-debt').value||0;
   const rate=+document.getElementById('hc-rate').value||0;
   const pay=+document.getElementById('hc-pay').value||0;
@@ -1471,7 +1472,7 @@ document.addEventListener('click',function(e){
   }
 });
 
-heroCalc();
+if (document.getElementById('hc-debt')) heroCalc();
 (function(){const r=document.getElementById('dp-rate');if(r){const v=r.value||19.9;const pct=((v-1)/(36-1))*100;document.getElementById('rate-slider').style.setProperty('--pct',pct+'%');document.getElementById('rate-slider-val').textContent=parseFloat(v).toFixed(1)+'%';}})();
 (function(){const r=document.getElementById('mg-rate');if(r){const v=r.value||6.8;const pct=((v-1)/(15-1))*100;document.getElementById('mg-rate-slider').style.setProperty('--pct',pct+'%');document.getElementById('mg-rate-slider-val').textContent=parseFloat(v).toFixed(2)+'%';}})();
 (function(){const r=document.getElementById('la-rate');if(r){const v=r.value||7.5;const pct=((v-0.5)/(36-0.5))*100;document.getElementById('la-rate-slider').style.setProperty('--pct',pct+'%');document.getElementById('la-rate-slider-val').textContent=parseFloat(v).toFixed(2)+'%';}})();
@@ -1479,7 +1480,8 @@ heroCalc();
 document.querySelectorAll('.yr').forEach(el => el.textContent = new Date().getFullYear());
 
 // Init homepage JSON-LD (ItemList for all 6 tools)
-document.getElementById('schema-page').textContent = JSON.stringify({
+const _schemaEl = document.getElementById('schema-page');
+if (_schemaEl) _schemaEl.textContent = JSON.stringify({
   "@context":"https://schema.org",
   "@type":"ItemList",
   "name":"Free Personal Finance Calculators",
