@@ -272,7 +272,7 @@ td.col-balance{font-weight:500}
 .tip-text{font-size:13px;color:var(--gray-700);line-height:1.6}
 .tip-text strong{color:var(--navy)}
 .related-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.related-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius);padding:16px;cursor:pointer;transition:border-color .15s,box-shadow .15s,transform .15s}
+.related-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius);padding:16px;cursor:pointer;transition:border-color .15s,box-shadow .15s,transform .15s;text-decoration:none;display:block;color:inherit}
 .related-card:hover{border-color:var(--blue);box-shadow:var(--shadow-md);transform:translateY(-1px)}
 .related-icon{font-size:20px;margin-bottom:8px}
 .related-name{font-family:var(--font-display);font-size:13px;font-weight:600;color:var(--navy)}
