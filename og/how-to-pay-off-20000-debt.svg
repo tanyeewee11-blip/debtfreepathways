@@ -1,0 +1,16 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#7c2d12"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#grad)" opacity="0.3"/>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#000;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <text x="60" y="80" font-family="Arial,sans-serif" font-size="24" font-weight="600" fill="rgba(255,255,255,0.7)" text-transform="uppercase" letter-spacing="3">DEBT PAYOFF · DEBTFREEPATHWAYS.COM</text>
+  <line x1="60" y1="100" x2="200" y2="100" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <text x="60" y="192" font-family="Arial,sans-serif" font-size="48" font-weight="700" fill="white">How to Pay Off $20,000 in Debt</text>
+  <text x="60" y="248" font-family="Arial,sans-serif" font-size="48" font-weight="700" fill="white">in 2 Years</text>
+  <text x="60" y="560" font-family="Arial,sans-serif" font-size="22" fill="rgba(255,255,255,0.6)">Free calculators and guides at DebtFreePathways.com</text>
+  <rect x="60" y="580" width="120" height="4" rx="2" fill="rgba(255,255,255,0.4)"/>
+</svg>
