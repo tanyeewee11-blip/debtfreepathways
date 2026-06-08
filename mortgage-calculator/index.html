@@ -101,6 +101,21 @@
             "text": "The interest rate determines your monthly payment. The APR (Annual Percentage Rate) includes the interest rate plus lender fees and closing costs, giving you a more complete picture of the loan's true cost. Always compare APRs — not just rates — when evaluating mortgage offers from different lenders."
           }
         }
+    ,{
+      "@type": "Question",
+      "name": "Should I pay points to lower my mortgage rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mortgage points (discount points) let you pay upfront to reduce your interest rate — typically 1 point costs 1% of the loan amount and reduces the rate by 0.25%. Whether it is worth it depends on your break-even timeline: divide the upfront cost by your monthly savings. If you plan to stay in the home beyond that break-even point (often 5–7 years), paying points saves money. If you might sell or refinance sooner, skip the points."
+      }
+    }    ,{
+      "@type": "Question",
+      "name": "What happens if I miss a mortgage payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Missing one payment typically triggers a late fee (usually 3–6% of the payment amount) and a note on your credit report after 30 days. Most lenders have a grace period of 10–15 days before the late fee applies. Missing multiple consecutive payments can trigger default proceedings. If you anticipate difficulty, contact your servicer proactively — most have hardship programs, forbearance options, or loan modification processes that are easier to access before you miss payments than after."
+      }
+    }
   ]
 }
 </script>
@@ -474,7 +489,10 @@
             <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How does my down payment affect my mortgage?<span class="faq-icon">+</span></button><div class="faq-a">A larger down payment reduces your loan amount, which lowers your monthly payment and total interest paid. It also eliminates PMI once you reach 20% down. However, putting more than 20% down has diminishing returns — the extra capital may generate better returns invested elsewhere.</div></div>
             <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the difference between interest rate and APR on a mortgage?<span class="faq-icon">+</span></button><div class="faq-a">The interest rate determines your monthly payment. The APR (Annual Percentage Rate) includes the interest rate plus lender fees and closing costs, giving you a more complete picture of the loan's true cost. Always compare APRs — not just rates — when evaluating mortgage offers from different lenders.</div></div>
         </div>
-      </div>
+      
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Should I pay points to lower my mortgage rate?<span class="faq-icon">+</span></button><div class="faq-a">Mortgage points (discount points) let you pay upfront to reduce your interest rate — typically 1 point costs 1% of the loan amount and reduces the rate by 0.25%. Whether it is worth it depends on your break-even timeline: divide the upfront cost by your monthly savings. If you plan to stay in the home beyond that break-even point (often 5–7 years), paying points saves money. If you might sell or refinance sooner, skip the points.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What happens if I miss a mortgage payment?<span class="faq-icon">+</span></button><div class="faq-a">Missing one payment typically triggers a late fee (usually 3–6% of the payment amount) and a note on your credit report after 30 days. Most lenders have a grace period of 10–15 days before the late fee applies. Missing multiple consecutive payments can trigger default proceedings. If you anticipate difficulty, contact your servicer proactively — most have hardship programs, forbearance options, or loan modification processes that are easier to access before you miss payments than after.</div></div>
+        </div>
       </div>
 
       <!-- SIDEBAR -->
@@ -597,6 +615,106 @@
     </div>
   </div>
 
+
+  <div style="background:#fff;padding:48px 0 40px;border-top:1px solid var(--gray-100)">
+    <div class="container">
+      <div style="max-width:720px;margin:0 auto">
+
+        <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">How down payment size affects your total cost: exact numbers</h2>
+        <p style="color:var(--gray-600);line-height:1.7;margin-bottom:20px">Your down payment affects three things simultaneously: your loan amount, whether you pay PMI, and the interest rate you qualify for. Here is how different down payments play out on a <strong>$400,000 home at 6.8% APR over 30 years</strong>:</p>
+
+        <div style="overflow-x:auto;margin-bottom:24px">
+          <table style="width:100%;border-collapse:collapse;font-size:0.875rem">
+            <thead>
+              <tr style="background:#f1f5f9">
+                <th style="padding:10px 14px;text-align:left;font-weight:600;color:var(--gray-800);border-bottom:2px solid var(--gray-200)">Down Payment</th>
+                <th style="padding:10px 14px;text-align:right;font-weight:600;color:var(--gray-800);border-bottom:2px solid var(--gray-200)">Loan Amount</th>
+                <th style="padding:10px 14px;text-align:right;font-weight:600;color:var(--gray-800);border-bottom:2px solid var(--gray-200)">Monthly P&I</th>
+                <th style="padding:10px 14px;text-align:right;font-weight:600;color:var(--gray-800);border-bottom:2px solid var(--gray-200)">PMI/mo</th>
+                <th style="padding:10px 14px;text-align:right;font-weight:600;color:var(--gray-800);border-bottom:2px solid var(--gray-200)">Total Interest</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--gray-100)"><td style="padding:10px 14px;color:var(--gray-700)">5% ($20,000)</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$380,000</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$2,484</td><td style="padding:10px 14px;text-align:right;color:#e53e3e">~$285</td><td style="padding:10px 14px;text-align:right;color:#e53e3e">$514,400</td></tr>
+              <tr style="border-bottom:1px solid var(--gray-100);background:#f8fafc"><td style="padding:10px 14px;color:var(--gray-700)">10% ($40,000)</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$360,000</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$2,353</td><td style="padding:10px 14px;text-align:right;color:#e53e3e">~$225</td><td style="padding:10px 14px;text-align:right;color:#e53e3e">$487,100</td></tr>
+              <tr style="border-bottom:1px solid var(--gray-100)"><td style="padding:10px 14px;color:var(--gray-700)">20% ($80,000)</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$320,000</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$2,091</td><td style="padding:10px 14px;text-align:right;color:#2f855a">$0</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$433,000</td></tr>
+              <tr style="background:#f0fff4"><td style="padding:10px 14px;color:var(--gray-700);font-weight:600">25% ($100,000)</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$300,000</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$1,960</td><td style="padding:10px 14px;text-align:right;color:#2f855a">$0</td><td style="padding:10px 14px;text-align:right;color:#2f855a">$405,800</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="color:var(--gray-600);line-height:1.7;margin-bottom:32px">Going from 5% to 20% down eliminates ~$510/month in combined PMI and principal costs, and saves over $81,000 in total interest. However, putting 25% down instead of 20% only saves an additional $27,000 — a much smaller return on the extra $20,000 invested in the down payment. Once you clear the 20% PMI threshold, the benefit of a larger down payment diminishes quickly.</p>
+
+        <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">Fixed-rate vs ARM: what the numbers look like in practice</h2>
+        <p style="color:var(--gray-600);line-height:1.7;margin-bottom:16px">A 5/1 ARM typically starts 0.5–1% below a 30-year fixed rate, then adjusts annually after year 5. The initial savings are real — but so is the rate risk. Here is how they compare on a <strong>$350,000 loan</strong>:</p>
+
+        <div style="overflow-x:auto;margin-bottom:24px">
+          <table style="width:100%;border-collapse:collapse;font-size:0.875rem">
+            <thead>
+              <tr style="background:#f1f5f9">
+                <th style="padding:10px 14px;text-align:left;font-weight:600;color:var(--gray-800);border-bottom:2px solid var(--gray-200)">Loan Type</th>
+                <th style="padding:10px 14px;text-align:right;font-weight:600;color:var(--gray-800);border-bottom:2px solid var(--gray-200)">Starting Rate</th>
+                <th style="padding:10px 14px;text-align:right;font-weight:600;color:var(--gray-800);border-bottom:2px solid var(--gray-200)">Monthly Payment (yr 1–5)</th>
+                <th style="padding:10px 14px;text-align:right;font-weight:600;color:var(--gray-800);border-bottom:2px solid var(--gray-200)">Worst-case Payment (lifetime cap)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--gray-100);background:#f0fff4"><td style="padding:10px 14px;color:var(--gray-700);font-weight:600">30-yr Fixed</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">6.8%</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$2,285</td><td style="padding:10px 14px;text-align:right;color:#2f855a">$2,285 (never changes)</td></tr>
+              <tr style="border-bottom:1px solid var(--gray-100)"><td style="padding:10px 14px;color:var(--gray-700)">5/1 ARM</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">6.1%</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$2,120</td><td style="padding:10px 14px;text-align:right;color:#e53e3e">~$2,870 (at 11.1% cap)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="color:var(--gray-600);line-height:1.7;margin-bottom:16px">The ARM saves $165/month for the first 5 years — a real $9,900 in savings. But if you are still in the home when rates adjust upward, the worst-case payment is $585/month higher than the fixed. The ARM makes financial sense when you are confident you will sell or refinance before year 5, or when you can absorb worst-case payment increases without hardship.</p>
+
+        <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">PMI: exact cost and how to eliminate it faster</h2>
+        <p style="color:var(--gray-600);line-height:1.7;margin-bottom:16px">PMI typically costs 0.5–1.5% of the loan amount per year. On a $320,000 loan, that is $1,600–$4,800 annually — or $133–$400 per month. It is not a small cost, and unlike interest, it builds no equity and serves only the lender.</p>
+        <p style="color:var(--gray-600);line-height:1.7;margin-bottom:12px">Four ways to reach 20% equity and eliminate PMI faster:</p>
+        <ul style="color:var(--gray-600);line-height:2;padding-left:20px;margin-bottom:16px">
+          <li><strong>Make extra principal payments.</strong> Every extra dollar reduces your balance and accelerates the 80% LTV threshold. Use the calculator above to model how much faster you reach 80% with $100–$300 extra per month.</li>
+          <li><strong>Request a new appraisal after home value increases.</strong> If your home has appreciated, your LTV may already be below 80% based on current value. Most lenders require a formal appraisal (typically $300–$500) and a minimum of 2 years of loan seasoning.</li>
+          <li><strong>Lump sum payments from windfalls.</strong> Tax refunds, bonuses, or inheritance applied directly to principal can push you past 80% LTV in a single move.</li>
+          <li><strong>Automatic cancellation.</strong> Under the Homeowners Protection Act, PMI must be automatically cancelled when your scheduled payments bring the balance to 78% of the original purchase price — even without a request.</li>
+        </ul>
+
+        <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:16px">How much house you can actually afford: the honest calculation</h2>
+        <p style="color:var(--gray-600);line-height:1.7;margin-bottom:16px">Lenders use two ratios to determine how much they will lend. Understanding both helps you set a realistic budget before you start shopping.</p>
+        <p style="color:var(--gray-600);line-height:1.7;margin-bottom:12px"><strong>Front-end ratio (housing costs ÷ gross income):</strong> Lenders typically want this below 28%. This includes your full monthly housing payment — P&I, taxes, insurance, HOA, and PMI.</p>
+        <p style="color:var(--gray-600);line-height:1.7;margin-bottom:12px"><strong>Back-end ratio (all debt payments ÷ gross income):</strong> Lenders typically want this below 43%. This includes housing plus all other monthly debt obligations — car loans, student loans, credit card minimums.</p>
+        <div style="overflow-x:auto;margin-bottom:24px">
+          <table style="width:100%;border-collapse:collapse;font-size:0.875rem">
+            <thead>
+              <tr style="background:#f1f5f9">
+                <th style="padding:10px 14px;text-align:left;font-weight:600;color:var(--gray-800);border-bottom:2px solid var(--gray-200)">Gross Monthly Income</th>
+                <th style="padding:10px 14px;text-align:right;font-weight:600;color:var(--gray-800);border-bottom:2px solid var(--gray-200)">Max Housing Cost (28%)</th>
+                <th style="padding:10px 14px;text-align:right;font-weight:600;color:var(--gray-800);border-bottom:2px solid var(--gray-200)">Approx. Max Loan (6.8%, 30yr)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--gray-100)"><td style="padding:10px 14px;color:var(--gray-700)">$5,000/month</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$1,400</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">~$215,000</td></tr>
+              <tr style="border-bottom:1px solid var(--gray-100);background:#f8fafc"><td style="padding:10px 14px;color:var(--gray-700)">$7,500/month</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$2,100</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">~$325,000</td></tr>
+              <tr style="border-bottom:1px solid var(--gray-100)"><td style="padding:10px 14px;color:var(--gray-700)">$10,000/month</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$2,800</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">~$435,000</td></tr>
+              <tr style="background:#f0fff4"><td style="padding:10px 14px;color:var(--gray-700)">$15,000/month</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">$4,200</td><td style="padding:10px 14px;text-align:right;color:var(--gray-700)">~$650,000</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="color:var(--gray-600);line-height:1.7">These figures assume your all-in housing cost (P&I + taxes + insurance + PMI) stays within the 28% limit. If you carry significant other debt, your effective maximum loan will be lower — the back-end 43% cap becomes the binding constraint.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#f8fafc;padding:32px 0;border-top:1px solid var(--gray-100)">
+    <div class="container">
+      <div style="max-width:720px;margin:0 auto">
+        <p style="font-weight:600;color:var(--gray-800);margin-bottom:12px">Related guides:</p>
+        <ul style="padding-left:20px;color:var(--gray-600);line-height:2;list-style:disc">
+          <li style="margin-bottom:6px"><a href="/blog/how-to-refinance-mortgage/" style="color:#0DBF7E;text-decoration:none">How to Refinance Your Mortgage</a></li>
+<li style="margin-bottom:6px"><a href="/blog/15-year-vs-30-year-mortgage/" style="color:#0DBF7E;text-decoration:none">15-Year vs 30-Year Mortgage</a></li>
+<li style="margin-bottom:6px"><a href="/blog/what-is-pmi/" style="color:#0DBF7E;text-decoration:none">What Is PMI?</a></li>
+<li style="margin-bottom:6px"><a href="/blog/first-time-homebuyer-mistakes/" style="color:#0DBF7E;text-decoration:none">First-Time Homebuyer Mistakes</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
   <footer>
     <div class="footer-inner">
       <div>
