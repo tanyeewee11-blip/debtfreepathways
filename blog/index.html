@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CXQCGBWSN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9CXQCGBWSN');
+</script>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Personal Finance Blog — Debt & Mortgage Tips | DebtFreePathways</title>
+<meta name="description" content="Personal finance guides and tips on debt payoff, mortgage planning, and building an emergency fund. Free tools included.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://debtfreepathways.com/blog/">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DebtFreePathways">
+<meta property="og:title" content="Personal Finance Blog — Debt & Mortgage Tips | DebtFreePathways">
+<meta property="og:description" content="Personal finance guides and tips on debt payoff, mortgage planning, and building an emergency fund. Free tools included.">
+<meta property="og:url" content="https://debtfreepathways.com/blog/">
+<meta property="og:image" content="https://debtfreepathways.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Personal Finance Blog — Debt & Mortgage Tips | DebtFreePathways">
+<meta name="twitter:description" content="Personal finance guides and tips on debt payoff, mortgage planning, and building an emergency fund. Free tools included.">
+<meta name="twitter:image" content="https://debtfreepathways.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Personal Finance Blog — DebtFreePathways",
+  "description": "Free guides on debt payoff, mortgage planning, credit scores, and budgeting — written to help you take concrete action on your finances.",
+  "url": "https://debtfreepathways.com/blog/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "DebtFreePathways",
+    "url": "https://debtfreepathways.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/"><span class="nav-dot"></span>DebtFreePathways</a>
+  <ul class="nav-links">
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <button class="nav-back" id="nav-back" onclick="window.location.href='/'">← <span id="nav-back-label">Back to home</span></button>
+  <button class="nav-cta" onclick="window.location.href='/#tools'">Browse Tools</button>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <ul class="nav-mobile-links">
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <button class="nav-mobile-cta" onclick="window.location.href='/#tools'">Browse Tools</button>
+</div>
+
+<main>
+<div class="calc-layout">
+  <div class="calc-main" style="max-width:720px;margin:0 auto;padding:40px 24px">
+    <div class="breadcrumb" style="color:var(--gray-400)"><span style="color:var(--gray-500)">Home</span> <span style="color:var(--gray-300)">/</span> <span style="color:var(--gray-400)">Blog</span></div>
+    <h1 style="font-size:2rem;margin-bottom:8px">Blog</h1>
+    <p style="color:var(--gray-500);margin-bottom:28px">Personal finance tips and guides to help you get debt-free faster.</p>
+
+    <!-- CATEGORY TABS -->
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px;border-bottom:2px solid var(--gray-100);padding-bottom:0">
+      <button onclick="filterPosts('all')" id="tab-all" style="padding:10px 18px;border:none;background:none;font-weight:600;font-size:0.875rem;color:#0DBF7E;border-bottom:2px solid #0DBF7E;margin-bottom:-2px;cursor:pointer;transition:all 0.2s">All</button>
+      <button onclick="filterPosts('debt')" id="tab-debt" style="padding:10px 18px;border:none;background:none;font-weight:500;font-size:0.875rem;color:var(--gray-400);border-bottom:2px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all 0.2s">Debt Payoff</button>
+      <button onclick="filterPosts('mortgage')" id="tab-mortgage" style="padding:10px 18px;border:none;background:none;font-weight:500;font-size:0.875rem;color:var(--gray-400);border-bottom:2px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all 0.2s">Mortgage</button>
+      <button onclick="filterPosts('credit')" id="tab-credit" style="padding:10px 18px;border:none;background:none;font-weight:500;font-size:0.875rem;color:var(--gray-400);border-bottom:2px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all 0.2s">Credit</button>
+      <button onclick="filterPosts('borrowing')" id="tab-borrowing" style="padding:10px 18px;border:none;background:none;font-weight:500;font-size:0.875rem;color:var(--gray-400);border-bottom:2px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all 0.2s">Borrowing</button>
+      <button onclick="filterPosts('budgeting')" id="tab-budgeting" style="padding:10px 18px;border:none;background:none;font-weight:500;font-size:0.875rem;color:var(--gray-400);border-bottom:2px solid transparent;margin-bottom:-2px;cursor:pointer;transition:all 0.2s">Budgeting & Savings</button>
+    </div>
+
+    <a href="/blog/how-to-pay-off-mortgage-early-strategies/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">MORTGAGE · 8 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How to Pay Off Your Mortgage Early: Strategies That Actually Work</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Paying off your mortgage early can save tens of thousands in interest. Here are the strategies that make the biggest difference, with real numbers.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/what-is-emergency-fund-ratio/" data-category="budgeting" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">SAVINGS · 6 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">What Is Emergency Fund Ratio and How Do You Calculate It?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">The emergency fund ratio tells you exactly where you stand relative to your savings goal. Learn what it means, how to calculate it, and what a healthy ratio looks like.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/what-is-apr-in-finance/" data-category="borrowing" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">BORROWING · 7 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">What Is APR in Finance? A Plain-English Explanation</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">APR is the most useful number when comparing loans or credit cards. Learn what it means, how it differs from interest rate, and how to use it correctly.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-much-emergency-fund-do-i-need/" data-category="budgeting" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">SAVINGS · 8 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How Much Emergency Fund Do I Need? A Step-by-Step Guide</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">The answer is different for everyone. Here is how to calculate your exact number based on your monthly expenses, job stability, and financial situation.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/debt-avalanche-vs-snowball-which-calculator/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT STRATEGY · 7 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">Debt Avalanche vs Snowball Calculator: Which Method Should You Use?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Both methods work. The right one depends on whether you prioritise saving money or staying motivated. See the real numbers side by side.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-interest-rate-difference-affects-loan-cost/" data-category="borrowing" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">BORROWING · 7 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How a Small Difference in Interest Rates Affects Your Loan Cost</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A 1% rate difference looks small on paper. Over a 30-year mortgage, it costs more than most people earn in a year. Here are the exact numbers.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/debt-avalanche-vs-snowball/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT STRATEGY · 4 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">Debt Avalanche vs Debt Snowball: Which Method Is Right for You?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Both methods work — but one could save you thousands more. We break down the math and psychology behind each strategy so you can choose the right one for your situation.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/emergency-fund/" data-category="budgeting" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">SAVINGS · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How Much Should You Have in Your Emergency Fund?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Three months or six? The right answer depends on your income, job stability, and family situation. Here's how to calculate the number that's right for you.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/extra-mortgage-payments/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">MORTGAGE · 4 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">What Happens When You Pay Extra on Your Mortgage Each Month?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Even $100 extra per month can save you tens of thousands in interest and shave years off your loan. Here's exactly how it works — with real numbers.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-to-pay-off-20000-debt/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT PAYOFF · 4 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How to Pay Off $20,000 in Debt in 2 Years</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A realistic, step-by-step plan with exact monthly payment targets, proven strategies, and a free calculator to track your progress.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-to-read-amortization-schedule/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">MORTGAGE · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How to Read a Mortgage Amortization Schedule</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Every column explained — and how to use this table to pay off your mortgage faster and save thousands in interest.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/what-credit-card-interest-costs/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT PAYOFF · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">What Credit Card Interest Really Costs You (With Examples)</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Most people underestimate what carrying a balance actually costs. Here are the real numbers — minimum payments, true cost of purchases, and how to pay less.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/what-is-apr/" data-category="budgeting" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">EDUCATION · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">What Is APR and How Does It Affect Your Loan?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">APR explained in plain English — what it includes, how it differs from your interest rate, and how to use it to compare loans accurately.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/good-debt-vs-bad-debt/" data-category="budgeting" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">EDUCATION · 6 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">Good Debt vs Bad Debt: What's the Difference?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Not all debt hurts you equally. Learn which debts build wealth and which drain it — and how to prioritise payoff accordingly.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+
+    <a href="/blog/credit-score-mortgage-rate/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">MORTGAGE · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How Your Credit Score Affects Your Mortgage Rate</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A 100-point difference in your credit score can mean $150,000 more in interest over 30 years. See the real numbers and how to improve your score before applying.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+
+    <a href="/blog/15-year-vs-30-year-mortgage/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">MORTGAGE · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">15-Year vs 30-Year Mortgage: Which Is Right for You?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">The 15-year saves you more money. The 30-year gives you more flexibility. Here is how to decide which matters more in your situation — with real numbers.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+
+    <a href="/blog/renting-vs-buying/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">HOME BUYING · 4 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">Renting vs Buying a Home: A Financial Breakdown</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Buying is not always better than renting. Here is a clear financial breakdown of true costs, hidden factors, and how to decide what makes sense for your situation.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/personal-loan-vs-credit-card/" data-category="borrowing" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">BORROWING · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">Personal Loan vs Credit Card: Which Should You Use?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">The right choice depends on how much you need, how long you need it, and what you plan to use it for. Here is how to decide.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+
+    <a href="/blog/50-30-20-budget-rule/" data-category="budgeting" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">BUDGETING · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">The 50/30/20 Budget Rule Explained</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A simple framework for managing your money — and how to adjust it when paying off debt is the priority.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-to-refinance-mortgage/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">MORTGAGE · 4 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How to Refinance Your Mortgage: Step-by-Step Guide</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Refinancing can save you hundreds per month — but only if the numbers work out. Here is how to calculate your break-even point and navigate the full process.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/signs-ready-to-buy-a-house/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">HOME BUYING · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">7 Signs You're Ready to Buy a House</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Being approved for a mortgage and being genuinely ready to buy are two different things. Here is a practical checklist to know for sure.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+
+    <a href="/blog/how-to-pay-off-credit-card-debt/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT PAYOFF · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How to Pay Off Credit Card Debt: A Step-by-Step Plan</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A practical step-by-step plan — which cards to target first, how to find extra money, and how long it will realistically take.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+    <a href="/blog/debt-to-income-ratio/" data-category="borrowing" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">BORROWING · 4 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">What Is a Good Debt-to-Income Ratio?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Learn what DTI means, how to calculate yours, and what ratio lenders require for mortgages and other loans.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+    <a href="/blog/how-to-build-credit/" data-category="credit" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">CREDIT · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How to Build Credit From Scratch</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A step-by-step guide to building credit from nothing — secured cards, authorised user strategies, and a realistic timeline.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+    <a href="/blog/fixed-vs-variable-rate-mortgage/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">MORTGAGE · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">Fixed vs Variable Rate Mortgage: Which Should You Choose?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Fixed vs variable rate compared side by side — trade-offs, monthly payment differences, and which suits your situation.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+    <a href="/blog/how-much-house-can-i-afford/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">HOME BUYING · 4 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How Much House Can I Afford? A Clear Guide</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Use the 28/36 rule to find your real number — with income-to-price tables and why lender approval is not the same as affordability.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+
+    <a href="/blog/negotiate-lower-credit-card-rate/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT PAYOFF · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How to Negotiate a Lower Interest Rate on Your Credit Card</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A single phone call can lower your APR by 2–6%. Here is exactly what to say and when to call.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+    <a href="/blog/miss-mortgage-payment/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">MORTGAGE · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">What Happens If You Miss a Mortgage Payment?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A clear timeline of grace periods, credit impact, and foreclosure risk — and what to do at each stage.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+    <a href="/blog/pay-off-student-loans-faster/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT PAYOFF · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How to Pay Off Student Loans Faster</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Five proven strategies that reduce total interest and get you debt-free years ahead of schedule.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+    <a href="/blog/what-is-compound-interest/" data-category="budgeting" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">EDUCATION · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">What Is Compound Interest and How Does It Work?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">The force that makes debt expensive and investing powerful — explained with real numbers.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+    <a href="/blog/how-to-save-for-house-down-payment/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px;transition:box-shadow 0.2s">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">HOME BUYING · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How to Save for a House Down Payment</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">How much you need, where to keep it, and the fastest ways to reach your target.</p>
+      <span style="color:#0DBF7E;font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+    <a href="/blog/what-is-credit-utilization/" data-category="credit" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">CREDIT · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">What Is Credit Utilization and Why Does It Matter?</h2>
+      <p style="color:var(--gray-500);margin-bottom:40px">One number quietly drives 30% of your credit score. Here is exactly what it is and how to control it.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-to-dispute-credit-report-error/" data-category="credit" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">CREDIT · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How to Dispute a Credit Report Error (Step-by-Step)</h2>
+      <p style="color:var(--gray-500);margin-bottom:40px">One in five credit reports contains an error. Here is exactly how to find mistakes and get them removed.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/debt-consolidation-pros-and-cons/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT PAYOFF · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">Debt Consolidation: Pros, Cons, and When It Actually Makes Sense</h2>
+      <p style="color:var(--gray-500);margin-bottom:40px">Consolidation can lower your interest rate — or cost you more long-term. Here is how to tell the difference.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/what-happens-when-you-default-on-a-loan/" data-category="borrowing" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">BORROWING · 5 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">What Happens When You Default on a Loan?</h2>
+      <p style="color:var(--gray-500);margin-bottom:40px">Default is not a single event — it is a process with escalating consequences. Here is the full timeline.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-to-get-out-of-debt-on-low-income/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT PAYOFF · 6 MIN READ</div>
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:10px">How to Get Out of Debt on a Low Income</h2>
+      <p style="color:var(--gray-500);margin-bottom:40px">A tight budget makes debt harder to pay off — but the fundamentals still work. Here is a realistic plan.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-to-read-your-credit-report/" data-category="credit" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">CREDIT · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">How to Read Your Credit Report: A Complete Guide</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Your credit report is the most important financial document most people never read. Here is what every section means.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/what-is-a-good-credit-score/" data-category="credit" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">CREDIT · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">What Is a Good Credit Score? (And How to Get One)</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Credit score ranges explained — what counts as good, what lenders actually want, and the fastest ways to improve yours.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-to-pay-off-10000-in-debt/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT PAYOFF · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">How to Pay Off $10,000 in Debt: A Realistic Plan</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A step-by-step plan with exact monthly payment targets, timeline estimates, and strategies that actually work.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/mortgage-pre-approval-vs-pre-qualification/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">HOME BUYING · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">Mortgage Pre-Approval vs Pre-Qualification: What's the Difference?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Sellers and agents treat these two documents very differently. Here is what each involves and which one you need.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/debt-to-income-ratio-car-loan/" data-category="borrowing" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">BORROWING · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">Debt-to-Income Ratio for a Car Loan: What You Need to Know</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Auto lenders use DTI differently than mortgage lenders. Here is what they look for and how to improve your ratio.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+
+    <a href="/blog/how-to-build-emergency-fund-fast/" data-category="budgeting" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">SAVINGS · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">How to Build an Emergency Fund Fast</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A step-by-step plan to build your emergency fund quickly — even on a tight budget.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/what-is-a-balance-transfer/" data-category="credit" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">CREDIT · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">What Is a Balance Transfer and How Does It Work?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A 0% balance transfer can eliminate interest entirely for 12–21 months. Here is exactly how to use one.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-to-pay-off-mortgage-early/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">MORTGAGE · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">How to Pay Off Your Mortgage Early</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Strategies that can save tens of thousands in interest — and how to decide if early payoff is right for you.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/what-is-a-heloc/" data-category="borrowing" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">BORROWING · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">What Is a HELOC and When Should You Use One?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A HELOC can be a powerful financial tool or a serious risk. Here is how it works and when to use one.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-to-improve-credit-score-90-days/" data-category="credit" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">CREDIT · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">How to Improve Your Credit Score in 90 Days</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A focused 90-day plan to raise your score before a major loan application — actions ranked by impact.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/first-time-homebuyer-mistakes/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">HOME BUYING · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">First-Time Homebuyer Mistakes to Avoid</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">First-time buyers make predictable, costly mistakes. Here is how to avoid every one of them.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-to-negotiate-medical-debt/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT PAYOFF · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">How to Negotiate Medical Debt: A Practical Guide</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Medical debt is more negotiable than any other type. Here is exactly how to reduce your balance.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/what-is-debt-settlement/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT PAYOFF · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">What Is Debt Settlement and Is It Worth It?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Settlement lets you pay less than you owe — but the costs and risks are serious. Here is the full picture.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-to-budget-irregular-income/" data-category="budgeting" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">BUDGETING · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">How to Budget When Your Income Is Irregular</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A fixed monthly budget doesn't work with variable income. Here is the system that does.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/debt-snowball-how-to-use/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT STRATEGY · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">How to Use the Debt Snowball Method: Step-by-Step</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">The snowball builds real momentum. Here is exactly how to set one up with a real example.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+
+    <a href="/blog/average-credit-card-interest-rate/" data-category="credit" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">CREDIT · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">What Is the Average Credit Card Interest Rate?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">The average APR is above 20% — near historic highs. Here is what that means for your balance and what to do about it.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-long-to-pay-off-credit-card/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT PAYOFF · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">How Long Does It Take to Pay Off a Credit Card?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">The answer depends almost entirely on how much above the minimum you pay. Here are the real numbers.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/what-is-pmi/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">MORTGAGE · 5 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">What Is PMI and How Do You Avoid It?</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">PMI adds to your monthly payment when you put less than 20% down. Here is how much it costs and how to eliminate it.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    
+
+    <a href="/blog/how-to-stop-living-paycheck-to-paycheck/" data-category="budgeting" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">BUDGETING · 6 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">How to Stop Living Paycheck to Paycheck</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">Most people are one or two changes away from financial stability. Here is exactly what those changes are.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+    <a href="/blog/how-to-get-out-of-debt/" data-category="debt" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">DEBT PAYOFF · 6 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">How to Get Out of Debt: A Step-by-Step Plan</h2>
+      <p style="color:var(--gray-500);font-size:0.95rem;margin-bottom:16px">A clear, actionable plan for getting out of debt — whatever your balance, income, or starting point.</p>
+      <span style="color:var(--primary);font-size:0.9rem;font-weight:500">Read more &rarr;</span>
+    </a>
+
+
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div><div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+    <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a href="/debt-payoff-calculator/">Debt Payoff</a></li><li><a href="/mortgage-calculator/">Mortgage</a></li><li><a href="/loan-amortization-calculator/">Loan Amortization</a></li><li><a href="/interest-rate-comparator/">Interest Compare</a></li><li><a href="/debt-avalanche-vs-snowball/">Debt Avalanche</a></li><li><a href="/emergency-fund-calculator/">Emergency Fund</a></li></ul></div>
+    <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-use/">Terms of Use</a></li><li><a href="/disclaimer/">Disclaimer</a>
+      <a href="/blog/zero-based-budgeting/" data-category="budgeting" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">BUDGETING · 7 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">Zero-Based Budgeting: How It Works and When to Use It</h2>
+      <p style="font-size:0.9rem;color:var(--gray-500);line-height:1.6;margin:0">Zero-based budgeting assigns every dollar of income a specific job until your budget reaches zero. Here is how it works and when it beats other methods.</p>
+      </a>
+
+      <a href="/blog/what-is-a-hard-inquiry/" data-category="credit" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">CREDIT · 6 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">What Is a Hard Inquiry and How Much Does It Hurt Your Credit?</h2>
+      <p style="font-size:0.9rem;color:var(--gray-500);line-height:1.6;margin:0">A hard inquiry from a credit application temporarily lowers your score by 2–10 points. Here is exactly how much it matters and when to avoid them.</p>
+      </a>
+
+      <a href="/blog/home-equity-explained/" data-category="mortgage" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">MORTGAGE · 6 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">Home Equity Explained: How It Builds, What It Means, and How to Use It</h2>
+      <p style="font-size:0.9rem;color:var(--gray-500);line-height:1.6;margin:0">Home equity is your home's value minus your mortgage balance. Here is how it builds over time, what erodes it, and how to use it responsibly.</p>
+      </a>
+
+      <a href="/blog/payday-loan-alternatives/" data-category="borrowing" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">BORROWING · 6 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">Payday Loan Alternatives: Lower-Cost Options for Emergency Cash</h2>
+      <p style="font-size:0.9rem;color:var(--gray-500);line-height:1.6;margin:0">Payday loans cost 300–400% APR. Here are six lower-cost alternatives — including credit union PALs, paycheck advance apps, and employer advances.</p>
+      </a>
+
+      <a href="/blog/how-long-does-it-take-to-build-credit/" data-category="credit" style="display:block;text-decoration:none;color:inherit;cursor:pointer;border:1px solid var(--gray-100);border-radius:16px;padding:28px;margin-bottom:20px">
+      <div style="font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px">CREDIT · 7 MIN READ</div>
+      <h2 style="font-size:1.15rem;font-weight:700;margin-bottom:10px;color:var(--gray-800)">How Long Does It Take to Build Credit? A Realistic Timeline</h2>
+      <p style="font-size:0.9rem;color:var(--gray-500);line-height:1.6;margin:0">Building credit from scratch takes 3–6 months for a first score and 1–2 years for a good score. Here is the exact timeline and what drives it.</p>
+      </a>
+</li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+</footer>
+
+<script src="/main.js" defer></script>
+
+<script>
+function filterPosts(category) {
+  // Update article visibility
+  var articles = document.querySelectorAll('a[data-category]');
+  articles.forEach(function(a) {
+    if (category === 'all' || a.getAttribute('data-category') === category) {
+      a.style.display = 'block';
+    } else {
+      a.style.display = 'none';
+    }
+  });
+
+  // Update tab styles
+  var tabs = ['all','debt','mortgage','credit','borrowing','budgeting'];
+  tabs.forEach(function(t) {
+    var btn = document.getElementById('tab-' + t);
+    if (!btn) return;
+    if (t === category) {
+      btn.style.color = '#0DBF7E';
+      btn.style.borderBottomColor = '#0DBF7E';
+      btn.style.fontWeight = '600';
+    } else {
+      btn.style.color = 'var(--gray-400)';
+      btn.style.borderBottomColor = 'transparent';
+      btn.style.fontWeight = '500';
+    }
+  });
+}
+</script>
+
+</body>
+</html>
