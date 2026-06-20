@@ -56,7 +56,7 @@
   </url>
   <url>
     <loc>https://debtfreepathways.com/blog/</loc>
-    <lastmod>2025-05-22</lastmod>
+    <lastmod>2026-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -80,13 +80,19 @@
   </url>
   <url>
     <loc>https://debtfreepathways.com/privacy-policy/</loc>
-    <lastmod>2025-05-22</lastmod>
+    <lastmod>2026-06-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://debtfreepathways.com/terms-of-use/</loc>
-    <lastmod>2025-05-22</lastmod>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://debtfreepathways.com/disclaimer/</loc>
+    <lastmod>2026-06-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -104,12 +110,6 @@
   </url>
   <url>
     <loc>https://debtfreepathways.com/blog/what-credit-card-interest-costs/</loc>
-    <lastmod>2025-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://debtfreepathways.com/blog/good-debt-vs-bad-debt/</loc>
     <lastmod>2025-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -277,17 +277,17 @@
   <url><loc>https://debtfreepathways.com/blog/good-debt-vs-bad-debt/</loc><lastmod>2025-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://debtfreepathways.com/blog/how-to-stop-living-paycheck-to-paycheck/</loc><lastmod>2025-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
-  <url><loc>https://debtfreepathways.com/blog/how-to-get-out-of-debt/</loc><lastmod>2025-06-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://debtfreepathways.com/blog/how-to-get-out-of-debt/</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://debtfreepathways.com/blog/how-much-emergency-fund-do-i-need/</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://debtfreepathways.com/blog/debt-avalanche-vs-snowball-which-calculator/</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://debtfreepathways.com/blog/how-interest-rate-difference-affects-loan-cost/</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://debtfreepathways.com/blog/how-to-pay-off-mortgage-early-strategies/</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://debtfreepathways.com/blog/what-is-emergency-fund-ratio/</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://debtfreepathways.com/blog/what-is-apr-in-finance/</loc><lastmod>2026-06-13</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://debtfreepathways.com/blog/closing-costs-explained/</loc><lastmod>2025-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://debtfreepathways.com/blog/high-yield-savings-account-explained/</loc><lastmod>2025-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://debtfreepathways.com/blog/closing-costs-explained/</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://debtfreepathways.com/blog/high-yield-savings-account-explained/</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://debtfreepathways.com/blog/home-equity-explained/</loc><lastmod>2025-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://debtfreepathways.com/blog/how-long-does-it-take-to-build-credit/</loc><lastmod>2025-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://debtfreepathways.com/blog/how-long-does-it-take-to-build-credit/</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://debtfreepathways.com/blog/how-to-remove-late-payment-from-credit-report/</loc><lastmod>2025-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://debtfreepathways.com/blog/payday-loan-alternatives/</loc><lastmod>2025-06-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://debtfreepathways.com/blog/what-is-a-debt-management-plan/</loc><lastmod>2025-06-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
