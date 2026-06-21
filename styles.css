@@ -90,8 +90,10 @@ footer{background:var(--navy);padding:48px 2rem 32px;color:rgba(255,255,255,.5)}
 .hero-sub{font-size:17px;font-weight:300;color:rgba(255,255,255,.6);max-width:520px;margin:0 auto 40px;line-height:1.7;animation:fadeUp .65s .1s ease both}
 .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:44px;animation:fadeUp .65s .2s ease both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-.hero-calc{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.11);border-radius:20px;padding:26px 30px;max-width:500px;margin:0 auto;text-align:left;position:relative;z-index:1;animation:fadeUp .65s .3s ease both;backdrop-filter:blur(8px)}
-.hero-calc-title{font-size:11px;font-weight:600;color:rgba(255,255,255,.45);letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px}
+.hero-calc{background:rgba(255,255,255,.08);border:1px solid rgba(13,191,126,.35);border-radius:20px;padding:26px 30px;max-width:500px;margin:0 auto;text-align:left;position:relative;z-index:1;animation:fadeUp .65s .3s ease both;backdrop-filter:blur(8px);box-shadow:0 0 0 1px rgba(13,191,126,.08),0 20px 50px rgba(0,0,0,.25)}
+.hero-calc-title{font-size:11px;font-weight:600;color:rgba(255,255,255,.45);letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:7px}
+.hero-calc-live{width:7px;height:7px;border-radius:50%;background:#0DBF7E;display:inline-block;animation:pulseDot 1.8s ease-in-out infinite}
+@keyframes pulseDot{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(13,191,126,.5)}50%{opacity:.7;box-shadow:0 0 0 5px rgba(13,191,126,0)}}
 .hcalc-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
 .hcalc-field label{display:block;font-size:11px;color:rgba(255,255,255,.4);margin-bottom:5px}
 .hcalc-field input{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:9px;padding:10px 13px;font-family:var(--font-body);font-size:14px;color:var(--white);outline:none;transition:border-color .15s,background .15s}
@@ -112,7 +114,8 @@ footer{background:var(--navy);padding:48px 2rem 32px;color:rgba(255,255,255,.5)}
 .tool-card.featured{border-color:var(--blue);background:var(--blue-light)}
 .tool-card.featured::after{opacity:1}
 .tool-icon{width:46px;height:46px;border-radius:13px;background:var(--icon-bg,var(--blue-light));display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:21px}
-.tool-badge{position:absolute;top:16px;right:16px;font-size:10px;font-weight:600;padding:3px 10px;border-radius:99px;letter-spacing:.05em;text-transform:uppercase}
+.tool-badge{position:absolute;top:16px;right:16px;font-size:10px;font-weight:600;padding:3px 10px;border-radius:99px;letter-spacing:.05em;text-transform:uppercase;display:inline-flex;align-items:center;gap:5px}
+.badge-dot{width:5px;height:5px;border-radius:50%;background:currentColor;display:inline-block}
 .badge-popular{background:var(--green-light);color:#076B47}
 .badge-new{background:var(--amber-light);color:#8B5C00}
 .tool-title{font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--navy);margin-bottom:6px}
@@ -120,7 +123,6 @@ footer{background:var(--navy);padding:48px 2rem 32px;color:rgba(255,255,255,.5)}
 .tool-meta{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid var(--gray-100)}
 .tool-tag{font-size:11px;color:var(--gray-400);background:var(--gray-50);padding:3px 10px;border-radius:99px;border:1px solid var(--gray-100)}
 .tool-arrow{font-size:14px;color:var(--blue);font-weight:500}
-.tool-vol{font-size:10px;font-weight:600;color:#076B47;background:var(--green-light);padding:2px 8px;border-radius:99px;margin-left:6px}
 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
 .step{text-align:center}
 .step-num{width:42px;height:42px;background:var(--navy);color:var(--white);font-family:var(--font-display);font-size:16px;font-weight:700;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}

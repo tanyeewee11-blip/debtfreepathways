@@ -131,14 +131,14 @@
 <main>
 <section class="hero">
     <div class="hero-badge"><span class="hero-badge-dot"></span>Free · No sign-up required</div>
-    <h1>Take Control of Your <span>Debt & Finances</span></h1>
-    <p class="hero-sub">Powerful, free calculators to help you pay off debt faster, plan your mortgage, and build a stronger financial future.</p>
+    <h1>Know Your Exact <span>Debt-Free Date</span></h1>
+    <p class="hero-sub">6 free calculators that show your real numbers — payoff date, total interest, mortgage costs — in seconds. No account, no email, no catch.</p>
     <div class="hero-actions">
       <a class="btn-primary" href="/#tools">Explore Free Calculators</a>
       <a class="btn-ghost" href="/#how">How it works</a>
     </div>
     <div class="hero-calc">
-      <div class="hero-calc-title">Quick debt payoff preview</div>
+      <div class="hero-calc-title"><span class="hero-calc-live"></span>Quick debt payoff preview — updates live</div>
       <div class="hcalc-row">
         <div class="hcalc-field"><label>Total debt ($)</label><input type="number" id="hc-debt" value="15000" oninput="heroCalc()"></div>
         <div class="hcalc-field"><label>Interest rate (%)</label><input type="number" id="hc-rate" value="19.9" step="0.1" oninput="heroCalc()"></div>
@@ -157,9 +157,9 @@
   </section>
 
   <div class="stats-bar">
-    <div class="stat-item"><div class="stat-num">$12K+</div><div class="stat-label">Potential interest saved with extra payments</div></div>
-    <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">Free calculators</div></div>
-    <div class="stat-item"><div class="stat-num">0</div><div class="stat-label">Sign-up required</div></div>
+    <div class="stat-item"><div class="stat-num" data-count-to="12" data-prefix="$" data-suffix="K+">$0</div><div class="stat-label">Potential interest saved with extra payments</div></div>
+    <div class="stat-item"><div class="stat-num" data-count-to="6">0</div><div class="stat-label">Free calculators</div></div>
+    <div class="stat-item"><div class="stat-num" data-count-to="0">0</div><div class="stat-label">Sign-up required</div></div>
     <div class="stat-item"><div class="stat-num">Instant</div><div class="stat-label">Real-time results</div></div>
   </div>
 
@@ -172,40 +172,40 @@
       </div>
       <div class="tools-grid">
         <a href="/debt-payoff-calculator/" class="tool-card featured" style="--card-accent:#1A6FE8;text-decoration:none;color:inherit;display:block">
-          <span class="tool-badge badge-popular">Most Popular</span>
-          <div class="tool-icon" style="--icon-bg:#D6E8FF">💳</div>
-          <div class="tool-title">Debt Payoff Calculator <span class="tool-vol">165K/mo</span></div>
-          <div class="tool-desc">See exactly how long it'll take to become debt-free and how much interest you'll save by paying extra each month.</div>
+          <span class="tool-badge badge-popular"><span class="badge-dot"></span>Start here</span>
+          <div class="tool-icon" style="--icon-bg:#D6E8FF"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A6FE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+          <div class="tool-title">Debt Payoff Calculator</div>
+          <div class="tool-desc">The most-used tool on this site. See your exact debt-free date and how much extra payments save you in interest.</div>
           <div class="tool-meta"><span class="tool-tag">Debt · Payoff</span><span class="tool-arrow">Calculate →</span></div>
         </a>
         <a href="/mortgage-calculator/" class="tool-card" style="--card-accent:#0DBF7E;text-decoration:none;color:inherit;display:block">
-          <div class="tool-icon" style="--icon-bg:#E6FAF3">🏠</div>
-          <div class="tool-title">Mortgage Calculator <span class="tool-vol">1M/mo</span></div>
+          <div class="tool-icon" style="--icon-bg:#E6FAF3"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0DBF7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 2l9 7.5"/><path d="M5 10v10a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1V10"/></svg></div>
+          <div class="tool-title">Mortgage Calculator</div>
           <div class="tool-desc">Calculate monthly payments, total interest, and see full amortization schedules for any home loan.</div>
           <div class="tool-meta"><span class="tool-tag">Mortgage · Home</span><span class="tool-arrow">Calculate →</span></div>
         </a>
         <a href="/loan-amortization-calculator/" class="tool-card" style="--card-accent:#F5A623;text-decoration:none;color:inherit;display:block">
-          <span class="tool-badge badge-new">New</span>
-          <div class="tool-icon" style="--icon-bg:#FEF6E7">📊</div>
-          <div class="tool-title">Loan Amortization <span class="tool-vol">90K/mo</span></div>
+          <span class="tool-badge badge-new"><span class="badge-dot"></span>New</span>
+          <div class="tool-icon" style="--icon-bg:#FEF6E7"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="9" x2="9" y2="21"/></svg></div>
+          <div class="tool-title">Loan Amortization</div>
           <div class="tool-desc">Break down every payment — principal vs. interest — month by month with a full amortization table.</div>
           <div class="tool-meta"><span class="tool-tag">Loan · Amortization</span><span class="tool-arrow">Calculate →</span></div>
         </a>
         <a href="/interest-rate-comparator/" class="tool-card" style="--card-accent:#1A6FE8;text-decoration:none;color:inherit;display:block">
-          <div class="tool-icon" style="--icon-bg:#E8EDFB">📉</div>
+          <div class="tool-icon" style="--icon-bg:#E8EDFB"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A6FE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><path d="M5 7l-3 6a3 3 0 0 0 6 0z"/><path d="M19 7l-3 6a3 3 0 0 0 6 0z"/><path d="M5 7h14"/><path d="M12 3l4 4-4 4-4-4z"/></svg></div>
           <div class="tool-title">Interest Rate Comparator</div>
           <div class="tool-desc">Compare two loans side-by-side to find which saves you the most money over time.</div>
           <div class="tool-meta"><span class="tool-tag">Interest · Compare</span><span class="tool-arrow">Calculate →</span></div>
         </a>
         <a href="/debt-avalanche-vs-snowball/" class="tool-card" style="--card-accent:#7C3AED;text-decoration:none;color:inherit;display:block">
-          <div class="tool-icon" style="--icon-bg:#EDE9FE">❄️</div>
-          <div class="tool-title">Debt Avalanche vs Snowball <span class="tool-vol">40K/mo</span></div>
+          <div class="tool-icon" style="--icon-bg:#EDE9FE"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="4.93" y1="6" x2="19.07" y2="18"/><line x1="4.93" y1="18" x2="19.07" y2="6"/><path d="M12 6l-2 2M12 6l2 2M12 18l-2-2M12 18l2-2"/></svg></div>
+          <div class="tool-title">Debt Avalanche vs Snowball</div>
           <div class="tool-desc">Find your optimal debt repayment strategy — see which method saves more interest or pays off faster.</div>
           <div class="tool-meta"><span class="tool-tag">Strategy · Debt</span><span class="tool-arrow">Calculate →</span></div>
         </a>
         <a href="/emergency-fund-calculator/" class="tool-card" style="--card-accent:#0DBF7E;text-decoration:none;color:inherit;display:block">
-          <div class="tool-icon" style="--icon-bg:#E6FAF3">🛡️</div>
-          <div class="tool-title">Emergency Fund Calculator <span class="tool-vol">22K/mo</span></div>
+          <div class="tool-icon" style="--icon-bg:#E6FAF3"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0DBF7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <div class="tool-title">Emergency Fund Calculator</div>
           <div class="tool-desc">Find out how much you need saved and how long it'll take to build your financial safety net.</div>
           <div class="tool-meta"><span class="tool-tag">Savings · Emergency</span><span class="tool-arrow">Calculate →</span></div>
         </a>
@@ -228,11 +228,18 @@
 
   <div class="trust-section">
     <div class="container">
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--gray-100)">
+        <img src="/images/marcus-avatar.png" alt="Marcus Sheldon" width="40" height="40" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0">
+        <div style="text-align:left">
+          <p style="font-size:13px;font-weight:600;color:var(--navy);margin:0">Calculators and guides written by <a href="/about/" style="color:var(--blue);text-decoration:none">Marcus Sheldon</a></p>
+          <p style="font-size:12px;color:var(--gray-400);margin:2px 0 0">8+ years writing about debt, mortgages, and credit · every formula checked against standard lending math</p>
+        </div>
+      </div>
       <div class="trust-grid">
-        <div class="trust-item"><div class="trust-icon">🔒</div><div class="trust-title">No data stored</div><div class="trust-desc">All calculations happen in your browser. We never store your financial data.</div></div>
-        <div class="trust-item"><div class="trust-icon">⚡</div><div class="trust-title">Instant results</div><div class="trust-desc">Real-time calculations update as you type — no waiting, no loading.</div></div>
-        <div class="trust-item"><div class="trust-icon">✅</div><div class="trust-title">Accuracy you can trust</div><div class="trust-desc">Formulas verified against standard financial calculation methods.</div></div>
-        <div class="trust-item"><div class="trust-icon">💯</div><div class="trust-title">Always free</div><div class="trust-desc">No premium plan, no paywall. Every calculator is completely free.</div></div>
+        <div class="trust-item"><div class="trust-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><div class="trust-title">No data stored</div><div class="trust-desc">All calculations happen in your browser. We never store your financial data.</div></div>
+        <div class="trust-item"><div class="trust-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 11 14 11 22 21 10 13 10 13 2"/></svg></div><div class="trust-title">Instant results</div><div class="trust-desc">Real-time calculations update as you type — no waiting, no loading.</div></div>
+        <div class="trust-item"><div class="trust-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg></div><div class="trust-title">Accuracy you can trust</div><div class="trust-desc">Formulas verified against standard financial calculation methods.</div></div>
+        <div class="trust-item"><div class="trust-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="trust-title">Always free</div><div class="trust-desc">No premium plan, no paywall. Every calculator is completely free.</div></div>
       </div>
     </div>
   </div>
@@ -285,22 +292,22 @@
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px">
           <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid var(--gray-100,#f3f4f6)">
-            <div style="font-size:1.4rem;margin-bottom:8px">🔢</div>
+            <div style="margin-bottom:10px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="10" y2="11"/><line x1="14" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="10" y2="15"/><line x1="14" y1="15" x2="16" y2="15"/></svg></div>
             <div style="font-weight:600;margin-bottom:6px">Standard financial formulas</div>
             <p style="font-size:0.9rem;color:var(--gray-500,#6b7280);line-height:1.6;margin:0">Every calculator uses the same formulas banks and lenders use — not simplified estimates. Amortization, APR, compound interest — all calculated correctly.</p>
           </div>
           <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid var(--gray-100,#f3f4f6)">
-            <div style="font-size:1.4rem;margin-bottom:8px">🔒</div>
+            <div style="margin-bottom:10px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
             <div style="font-weight:600;margin-bottom:6px">Your data never leaves your device</div>
             <p style="font-size:0.9rem;color:var(--gray-500,#6b7280);line-height:1.6;margin:0">All calculations happen locally in your browser. Your debt balance, income, and loan details are never sent to any server or stored anywhere.</p>
           </div>
           <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid var(--gray-100,#f3f4f6)">
-            <div style="font-size:1.4rem;margin-bottom:8px">📖</div>
+            <div style="margin-bottom:10px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
             <div style="font-weight:600;margin-bottom:6px">Guides that explain the numbers</div>
             <p style="font-size:0.9rem;color:var(--gray-500,#6b7280);line-height:1.6;margin:0">Every calculator is paired with an in-depth guide explaining what the numbers mean, what lenders actually look for, and what to do with the results.</p>
           </div>
           <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid var(--gray-100,#f3f4f6)">
-            <div style="font-size:1.4rem;margin-bottom:8px">🚫</div>
+            <div style="margin-bottom:10px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></div>
             <div style="font-weight:600;margin-bottom:6px">No product recommendations</div>
             <p style="font-size:0.9rem;color:var(--gray-500,#6b7280);line-height:1.6;margin:0">We do not earn commissions from banks, lenders, or financial products. There are no sponsored results, no affiliate links in calculator outputs, and no pressure to sign up for anything.</p>
           </div>
