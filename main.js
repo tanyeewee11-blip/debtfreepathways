@@ -157,8 +157,19 @@ function scrollToId(id) {
 }
 function toggleFaq(btn) {
   const item = btn.closest('.faq-item'), isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-  if(!isOpen) item.classList.add('open');
+  // Collapse all open items and reset aria-expanded
+  document.querySelectorAll('.faq-item.open').forEach(el => {
+    el.classList.remove('open');
+    const b = el.querySelector('.faq-q');
+    if (b) b.setAttribute('aria-expanded', 'false');
+  });
+  // Expand clicked item if it was closed
+  if (!isOpen) {
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+  } else {
+    btn.setAttribute('aria-expanded', 'false');
+  }
 }
 
 /* ═══════════════════════════════════════
@@ -260,14 +271,41 @@ function heroCalc() {
   const debt=+document.getElementById('hc-debt').value||0;
   const rate=+document.getElementById('hc-rate').value||0;
   const pay=+document.getElementById('hc-pay').value||0;
-  if(!pay||!debt){document.getElementById('hc-months').textContent='—';document.getElementById('hc-interest').textContent='Enter your numbers';return;}
-  if(rate===0){const n=Math.ceil(debt/pay);document.getElementById('hc-months').textContent=fmtM(n);document.getElementById('hc-interest').textContent='No interest';return;}
+  // Guard: missing or invalid inputs
+  if(!pay||!debt||debt<0||pay<0||rate<0){
+    document.getElementById('hc-months').textContent='—';
+    document.getElementById('hc-interest').textContent='Enter your numbers';
+    return;
+  }
+  if(rate===0){
+    const n=Math.ceil(debt/pay);
+    document.getElementById('hc-months').textContent=fmtM(n);
+    document.getElementById('hc-interest').textContent='No interest';
+    return;
+  }
   const r=rate/100/12;
-  if(pay<=debt*r){document.getElementById('hc-months').textContent='∞';document.getElementById('hc-interest').textContent='Payment too low';return;}
-  const n=Math.ceil(-Math.log(1-(debt*r)/pay)/Math.log(1+r));
+  // Guard: payment must exceed monthly interest charge to ever pay off
+  if(pay<=debt*r){
+    document.getElementById('hc-months').textContent='∞';
+    document.getElementById('hc-interest').textContent='Payment too low to pay off';
+    return;
+  }
+  const ratio=(debt*r)/pay;
+  // Guard: prevent Math.log of zero or negative (floating point edge case)
+  if(ratio<=0||ratio>=1){
+    document.getElementById('hc-months').textContent='—';
+    document.getElementById('hc-interest').textContent='Check your numbers';
+    return;
+  }
+  const n=Math.ceil(-Math.log(1-ratio)/Math.log(1+r));
+  if(!isFinite(n)||n<=0){
+    document.getElementById('hc-months').textContent='—';
+    document.getElementById('hc-interest').textContent='Check your numbers';
+    return;
+  }
   const interest=pay*n-debt;
   document.getElementById('hc-months').textContent=fmtM(n);
-  document.getElementById('hc-interest').textContent='$'+Math.round(interest).toLocaleString()+' interest';
+  document.getElementById('hc-interest').textContent='$'+Math.round(Math.max(0,interest)).toLocaleString()+' interest';
 }
 
 /* ═══════════════════════════════════════

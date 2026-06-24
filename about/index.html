@@ -17,7 +17,6 @@
 <meta name="description" content="DebtFreePathways offers free personal finance calculators and guides to help you pay off debt, plan your mortgage, and build financial freedom — no sign-up required.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://debtfreepathways.com/about/">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DebtFreePathways">
 <meta property="og:title" content="About DebtFreePathways — Free Financial Calculators for Real People">
@@ -83,6 +82,7 @@
 </script>
 </head>
 <body>
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
 
 <nav>
   <a class="nav-logo" href="/"><span class="nav-dot"></span>DebtFreePathways</a>
@@ -107,7 +107,7 @@
   <button class="nav-mobile-cta" onclick="window.location.href='/#tools'">Browse Tools</button>
 </div>
 
-<main>
+<main id="main-content">
 <div class="calc-layout">
   <div class="calc-main" style="max-width:720px;margin:0 auto;padding:40px 24px">
 
@@ -290,5 +290,15 @@
 </main>
 
 <script src="/main.js" defer></script>
+<!-- AdSense loaded after page render to avoid blocking LCP -->
+<script>
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770';
+    s.crossOrigin = 'anonymous';
+    document.body.appendChild(s);
+  });
+</script>
 </body>
 </html>

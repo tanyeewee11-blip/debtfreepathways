@@ -18,7 +18,6 @@
 <meta name="description" content="Privacy Policy for DebtFreePathways.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://debtfreepathways.com/privacy.html">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DebtFreePathways">
 <meta property="og:title" content="Privacy Policy — DebtFreePathways">
@@ -37,6 +36,7 @@
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
 
 <!-- NAV -->
 <nav>
@@ -64,7 +64,7 @@
 </div>
 
 
-<main>
+<main id="main-content">
 <div class="calc-layout">
     <div class="calc-main" style="max-width:720px;margin:0 auto;padding:40px 24px">
       <div class="breadcrumb" style="color:var(--gray-400)"><span href="/" style="color:var(--gray-500)">Home</span> <span style="color:var(--gray-300)">/</span> <span style="color:var(--gray-400)">Privacy Policy</span></div>
@@ -134,5 +134,15 @@
 </main>
 
 <script src="/main.js" defer></script>
+<!-- AdSense loaded after page render to avoid blocking LCP -->
+<script>
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770';
+    s.crossOrigin = 'anonymous';
+    document.body.appendChild(s);
+  });
+</script>
 </body>
 </html>

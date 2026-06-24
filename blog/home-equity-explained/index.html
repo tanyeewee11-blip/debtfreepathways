@@ -12,7 +12,6 @@
 <meta name="description" content="Home equity is your home's value minus your mortgage balance. Here is how it builds over time, what erodes it, and how to use it responsibly.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://debtfreepathways.com/blog/home-equity-explained/">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DebtFreePathways">
 <meta property="og:title" content="Home Equity Explained: How It Builds, What It Means, and How to Use It — DebtFreePathways">
@@ -34,6 +33,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://debtfreepathways.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://debtfreepathways.com/blog/"},{"@type":"ListItem","position":3,"name":"Home Equity Explained","item":"https://debtfreepathways.com/blog/home-equity-explained/"}]}</script>
 </head>
 <body>
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
 <nav>
   <a class="nav-logo" href="/"><span class="nav-dot"></span>DebtFreePathways</a>
   <ul class="nav-links"><li><a href="/#tools">Calculators</a></li><li><a href="/#how">How It Works</a></li><li><a href="/blog/">Blog</a></li></ul>
@@ -45,7 +45,7 @@
   <ul class="nav-mobile-links"><li><a href="/#tools">Calculators</a></li><li><a href="/#how">How It Works</a></li><li><a href="/blog/">Blog</a></li></ul>
   <button class="nav-mobile-cta" onclick="window.location.href='/#tools'">Browse Tools</button>
 </div>
-<main>
+<main id="main-content">
 <div class="calc-layout"><div class="blog-page-wrap">
   <div class="calc-main" style="padding:40px 0 40px 24px">
     <div class="breadcrumb" style="color:var(--gray-400)"><span style="color:var(--gray-500)">Home</span> <span style="color:var(--gray-300)">/</span> <span style="color:var(--gray-500)">Blog</span> <span style="color:var(--gray-300)">/</span> <span style="color:var(--gray-700)">Home Equity Explained</span></div>
@@ -136,5 +136,15 @@
   <div class="footer-bottom"><span>&copy; <span class="yr"></span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
 </footer>
 <script src="/main.js" defer></script>
+<!-- AdSense loaded after page render to avoid blocking LCP -->
+<script>
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770';
+    s.crossOrigin = 'anonymous';
+    document.body.appendChild(s);
+  });
+</script>
 </body>
 </html>

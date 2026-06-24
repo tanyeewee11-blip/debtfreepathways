@@ -18,7 +18,6 @@
 <meta name="description" content="Find out exactly when you'll be debt-free, what your mortgage really costs, and how much you need saved. 6 free calculators. No account required.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://debtfreepathways.com/">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770" crossorigin="anonymous"></script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DebtFreePathways">
 <meta property="og:title" content="DebtFreePathways — Free Debt Payoff & Mortgage Calculators">
@@ -50,14 +49,6 @@
         "name": "DebtFreePathways",
         "url": "https://debtfreepathways.com/"
       },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://debtfreepathways.com/blog/?s={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
     },
     {
       "@type": "FAQPage",
@@ -101,6 +92,7 @@
 </script>
 </head>
 <body>
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
 
 <!-- NAV -->
 <nav>
@@ -128,7 +120,7 @@
 </div>
 
 
-<main>
+<main id="main-content">
 <section class="hero">
     <div class="hero-badge"><span class="hero-badge-dot"></span>Free · No sign-up required</div>
     <h1>Know Your Exact <span>Debt-Free Date</span></h1>
@@ -145,13 +137,13 @@
       </div>
       <div class="hcalc-row">
         <div class="hcalc-field"><label>Monthly payment ($)</label><input type="number" id="hc-pay" value="400" oninput="heroCalc()"></div>
-        <div class="hcalc-field" style="display:flex;align-items:flex-end">
-          <a class="btn-primary" href="/debt-payoff-calculator/" style="width:100%;text-align:center;padding:10px 0;font-size:13px">Full breakdown →</a>
+        <div class="hcalc-field" class="flex-end">
+          <a class="btn-primary" href="/debt-payoff-calculator/" class="btn-full">Full breakdown →</a>
         </div>
       </div>
       <div class="hcalc-result">
         <div><div class="hcalc-result-label">Debt-free in</div><div class="hcalc-result-sub" id="hc-interest">calculating…</div></div>
-        <div style="text-align:right"><div class="hcalc-result-val" id="hc-months">—</div></div>
+        <div class="text-right"><div class="hcalc-result-val" id="hc-months">—</div></div>
       </div>
     </div>
   </section>
@@ -228,11 +220,14 @@
 
   <div class="trust-section">
     <div class="container">
-      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--gray-100)">
-        <img src="/images/marcus-avatar.png" alt="Marcus Sheldon" width="40" height="40" style="width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0">
-        <div style="text-align:left">
-          <p style="font-size:13px;font-weight:600;color:var(--navy);margin:0">Calculators and guides written by <a href="/about/" style="color:var(--blue);text-decoration:none">Marcus Sheldon</a></p>
-          <p style="font-size:12px;color:var(--gray-400);margin:2px 0 0">8+ years writing about debt, mortgages, and credit · every formula checked against standard lending math</p>
+      <div class="author-row">
+        <picture>
+          <source srcset="/images/marcus-avatar.webp" type="image/webp">
+          <img src="/images/marcus-avatar.png" alt="Marcus Sheldon" width="40" height="40" class="author-avatar">
+        </picture>
+        <div class="text-left">
+          <p class="author-name">Calculators and guides written by <a href="/about/" style="color:var(--blue);text-decoration:none">Marcus Sheldon</a></p>
+          <p class="author-meta">8+ years writing about debt, mortgages, and credit · every formula checked against standard lending math</p>
         </div>
       </div>
       <div class="trust-grid">
@@ -245,84 +240,84 @@
   </div>
 
   <div class="container">
-    <section class="section" id="faq" style="border-top:1px solid var(--gray-100)">
-      <div class="section-header" style="text-align:center">
+    <section class="section" id="faq" class="section-divider">
+      <div class="section-header text-center">
         <div class="section-label">Got questions?</div>
         <div class="section-title">Frequently asked questions</div>
       </div>
       <div class="faq-list">
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How accurate are these calculators?<span class="faq-icon">+</span></button><div class="faq-a">Our calculators use standard financial formulas (compound interest, amortization schedules) that match those used by banks. Results are highly accurate for planning, though actual figures may vary slightly based on your lender's specific terms.</div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is my financial data saved or shared?<span class="faq-icon">+</span></button><div class="faq-a">No. All calculations happen entirely in your browser — nothing is sent to our servers. We never store, sell, or share any numbers you enter.</div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What's the difference between debt avalanche and debt snowball?<span class="faq-icon">+</span></button><div class="faq-a">The avalanche method pays off the highest-interest debt first (saves the most money). The snowball method pays off the smallest balance first (builds motivation). Our calculator lets you compare both.</div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are these calculators free to use?<span class="faq-icon">+</span></button><div class="faq-a">Yes — completely free, with no sign-up, no email required, and no premium tier. All 6 calculators are fully accessible at no cost, forever.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How accurate are these calculators?<span class="faq-icon">+</span></button><div class="faq-a">Our calculators use standard financial formulas (compound interest, amortization schedules) that match those used by banks. Results are highly accurate for planning, though actual figures may vary slightly based on your lender's specific terms.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Is my financial data saved or shared?<span class="faq-icon">+</span></button><div class="faq-a">No. All calculations happen entirely in your browser — nothing is sent to our servers. We never store, sell, or share any numbers you enter.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What's the difference between debt avalanche and debt snowball?<span class="faq-icon">+</span></button><div class="faq-a">The avalanche method pays off the highest-interest debt first (saves the most money). The snowball method pays off the smallest balance first (builds motivation). Our calculator lets you compare both.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Are these calculators free to use?<span class="faq-icon">+</span></button><div class="faq-a">Yes — completely free, with no sign-up, no email required, and no premium tier. All 6 calculators are fully accessible at no cost, forever.</div></div>
 
           <div class="faq-item">
-            <button class="faq-q" onclick="toggleFaq(this)">How do I know which calculator to use?<span class="faq-icon">+</span></button>
+            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How do I know which calculator to use?<span class="faq-icon">+</span></button>
             <div class="faq-a">Start with the tool that matches your most pressing financial question. If you are carrying credit card or loan debt, the Debt Payoff Calculator shows your payoff date and total interest. If you are buying a home, the Mortgage Calculator gives you a full payment breakdown. If you have multiple debts and are not sure which to pay first, the Debt Avalanche vs Snowball tool compares both strategies side by side.</div>
           </div>
           <div class="faq-item">
-            <button class="faq-q" onclick="toggleFaq(this)">Can I use these calculators on my phone?<span class="faq-icon">+</span></button>
+            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can I use these calculators on my phone?<span class="faq-icon">+</span></button>
             <div class="faq-a">Yes. All calculators are fully responsive and work on any device — phone, tablet, or desktop. No app download is required. Just open the page in your browser and the calculator works immediately.</div>
           </div>
           <div class="faq-item">
-            <button class="faq-q" onclick="toggleFaq(this)">How often is the content updated?<span class="faq-icon">+</span></button>
+            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How often is the content updated?<span class="faq-icon">+</span></button>
             <div class="faq-a">Our guides are reviewed and updated regularly to reflect current lending guidelines, interest rate environments, and financial regulations. Calculator formulas use standard financial mathematics that do not change — but the surrounding context and rate examples are kept current.</div>
           </div>
       </div>
     </section>
   </div>
 
-  <div style="background:#fff;padding:48px 0 32px">
+  <div class="content-white">
     <div class="container">
-      <div style="max-width:720px;margin:0 auto">
-        <h2 style="font-size:1.4rem;font-weight:700;margin-bottom:12px">Understanding your debt numbers</h2>
-        <p style="color:var(--gray-600,#4b5563);line-height:1.7;margin-bottom:16px">Most people know roughly how much they owe — but very few know their exact payoff date, total interest cost, or how much a small extra payment would change things. That gap between knowing your balance and understanding your debt is exactly what these tools are designed to close.</p>
-        <p style="color:var(--gray-600,#4b5563);line-height:1.7;margin-bottom:16px">A $10,000 credit card balance at 22% APR with minimum payments will take over 20 years to pay off and cost more than $15,000 in interest alone. Increasing that payment by $150/month cuts the timeline to under 5 years and saves over $12,000. Most people do not know these numbers — and once they do, they make different decisions.</p>
-        <p style="color:var(--gray-600,#4b5563);line-height:1.7">That is the purpose of DebtFreePathways: not to tell you what to do, but to give you the exact numbers so you can decide for yourself.</p>
+      <div class="content-inner">
+        <h2 class="section-h2">Understanding your debt numbers</h2>
+        <p class="body-p">Most people know roughly how much they owe — but very few know their exact payoff date, total interest cost, or how much a small extra payment would change things. That gap between knowing your balance and understanding your debt is exactly what these tools are designed to close.</p>
+        <p class="body-p">A $10,000 credit card balance at 22% APR with minimum payments will take over 20 years to pay off and cost more than $15,000 in interest alone. Increasing that payment by $150/month cuts the timeline to under 5 years and saves over $12,000. Most people do not know these numbers — and once they do, they make different decisions.</p>
+        <p class="body-p body-p--last">That is the purpose of DebtFreePathways: not to tell you what to do, but to give you the exact numbers so you can decide for yourself.</p>
       </div>
     </div>
   </div>
 
 
-  <div style="background:var(--gray-50,#f9fafb);padding:56px 0">
+  <div class="content-gray">
     <div class="container">
-      <div style="max-width:720px;margin:0 auto">
-        <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:12px">Why use DebtFreePathways?</h2>
-        <p style="color:var(--gray-600,#4b5563);line-height:1.7;margin-bottom:32px">Most financial calculators online are either too simple to be genuinely useful, or buried in pages designed to upsell you on financial products. DebtFreePathways was built with one goal: give you accurate, useful financial tools with no agenda.</p>
+      <div class="content-inner">
+        <h2 class="section-h2">Why use DebtFreePathways?</h2>
+        <p class="body-p body-p--lg">Most financial calculators online are either too simple to be genuinely useful, or buried in pages designed to upsell you on financial products. DebtFreePathways was built with one goal: give you accurate, useful financial tools with no agenda.</p>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px">
-          <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid var(--gray-100,#f3f4f6)">
-            <div style="margin-bottom:10px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="10" y2="11"/><line x1="14" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="10" y2="15"/><line x1="14" y1="15" x2="16" y2="15"/></svg></div>
-            <div style="font-weight:600;margin-bottom:6px">Standard financial formulas</div>
-            <p style="font-size:0.9rem;color:var(--gray-500,#6b7280);line-height:1.6;margin:0">Every calculator uses the same formulas banks and lenders use — not simplified estimates. Amortization, APR, compound interest — all calculated correctly.</p>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="10" y2="11"/><line x1="14" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="10" y2="15"/><line x1="14" y1="15" x2="16" y2="15"/></svg></div>
+            <div class="feature-card-title">Standard financial formulas</div>
+            <p class="feature-card-desc">Every calculator uses the same formulas banks and lenders use — not simplified estimates. Amortization, APR, compound interest — all calculated correctly.</p>
           </div>
-          <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid var(--gray-100,#f3f4f6)">
-            <div style="margin-bottom:10px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
-            <div style="font-weight:600;margin-bottom:6px">Your data never leaves your device</div>
-            <p style="font-size:0.9rem;color:var(--gray-500,#6b7280);line-height:1.6;margin:0">All calculations happen locally in your browser. Your debt balance, income, and loan details are never sent to any server or stored anywhere.</p>
+          <div class="feature-card">
+            <div class="feature-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+            <div class="feature-card-title">Your data never leaves your device</div>
+            <p class="feature-card-desc">All calculations happen locally in your browser. Your debt balance, income, and loan details are never sent to any server or stored anywhere.</p>
           </div>
-          <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid var(--gray-100,#f3f4f6)">
-            <div style="margin-bottom:10px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
-            <div style="font-weight:600;margin-bottom:6px">Guides that explain the numbers</div>
-            <p style="font-size:0.9rem;color:var(--gray-500,#6b7280);line-height:1.6;margin:0">Every calculator is paired with an in-depth guide explaining what the numbers mean, what lenders actually look for, and what to do with the results.</p>
+          <div class="feature-card">
+            <div class="feature-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+            <div class="feature-card-title">Guides that explain the numbers</div>
+            <p class="feature-card-desc">Every calculator is paired with an in-depth guide explaining what the numbers mean, what lenders actually look for, and what to do with the results.</p>
           </div>
-          <div style="background:#fff;border-radius:12px;padding:24px;border:1px solid var(--gray-100,#f3f4f6)">
-            <div style="margin-bottom:10px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></div>
-            <div style="font-weight:600;margin-bottom:6px">No product recommendations</div>
-            <p style="font-size:0.9rem;color:var(--gray-500,#6b7280);line-height:1.6;margin:0">We do not earn commissions from banks, lenders, or financial products. There are no sponsored results, no affiliate links in calculator outputs, and no pressure to sign up for anything.</p>
+          <div class="feature-card">
+            <div class="feature-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></div>
+            <div class="feature-card-title">No product recommendations</div>
+            <p class="feature-card-desc">We do not earn commissions from banks, lenders, or financial products. There are no sponsored results, no affiliate links in calculator outputs, and no pressure to sign up for anything.</p>
           </div>
         </div>
 
-        <h2 style="font-size:1.3rem;font-weight:700;margin-bottom:12px">Who is this for?</h2>
-        <p style="color:var(--gray-600,#4b5563);line-height:1.7;margin-bottom:16px">DebtFreePathways is built for anyone managing real debt or making real financial decisions — not for finance professionals or people with perfect financial situations. Specifically:</p>
-        <ul style="color:var(--gray-600,#4b5563);line-height:2;padding-left:20px;margin-bottom:16px">
+        <h2 class="section-h2 section-h2--sm">Who is this for?</h2>
+        <p class="body-p">DebtFreePathways is built for anyone managing real debt or making real financial decisions — not for finance professionals or people with perfect financial situations. Specifically:</p>
+        <ul class="audience-list">
           <li>People with credit card debt who want to know exactly when they will be free of it</li>
           <li>First-time home buyers trying to understand what they can actually afford</li>
           <li>Anyone with multiple loans deciding which to pay off first</li>
           <li>People building an emergency fund who want a concrete savings target</li>
           <li>Homeowners considering refinancing or making extra mortgage payments</li>
         </ul>
-        <p style="color:var(--gray-600,#4b5563);line-height:1.7">You do not need a finance degree or a spreadsheet. Enter your numbers, get a clear answer, and know what to do next.</p>
+        <p class="body-p body-p--last">You do not need a finance degree or a spreadsheet. Enter your numbers, get a clear answer, and know what to do next.</p>
       </div>
     </div>
   </div>
@@ -331,7 +326,7 @@
   <footer>
     <div class="footer-inner">
       <div>
-        <div class="footer-brand"><span style="width:8px;height:8px;background:#0DBF7E;border-radius:50%;display:inline-block"></span>DebtFreePathways</div>
+        <div class="footer-brand"><span class="footer-dot"></span>DebtFreePathways</div>
         <p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p>
       </div>
       <div>
@@ -353,12 +348,22 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span class="yr"></span> DebtFreePathways. For informational purposes only.</span>
+      <span>© <span class="yr">2025</span> DebtFreePathways. For informational purposes only.</span>
       <span>Not financial advice.</span>
     </div>
   </footer>
 </main>
 
 <script src="main.js" defer></script>
+<!-- AdSense loaded after page render to avoid blocking LCP -->
+<script>
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770';
+    s.crossOrigin = 'anonymous';
+    document.body.appendChild(s);
+  });
+</script>
 </body>
 </html>
