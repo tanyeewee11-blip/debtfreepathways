@@ -30,9 +30,7 @@
 <meta name="twitter:title" content="Free Loan Amortization Calculator — Full Payment Breakdown | DebtFreePathways">
 <meta name="twitter:description" content="Free loan amortization calculator — break down every payment into principal vs. interest with a full month-by-month schedule and interactive chart.">
 <meta name="twitter:image" content="https://debtfreepathways.com/og-image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- system fonts: no external font loading -->
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">
 {
@@ -687,7 +685,10 @@
 ═══════════════════════════════ -->
 </main>
 
-<script src="/main.js" defer></script>
+<script src="../core.js" defer></script>
+<script src="../calc-la.js" defer></script>
+<script src="../calc-share.js" defer></script>
+<script src="../calc-qs.js" defer></script>
 <!-- AdSense loaded after page render to avoid blocking LCP -->
 <script>
   window.addEventListener('load', function() {

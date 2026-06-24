@@ -30,9 +30,7 @@
 <meta name="twitter:title" content="Free Interest Rate Comparator — Compare Loan Costs | DebtFreePathways">
 <meta name="twitter:description" content="Compare two loans side by side to find which saves you the most money. Free interest rate comparator — see total cost, monthly payments, and interest saved.">
 <meta name="twitter:image" content="https://debtfreepathways.com/og-image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- system fonts: no external font loading -->
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">
 {
@@ -628,7 +626,10 @@
 ═══════════════════════════════ -->
 </main>
 
-<script src="/main.js" defer></script>
+<script src="../core.js" defer></script>
+<script src="../calc-irc.js" defer></script>
+<script src="../calc-share.js" defer></script>
+<script src="../calc-qs.js" defer></script>
 <!-- AdSense loaded after page render to avoid blocking LCP -->
 <script>
   window.addEventListener('load', function() {
