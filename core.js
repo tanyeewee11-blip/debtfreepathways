@@ -57,3 +57,14 @@ function toggleMobileMenu(){const btn=document.getElementById('nav-hamburger');c
 function closeMobileMenu(){document.getElementById('nav-hamburger').classList.remove('open');document.getElementById('nav-mobile-menu').classList.remove('open');}
 document.addEventListener('click',function(e){const btn=document.getElementById('nav-hamburger');const menu=document.getElementById('nav-mobile-menu');if(!btn.contains(e.target)&&!menu.contains(e.target)){btn.classList.remove('open');menu.classList.remove('open');}})
 document.querySelectorAll('.yr').forEach(el=>el.textContent=new Date().getFullYear());
+// Auto-trigger heroCalc on homepage load
+if(document.getElementById('hc-debt'))heroCalc();
+
+// Wire heroCalc to input events
+(function(){
+  var fields=['hc-debt','hc-rate','hc-pay'];
+  fields.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el)el.addEventListener('input',heroCalc);
+  });
+})();
