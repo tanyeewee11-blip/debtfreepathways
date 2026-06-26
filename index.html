@@ -160,11 +160,11 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
     <div class="hero-calc">
       <div class="hero-calc-title"><span class="hero-calc-live"></span>Quick debt payoff preview — updates live</div>
       <div class="hcalc-row">
-        <div class="hcalc-field"><label>Total debt ($)</label><input type="number" id="hc-debt" value="15000" oninput="heroCalc()"></div>
-        <div class="hcalc-field"><label>Interest rate (%)</label><input type="number" id="hc-rate" value="19.9" step="0.1" oninput="heroCalc()"></div>
+        <div class="hcalc-field"><label>Total debt ($)</label><input type="number" id="hc-debt" aria-label="Total debt amount in dollars" value="15000" oninput="heroCalc()"></div>
+        <div class="hcalc-field"><label>Interest rate (%)</label><input type="number" id="hc-rate" aria-label="Annual interest rate percentage" value="19.9" step="0.1" oninput="heroCalc()"></div>
       </div>
       <div class="hcalc-row">
-        <div class="hcalc-field"><label>Monthly payment ($)</label><input type="number" id="hc-pay" value="400" oninput="heroCalc()"></div>
+        <div class="hcalc-field"><label>Monthly payment ($)</label><input type="number" id="hc-pay" aria-label="Monthly payment amount in dollars" value="400" oninput="heroCalc()"></div>
         <div class="hcalc-field" class="flex-end">
           <a class="btn-primary" href="/debt-payoff-calculator/" class="btn-full">Full breakdown →</a>
         </div>
@@ -251,7 +251,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
       <div class="author-row">
         <picture>
           <source srcset="/images/marcus-avatar.webp" type="image/webp">
-          <img src="/images/marcus-avatar.png" alt="Marcus Sheldon" width="40" height="40" class="author-avatar">
+          <img src="/images/marcus-avatar.png" alt="Marcus Sheldon" width="40" height="40" class="author-avatar" loading="eager">
         </picture>
         <div class="text-left">
           <p class="author-name">Calculators and guides written by <a href="/about/" style="color:var(--blue);text-decoration:none">Marcus Sheldon</a></p>
@@ -360,7 +360,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
       </div>
       <form class="newsletter-form" id="newsletter-form" onsubmit="newsletterSubmit(event)">
         <div class="newsletter-fields">
-          <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Your email address" required autocomplete="email">
+          <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Your email address" aria-label="Email address for newsletter" required autocomplete="email">
           <button type="submit" class="newsletter-btn" id="newsletter-btn">Subscribe — it's free</button>
         </div>
         <p class="newsletter-privacy">🔒 No spam. Unsubscribe at any time.</p>
@@ -394,7 +394,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span class="yr">2025</span> DebtFreePathways. For informational purposes only.</span>
+      <span>© <span class="yr">2026</span> DebtFreePathways. For informational purposes only.</span>
       <span>Not financial advice.</span>
     </div>
   </footer>
