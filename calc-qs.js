@@ -30,7 +30,7 @@ function dpRestoreQS(){
   setVal('dp-payment',p.get('payment'));
   setVal('dp-extra',p.get('extra'));
   setVal('dp-type',p.get('type'));
-  dpCalc();
+  if(typeof dpCalc==="function")dpCalc();
 }
 
 /* ── Mortgage ── */
@@ -56,7 +56,7 @@ function mgRestoreQS(){
   setVal('mg-extra',p.get('extra'));
   setVal('mg-tax',p.get('tax'));
   setVal('mg-insurance',p.get('insurance'));
-  mgCalc();
+  if(typeof mgCalc==="function")mgCalc();
 }
 
 /* ── Loan Amortization ── */
@@ -78,7 +78,7 @@ function laRestoreQS(){
   setVal('la-term',p.get('term'));
   setVal('la-extra',p.get('extra'));
   setVal('la-start',p.get('start'));
-  laCalc();
+  if(typeof laCalc==="function")laCalc();
 }
 
 /* ── Interest Rate Comparator ── */
@@ -102,7 +102,7 @@ function ircRestoreQS(){
   setVal('irc-a-label',p.get('alabel'));
   setVal('irc-b-rate',p.get('brate'));
   setVal('irc-b-label',p.get('blabel'));
-  ircCalc();
+  if(typeof ircCalc==="function")ircCalc();
 }
 
 /* ── Debt Avalanche vs Snowball ── */
@@ -152,7 +152,7 @@ function daRestoreQS(){
       if(minEl)minEl.value=m;
     });
   }
-  daCalc();
+  if(typeof daCalc==="function")daCalc();
 }
 
 /* ── Emergency Fund ── */
@@ -176,7 +176,7 @@ function efRestoreQS(){
   ['housing','food','transport','utilities','insurance','other','months','savings','existing'].forEach(k=>{
     setVal('ef-'+k,p.get(k));
   });
-  efCalc();
+  if(typeof efCalc==="function")efCalc();
 }
 
 /* ── Auto-wire: save QS on any input change, restore on load ── */
