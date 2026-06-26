@@ -7,7 +7,8 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <!-- system fonts: no external font loading -->
-<link rel="stylesheet" href="/styles.css">
+<link rel="preload" href="/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/styles.css"></noscript>
 <style>
 .notfound-wrap {
   min-height: 80vh;
