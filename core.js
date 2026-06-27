@@ -20,7 +20,10 @@ const r=rate/100/12;if(pay<=debt*r){document.getElementById('hc-months').textCon
 const ratio=(debt*r)/pay;if(ratio<=0||ratio>=1){document.getElementById('hc-months').textContent='—';document.getElementById('hc-interest').textContent='Check your numbers';return;}
 const n=Math.ceil(-Math.log(1-ratio)/Math.log(1+r));if(!isFinite(n)||n<=0){document.getElementById('hc-months').textContent='—';document.getElementById('hc-interest').textContent='Check your numbers';return;}
 const interest=pay*n-debt;document.getElementById('hc-months').textContent=fmtM(n);document.getElementById('hc-interest').textContent='$'+Math.round(Math.max(0,interest)).toLocaleString()+' interest';}
-let dpSched=null,dpSchedExtra=null,dpTableVisible=false,dpTableViewMode='monthly';let dpExtraOn=false;function syncRateSlider(val){document.getElementById('dp-rate').value=val;document.getElementById('rate-slider-val').textContent=parseFloat(val).toFixed(1)+'%';const pct=((val-1)/(36-1))*100;document.getElementById('rate-slider').style.setProperty('--pct',pct+'%');dpCalc();}
+
+function toggleMobileMenu(){const btn=document.getElementById('nav-hamburger');const menu=document.getElementById('nav-mobile-menu');btn.classList.toggle('open');menu.classList.toggle('open');}
+function closeMobileMenu(){document.getElementById('nav-hamburger').classList.remove('open');document.getElementById('nav-mobile-menu').classList.remove('open');}
+document.addEventListener('click',function(e){const btn=document.getElementById('nav-hamburger');const menu=document.getElementById('nav-mobile-menu');if(!btn.contains(e.target)&&!menu.contains(e.target)){btn.classList.remove('open');menu.classList.remove('open');}})
 function newsletterSubmit(e){
   e.preventDefault();
   const btn=document.getElementById('newsletter-btn');
@@ -53,10 +56,7 @@ function newsletterSubmit(e){
     alert('Something went wrong. Please try again.');
   }
 }
-function toggleMobileMenu(){const btn=document.getElementById('nav-hamburger');const menu=document.getElementById('nav-mobile-menu');btn.classList.toggle('open');menu.classList.toggle('open');}
-function closeMobileMenu(){document.getElementById('nav-hamburger').classList.remove('open');document.getElementById('nav-mobile-menu').classList.remove('open');}
-document.addEventListener('click',function(e){const btn=document.getElementById('nav-hamburger');const menu=document.getElementById('nav-mobile-menu');if(!btn.contains(e.target)&&!menu.contains(e.target)){btn.classList.remove('open');menu.classList.remove('open');}})
-document.querySelectorAll('.yr').forEach(el=>el.textContent=new Date().getFullYear());
+
 // Auto-trigger heroCalc on homepage load
 if(document.getElementById('hc-debt'))heroCalc();
 
