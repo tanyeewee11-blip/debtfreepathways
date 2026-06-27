@@ -211,7 +211,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <div class="input-grid">
             <div class="input-group">
               <label>Loan amount</label>
-              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="la-amount" value="25000" min="0" oninput="laCalc()"></div>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="la-amount" aria-label="Loan amount in dollars" value="25000" min="0" oninput="laCalc()"></div>
               <div class="input-hint" id="la-amount-hint">Total principal borrowed</div>
             </div>
             <div class="input-group">
@@ -237,12 +237,12 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <!-- Rate slider -->
           <div class="slider-row">
             <label>Annual interest rate (APR) <span class="slider-val" id="la-rate-slider-val">7.50%</span></label>
-            <input type="range" id="la-rate-slider" min="0.5" max="36" step="0.1" value="7.5" style="--pct:19.7%" oninput="syncLaRateSlider(this.value)">
+            <input type="range" id="la-rate-slider" aria-label="Interest rate slider" min="0.5" max="36" step="0.1" value="7.5" style="--pct:19.7%" oninput="syncLaRateSlider(this.value)">
             <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--gray-300);margin-top:4px"><span>0.5%</span><span>36%</span></div>
           </div>
           <div class="input-group" style="margin-bottom:20px">
             <label>Or type exact rate</label>
-            <div class="input-wrap has-suffix"><input type="number" id="la-rate" value="7.5" step="0.01" min="0" max="100" oninput="syncLaSliderFromInput()"><span class="input-suffix">%</span></div>
+            <div class="input-wrap has-suffix"><input type="number" id="la-rate" aria-label="Annual interest rate percentage" value="7.5" step="0.01" min="0" max="100" oninput="syncLaSliderFromInput()"><span class="input-suffix">%</span></div>
           </div>
 
           <!-- Extra payment toggle -->
@@ -256,7 +256,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <div class="extra-input-row" id="la-extra-input-row">
             <div class="input-group">
               <label>Extra monthly payment</label>
-              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="la-extra" value="100" min="0" oninput="laCalc()"></div>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="la-extra" aria-label="Extra monthly payment in dollars" value="100" min="0" oninput="laCalc()"></div>
               <div class="input-hint">Added on top of your regular payment each month</div>
             </div>
           </div>
@@ -264,7 +264,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <!-- Start date -->
           <div class="input-group" style="margin-bottom:24px">
             <label>Loan start date</label>
-            <div class="input-wrap"><input type="month" id="la-start" oninput="laCalc()"></div>
+            <div class="input-wrap"><input type="month" id="la-start" aria-label="Loan start date" oninput="laCalc()"></div>
             <div class="input-hint">Used to show exact payoff date</div>
           </div>
 
@@ -656,7 +656,20 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
       </div>
     </div>
   </div>
-    <!-- Newsletter signup -->
+  
+  <!-- SEO content block -->
+  <section class="calc-content-block">
+    <div class="container">
+      <h2 class="calc-content-h2">How to Read an Amortization Schedule</h2>
+      <p class="calc-content-p">An amortization schedule breaks down every payment into its principal and interest components. Early payments are mostly interest — for a 30-year mortgage at 7%, your first payment might be 90% interest. By the final year, almost all of it goes to principal.</p>
+      <p class="calc-content-p">Enter your loan amount, interest rate, and term to generate a complete month-by-month schedule. Use the <strong>extra payment</strong> field to see exactly which month your loan ends early and how much total interest you save.</p>
+      <h3 class="calc-content-h3">Why Make Extra Payments?</h3>
+      <p class="calc-content-p">Extra payments on a loan go entirely toward reducing your principal balance. Because interest is calculated on the remaining principal, a lower balance means less interest charged each month — creating a compounding effect that accelerates payoff.</p>
+      <p class="calc-content-p">Even a one-time lump-sum extra payment can meaningfully reduce your total interest. The earlier in the loan you make it, the greater the impact.</p>
+    </div>
+  </section>
+
+  <!-- Newsletter signup -->
   <section class="newsletter-section">
     <div class="newsletter-inner">
       <div class="newsletter-text">
@@ -668,6 +681,8 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Your email address" aria-label="Email address for newsletter" required autocomplete="email">
           <button type="submit" class="newsletter-btn" id="newsletter-btn">Subscribe — it's free</button>
         </div>
+        <!-- Mailchimp honeypot - do not remove -->
+        <input type="text" name="b_13ee9faad15c1ec950a1636a5_c14a1a25f2" tabindex="-1" value="" style="position:absolute;left:-5000px;top:-5000px;" aria-hidden="true">
         <p class="newsletter-privacy">🔒 No spam. Unsubscribe at any time.</p>
         <p class="newsletter-success" id="newsletter-success" style="display:none">🎉 You're in! Check your inbox to confirm.</p>
       </form>

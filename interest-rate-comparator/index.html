@@ -205,7 +205,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
             <div class="input-grid">
               <div class="input-group">
                 <label>Loan amount</label>
-                <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="irc-amount" value="30000" min="0" oninput="ircCalc()"></div>
+                <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="irc-amount" aria-label="Loan amount to compare in dollars" value="30000" min="0" oninput="ircCalc()"></div>
               </div>
               <div class="input-group">
                 <label>Loan term</label>
@@ -238,14 +238,14 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
               </div>
               <div class="slider-row" style="margin-bottom:12px">
                 <label>Interest rate <span class="slider-val" id="irc-a-rate-display">6.50%</span></label>
-                <input type="range" id="irc-a-slider" min="0.5" max="36" step="0.1" value="6.5" style="--pct:17.1%" oninput="syncIrcSlider('a',this.value)">
+                <input type="range" id="irc-a-slider" aria-label="Loan A interest rate slider" min="0.5" max="36" step="0.1" value="6.5" style="--pct:17.1%" oninput="syncIrcSlider('a',this.value)">
               </div>
               <div class="input-group" style="margin-bottom:12px">
-                <div class="input-wrap has-suffix"><input type="number" id="irc-a-rate" value="6.5" step="0.01" min="0" max="100" oninput="syncIrcFromInput('a')"><span class="input-suffix">%</span></div>
+                <div class="input-wrap has-suffix"><input type="number" id="irc-a-rate" aria-label="Loan A annual interest rate percentage" value="6.5" step="0.01" min="0" max="100" oninput="syncIrcFromInput('a')"><span class="input-suffix">%</span></div>
               </div>
               <div class="input-group">
                 <label style="font-size:11px">Label (optional)</label>
-                <div class="input-wrap"><input type="text" id="irc-a-label" placeholder="e.g. Bank offer" oninput="ircUpdateLabels()" style="font-size:13px"></div>
+                <div class="input-wrap"><input type="text" id="irc-a-label" aria-label="Loan A custom name" placeholder="e.g. Bank offer" oninput="ircUpdateLabels()" style="font-size:13px"></div>
               </div>
             </div>
 
@@ -260,14 +260,14 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
               </div>
               <div class="slider-row" style="margin-bottom:12px">
                 <label>Interest rate <span class="slider-val" id="irc-b-rate-display">8.90%</span></label>
-                <input type="range" id="irc-b-slider" min="0.5" max="36" step="0.1" value="8.9" style="--pct:23.8%" oninput="syncIrcSlider('b',this.value)">
+                <input type="range" id="irc-b-slider" aria-label="Loan B interest rate slider" min="0.5" max="36" step="0.1" value="8.9" style="--pct:23.8%" oninput="syncIrcSlider('b',this.value)">
               </div>
               <div class="input-group" style="margin-bottom:12px">
-                <div class="input-wrap has-suffix"><input type="number" id="irc-b-rate" value="8.9" step="0.01" min="0" max="100" oninput="syncIrcFromInput('b')"><span class="input-suffix">%</span></div>
+                <div class="input-wrap has-suffix"><input type="number" id="irc-b-rate" aria-label="Loan B annual interest rate percentage" value="8.9" step="0.01" min="0" max="100" oninput="syncIrcFromInput('b')"><span class="input-suffix">%</span></div>
               </div>
               <div class="input-group">
                 <label style="font-size:11px">Label (optional)</label>
-                <div class="input-wrap"><input type="text" id="irc-b-label" placeholder="e.g. Credit union" oninput="ircUpdateLabels()" style="font-size:13px"></div>
+                <div class="input-wrap"><input type="text" id="irc-b-label" aria-label="Loan B custom name" placeholder="e.g. Credit union" oninput="ircUpdateLabels()" style="font-size:13px"></div>
               </div>
             </div>
           </div>
@@ -616,7 +616,19 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
       </div>
     </div>
   </div>
-    <!-- Newsletter signup -->
+  
+  <!-- SEO content block -->
+  <section class="calc-content-block">
+    <div class="container">
+      <h2 class="calc-content-h2">Why a Small Rate Difference Matters More Than You Think</h2>
+      <p class="calc-content-p">A 1% difference in interest rate might seem trivial, but on a $20,000 car loan over 5 years, it adds up to hundreds of dollars. On a $300,000 mortgage over 30 years, a 0.5% rate difference can mean over $30,000 in extra interest.</p>
+      <p class="calc-content-p">Use this calculator to compare any two loan rates side by side. Enter the same loan amount and term for both, then adjust the rates to see your exact monthly payment difference and total interest savings.</p>
+      <h3 class="calc-content-h3">When to Use This Calculator</h3>
+      <p class="calc-content-p">This tool is useful when you're comparing loan offers from two different lenders, deciding whether to refinance, or evaluating the impact of improving your credit score before applying. A higher credit score typically qualifies you for a lower rate — use our calculator to quantify exactly what that improvement is worth in dollars.</p>
+    </div>
+  </section>
+
+  <!-- Newsletter signup -->
   <section class="newsletter-section">
     <div class="newsletter-inner">
       <div class="newsletter-text">
@@ -628,6 +640,8 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Your email address" aria-label="Email address for newsletter" required autocomplete="email">
           <button type="submit" class="newsletter-btn" id="newsletter-btn">Subscribe — it's free</button>
         </div>
+        <!-- Mailchimp honeypot - do not remove -->
+        <input type="text" name="b_13ee9faad15c1ec950a1636a5_c14a1a25f2" tabindex="-1" value="" style="position:absolute;left:-5000px;top:-5000px;" aria-hidden="true">
         <p class="newsletter-privacy">🔒 No spam. Unsubscribe at any time.</p>
         <p class="newsletter-success" id="newsletter-success" style="display:none">🎉 You're in! Check your inbox to confirm.</p>
       </form>

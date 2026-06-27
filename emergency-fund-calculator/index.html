@@ -201,27 +201,27 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <div class="input-grid">
             <div class="input-group">
               <label>Housing (rent/mortgage)</label>
-              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-housing" value="1800" min="0" oninput="efCalc()"></div>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-housing" aria-label="Monthly housing costs in dollars" value="1800" min="0" oninput="efCalc()"></div>
             </div>
             <div class="input-group">
               <label>Food & groceries</label>
-              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-food" value="600" min="0" oninput="efCalc()"></div>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-food" aria-label="Monthly food expenses in dollars" value="600" min="0" oninput="efCalc()"></div>
             </div>
             <div class="input-group">
               <label>Transportation</label>
-              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-transport" value="400" min="0" oninput="efCalc()"></div>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-transport" aria-label="Monthly transport costs in dollars" value="400" min="0" oninput="efCalc()"></div>
             </div>
             <div class="input-group">
               <label>Utilities & bills</label>
-              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-utilities" value="300" min="0" oninput="efCalc()"></div>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-utilities" aria-label="Monthly utilities in dollars" value="300" min="0" oninput="efCalc()"></div>
             </div>
             <div class="input-group">
               <label>Insurance (all types)</label>
-              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-insurance" value="250" min="0" oninput="efCalc()"></div>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-insurance" aria-label="Monthly insurance costs in dollars" value="250" min="0" oninput="efCalc()"></div>
             </div>
             <div class="input-group">
               <label>Other essentials</label>
-              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-other" value="200" min="0" oninput="efCalc()"></div>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-other" aria-label="Other monthly expenses in dollars" value="200" min="0" oninput="efCalc()"></div>
             </div>
           </div>
 
@@ -236,13 +236,13 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
             </div>
             <div class="input-group" style="margin-top:10px">
               <label>Or enter custom months</label>
-              <div class="input-wrap"><input type="number" id="ef-months" value="3" min="1" max="36" oninput="efSyncCustom()"></div>
+              <div class="input-wrap"><input type="number" id="ef-months" aria-label="Months of expenses to save" value="3" min="1" max="36" oninput="efSyncCustom()"></div>
             </div>
           </div>
 
           <div class="input-group" style="margin-bottom:0">
             <label>Monthly savings toward emergency fund</label>
-            <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-savings" value="400" min="0" oninput="efCalc()"></div>
+            <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-savings" aria-label="Monthly savings amount in dollars" value="400" min="0" oninput="efCalc()"></div>
             <div class="input-hint">How much you can set aside each month</div>
           </div>
 
@@ -256,7 +256,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <div class="extra-input-row" id="ef-existing-row">
             <div class="input-group">
               <label>Current emergency savings</label>
-              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-existing" value="1000" min="0" oninput="efCalc()"></div>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="ef-existing" aria-label="Existing emergency fund balance in dollars" value="1000" min="0" oninput="efCalc()"></div>
             </div>
           </div>
 
@@ -620,7 +620,20 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
       </div>
     </div>
   </div>
-    <!-- Newsletter signup -->
+  
+  <!-- SEO content block -->
+  <section class="calc-content-block">
+    <div class="container">
+      <h2 class="calc-content-h2">How Much Should You Have in Your Emergency Fund?</h2>
+      <p class="calc-content-p">Most financial experts recommend saving 3–6 months of essential expenses. If you have a stable job and low financial risk, 3 months may be enough. If you're self-employed, have dependents, or work in a volatile industry, aim for 6 months or more.</p>
+      <p class="calc-content-p">Enter your monthly expenses across all categories — housing, food, transport, utilities, insurance, and other essentials. The calculator shows your total target, how long it will take to reach it at your current savings rate, and tracks your progress if you already have some savings set aside.</p>
+      <h3 class="calc-content-h3">Where to Keep Your Emergency Fund</h3>
+      <p class="calc-content-p">Your emergency fund should be liquid and safe — not invested in stocks. A high-yield savings account (HYSA) is the standard recommendation: FDIC-insured, earns more than a regular savings account, and accessible within 1–2 business days.</p>
+      <p class="calc-content-p">Keep your emergency fund separate from your everyday checking account. Out of sight, out of mind — you're less likely to spend it on non-emergencies.</p>
+    </div>
+  </section>
+
+  <!-- Newsletter signup -->
   <section class="newsletter-section">
     <div class="newsletter-inner">
       <div class="newsletter-text">
@@ -632,6 +645,8 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Your email address" aria-label="Email address for newsletter" required autocomplete="email">
           <button type="submit" class="newsletter-btn" id="newsletter-btn">Subscribe — it's free</button>
         </div>
+        <!-- Mailchimp honeypot - do not remove -->
+        <input type="text" name="b_13ee9faad15c1ec950a1636a5_c14a1a25f2" tabindex="-1" value="" style="position:absolute;left:-5000px;top:-5000px;" aria-hidden="true">
         <p class="newsletter-privacy">🔒 No spam. Unsubscribe at any time.</p>
         <p class="newsletter-success" id="newsletter-success" style="display:none">🎉 You're in! Check your inbox to confirm.</p>
       </form>

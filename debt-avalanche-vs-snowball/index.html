@@ -226,7 +226,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <div style="margin-top:20px;margin-bottom:0">
             <div class="input-group">
               <label>Total monthly payment budget</label>
-              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="da-budget" value="850" min="0" oninput="daCalc()"></div>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="da-budget" aria-label="Total monthly debt payment budget in dollars" value="850" min="0" oninput="daCalc()"></div>
               <div class="input-hint">Must be ≥ sum of all minimum payments</div>
               <div class="input-hint" id="da-budget-error" style="color:#c0392b;display:none">⚠️ Budget is less than the total minimum payments (<span id="da-min-total"></span>). Please increase your budget.</div>
             </div>
@@ -561,7 +561,20 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
       </div>
     </div>
   </div>
-    <!-- Newsletter signup -->
+  
+  <!-- SEO content block -->
+  <section class="calc-content-block">
+    <div class="container">
+      <h2 class="calc-content-h2">Avalanche vs Snowball: Which Method Is Right for You?</h2>
+      <p class="calc-content-p">The <strong>debt avalanche</strong> pays off your highest-interest debt first. This is mathematically optimal — you'll pay the least interest over time and get out of debt fastest in dollar terms.</p>
+      <p class="calc-content-p">The <strong>debt snowball</strong> targets your smallest balance first regardless of interest rate. Each paid-off account gives you a psychological win and frees up cash to accelerate the next debt. Research shows many people stick with the snowball longer because of these quick wins.</p>
+      <h3 class="calc-content-h3">How to Use This Calculator</h3>
+      <p class="calc-content-p">Add each of your debts with its balance, interest rate, and minimum payment. Set your total monthly budget — the amount you can afford to put toward debt each month. The calculator runs both strategies simultaneously and shows you the exact month each debt is paid off, plus total interest for each method.</p>
+      <p class="calc-content-p">The right method is the one you'll stick to. If the interest savings from avalanche are small, the snowball's motivation boost may be worth more in the long run.</p>
+    </div>
+  </section>
+
+  <!-- Newsletter signup -->
   <section class="newsletter-section">
     <div class="newsletter-inner">
       <div class="newsletter-text">
@@ -573,6 +586,8 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Your email address" aria-label="Email address for newsletter" required autocomplete="email">
           <button type="submit" class="newsletter-btn" id="newsletter-btn">Subscribe — it's free</button>
         </div>
+        <!-- Mailchimp honeypot - do not remove -->
+        <input type="text" name="b_13ee9faad15c1ec950a1636a5_c14a1a25f2" tabindex="-1" value="" style="position:absolute;left:-5000px;top:-5000px;" aria-hidden="true">
         <p class="newsletter-privacy">🔒 No spam. Unsubscribe at any time.</p>
         <p class="newsletter-success" id="newsletter-success" style="display:none">🎉 You're in! Check your inbox to confirm.</p>
       </form>

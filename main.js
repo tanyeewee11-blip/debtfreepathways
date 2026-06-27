@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded',function(){
    Swap the action URL below with your
    Mailchimp/ConvertKit/Brevo endpoint.
 ═══════════════════════════════════════ */
-async function newsletterSubmit(e){
+function newsletterSubmit(e){
   e.preventDefault();
   const btn=document.getElementById('newsletter-btn');
   const email=document.getElementById('newsletter-email').value.trim();
@@ -376,26 +376,38 @@ async function newsletterSubmit(e){
   btn.disabled=true;
   btn.textContent='Subscribing...';
 
-  try{
-    // ── REPLACE THIS URL with your Mailchimp/ConvertKit/Brevo endpoint ──
-    const res=await fetch('https://api.web3forms.com/submit',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        access_key:'7a4e7076-bf45-4ac9-81f2-af3e70dbcc9b',
-        subject:'New newsletter subscriber: '+email,
-        email:email,
-        message:'Newsletter signup from DebtFreePathways'
-      })
-    });
-    const data=await res.json();
-    if(data.success){
-      document.getElementById('newsletter-form').style.display='none';
-      if(success)success.style.display='block';
-    } else {throw new Error('failed');}
-  } catch(err){
-    btn.disabled=false;
-    btn.textContent='Subscribe — it\'s free';
-    alert('Something went wrong. Please try again.');
-  }
+  const MAILCHIMP_URL='https://gmail.us17.list-manage.com/subscribe/post?u=13ee9faad15c1ec950a1636a5&id=c14a1a25f2&f_id=002ec2e1f0';
+
+  const iframe=document.createElement('iframe');
+  iframe.name='mc-iframe-'+Date.now();
+  iframe.style.display='none';
+  document.body.appendChild(iframe);
+
+  const form=document.createElement('form');
+  form.method='POST';
+  form.action=MAILCHIMP_URL;
+  form.target=iframe.name;
+
+  const emailInput=document.createElement('input');
+  emailInput.type='email';
+  emailInput.name='EMAIL';
+  emailInput.value=email;
+  form.appendChild(emailInput);
+
+  const honeypot=document.createElement('input');
+  honeypot.type='text';
+  honeypot.name='b_13ee9faad15c1ec950a1636a5_c14a1a25f2';
+  honeypot.tabIndex=-1;
+  honeypot.value='';
+  form.appendChild(honeypot);
+
+  document.body.appendChild(form);
+  form.submit();
+
+  setTimeout(function(){
+    document.getElementById('newsletter-form').style.display='none';
+    if(success)success.style.display='block';
+    document.body.removeChild(form);
+    setTimeout(function(){document.body.removeChild(iframe);},2000);
+  },1000);
 }

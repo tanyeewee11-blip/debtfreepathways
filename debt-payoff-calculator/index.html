@@ -223,18 +223,18 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <div class="input-grid">
             <div class="input-group">
               <label>Total balance owed</label>
-              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="dp-balance" value="15000" min="0" oninput="dpCalc()"></div>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="dp-balance" aria-label="Outstanding debt balance in dollars" value="15000" min="0" oninput="dpCalc()"></div>
               <div class="input-hint">Current outstanding balance</div>
             </div>
             <div class="input-group">
               <label>Annual interest rate (APR)</label>
-              <div class="input-wrap has-suffix"><input type="number" id="dp-rate" value="19.9" step="0.1" min="0" max="100" oninput="dpCalc()"><span class="input-suffix">%</span></div>
+              <div class="input-wrap has-suffix"><input type="number" id="dp-rate" aria-label="Annual interest rate percentage" value="19.9" step="0.1" min="0" max="100" oninput="dpCalc()"><span class="input-suffix">%</span></div>
               <div class="input-hint">Found on your statement</div>
               <div id="dp-rate-hint" style="display:none;color:#D85A30;font-size:0.8rem;margin-top:4px">⚠️ That's a very high rate — double-check your APR</div>
             </div>
             <div class="input-group">
               <label>Monthly payment</label>
-              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="dp-payment" value="400" min="0" oninput="dpCalc()"></div>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="dp-payment" aria-label="Minimum monthly payment in dollars" value="400" min="0" oninput="dpCalc()"></div>
               <div class="input-hint">Minimum or planned payment</div>
               <div id="dp-payment-hint" style="display:none;color:#D85A30;font-size:0.8rem;margin-top:4px">⚠️ Payment too low to cover interest — try a higher amount</div>
             </div>
@@ -254,7 +254,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           </div>
           <div class="slider-row">
             <label>Interest rate <span class="slider-val" id="rate-slider-val">19.9%</span></label>
-            <input type="range" id="rate-slider" min="1" max="36" step="0.1" value="19.9" oninput="syncRateSlider(this.value)">
+            <input type="range" id="rate-slider" aria-label="Interest rate slider" min="1" max="36" step="0.1" value="19.9" oninput="syncRateSlider(this.value)">
           </div>
           <div class="extra-toggle" onclick="toggleExtra()">
             <div>
@@ -266,7 +266,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <div class="extra-input-row" id="extra-input-row">
             <div class="input-group">
               <label>Extra monthly payment</label>
-              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="dp-extra" value="100" min="0" oninput="dpCalc()"></div>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="dp-extra" aria-label="Extra monthly payment in dollars" value="100" min="0" oninput="dpCalc()"></div>
               <div class="input-hint">Even $50/month extra can save thousands in interest</div>
             </div>
           </div>
@@ -610,7 +610,20 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
       </div>
     </div>
   </div>
-    <!-- Newsletter signup -->
+  
+  <!-- SEO content block -->
+  <section class="calc-content-block">
+    <div class="container">
+      <h2 class="calc-content-h2">How to Use the Debt Payoff Calculator</h2>
+      <p class="calc-content-p">Enter your current balance, interest rate, and the monthly payment you can afford. The calculator instantly shows your payoff date and total interest paid — no sign-up required.</p>
+      <p class="calc-content-p">Use the <strong>extra payment</strong> field to see how much faster you can pay off debt by adding even $50–$100 more per month. For most credit card balances, a small extra payment can cut years off your timeline and save thousands in interest.</p>
+      <h3 class="calc-content-h3">Debt Payoff Methods: Avalanche vs Snowball</h3>
+      <p class="calc-content-p">If you have multiple debts, the <strong>avalanche method</strong> saves the most interest by targeting the highest-rate debt first. The <strong>snowball method</strong> pays off the smallest balance first for quick wins. Use our <a href="/debt-avalanche-vs-snowball/">Avalanche vs Snowball calculator</a> to compare both strategies side by side.</p>
+      <p class="calc-content-p">This calculator uses the standard amortization formula. All calculations happen in your browser — your financial data is never sent to any server.</p>
+    </div>
+  </section>
+
+  <!-- Newsletter signup -->
   <section class="newsletter-section">
     <div class="newsletter-inner">
       <div class="newsletter-text">
@@ -622,6 +635,8 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Your email address" aria-label="Email address for newsletter" required autocomplete="email">
           <button type="submit" class="newsletter-btn" id="newsletter-btn">Subscribe — it's free</button>
         </div>
+        <!-- Mailchimp honeypot - do not remove -->
+        <input type="text" name="b_13ee9faad15c1ec950a1636a5_c14a1a25f2" tabindex="-1" value="" style="position:absolute;left:-5000px;top:-5000px;" aria-hidden="true">
         <p class="newsletter-privacy">🔒 No spam. Unsubscribe at any time.</p>
         <p class="newsletter-success" id="newsletter-success" style="display:none">🎉 You're in! Check your inbox to confirm.</p>
       </form>
