@@ -1,0 +1,17 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0B1F3A"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#grad)" opacity="0.3"/>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0DBF7E;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#0DBF7E;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <text x="60" y="80" font-family="Arial,sans-serif" font-size="24" font-weight="600" fill="rgba(255,255,255,0.7)" text-transform="uppercase" letter-spacing="3">FREE CALCULATOR · DEBTFREEPATHWAYS.COM</text>
+  <line x1="60" y1="100" x2="200" y2="100" stroke="#0DBF7E" stroke-width="2"/>
+  <text x="60" y="192" font-family="Arial,sans-serif" font-size="46" font-weight="700" fill="white">Retirement Savings</text>
+  <text x="60" y="248" font-family="Arial,sans-serif" font-size="46" font-weight="700" fill="white">Calculator</text>
+  <text x="60" y="300" font-family="Arial,sans-serif" font-size="22" fill="rgba(255,255,255,0.7)">Compound growth · Inflation · Social Security · 4% rule</text>
+  <text x="60" y="560" font-family="Arial,sans-serif" font-size="22" fill="rgba(255,255,255,0.6)">Free calculators and guides at DebtFreePathways.com</text>
+  <rect x="60" y="580" width="120" height="4" rx="2" fill="#0DBF7E"/>
+</svg>
