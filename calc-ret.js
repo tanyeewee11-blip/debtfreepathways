@@ -55,6 +55,7 @@ function retCalc(){
     bannerVal.style.color='#09a06a';
     bannerLabel.textContent='🎉 On track — projected surplus';
     bannerVal.textContent='+'+fmt(surplusToday);
+    bannerSub.style.color='#3D4460';
   }else{
     banner.style.background='#fff0f0';
     banner.style.borderColor='#ffc7c7';
@@ -62,6 +63,7 @@ function retCalc(){
     bannerVal.style.color='#c0392b';
     bannerLabel.textContent='⚠️ Projected shortfall';
     bannerVal.textContent='-'+fmt(Math.abs(surplusToday));
+    bannerSub.style.color='#3D4460';
   }
   bannerSub.textContent='Target needed: '+fmt(requiredPortfolioToday)+' (today\'s dollars) · Projected: '+fmt(FVToday);
 
