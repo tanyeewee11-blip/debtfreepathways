@@ -59,12 +59,14 @@ function fireCalc(){
     banner.style.background='rgba(13,191,126,.12)';
     banner.style.borderColor='rgba(13,191,126,.25)';
     bannerLabel.style.color='#09a06a';
+    bannerSub.style.color='#3D4460';
   }else{
     bannerLabel.textContent='🔥 Your FIRE number: '+fmt(fireNumber);
     bannerSub.textContent='At your current contribution rate, this number is not reachable through savings and growth alone — try increasing your monthly contribution.';
     banner.style.background='#fff0f0';
     banner.style.borderColor='#ffc7c7';
     bannerLabel.style.color='#c0392b';
+    bannerSub.style.color='#3D4460';
   }
 
   // --- FIRE variant comparison table ---
