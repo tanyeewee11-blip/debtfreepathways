@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CXQCGBWSN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9CXQCGBWSN');
+</script>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Free FIRE Number Calculator — When Can You Retire Early? | DebtFreePathways</title>
+<meta name="description" content="Free FIRE number calculator — find your financial independence number, see how many years until you reach it, and compare Lean FIRE, your number, and Fat FIRE side by side.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://debtfreepathways.com/fire-number-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DebtFreePathways">
+<meta property="og:title" content="Free FIRE Number Calculator — When Can You Retire Early? | DebtFreePathways">
+<meta property="og:description" content="Free FIRE number calculator — find your financial independence number, see how many years until you reach it, and compare Lean FIRE, your number, and Fat FIRE side by side.">
+<meta property="og:url" content="https://debtfreepathways.com/fire-number-calculator/">
+<meta property="og:image" content="https://debtfreepathways.com/og/fire-number-calculator.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free FIRE Number Calculator — When Can You Retire Early? | DebtFreePathways">
+<meta name="twitter:description" content="Free FIRE number calculator — find your financial independence number, see how many years until you reach it, and compare Lean FIRE, your number, and Fat FIRE side by side.">
+<link rel="preload" href="/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/styles.css"></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FIRE Number Calculator",
+  "description": "Find your financial independence number based on your desired annual spending and withdrawal rate, and see how many years until you reach it based on your savings and contributions.",
+  "url": "https://debtfreepathways.com/fire-number-calculator/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DebtFreePathways",
+    "url": "https://debtfreepathways.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a FIRE number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your FIRE number is the portfolio size needed to sustain your desired annual spending indefinitely, calculated by dividing your annual spending by your chosen withdrawal rate (commonly 4%, which is the same as multiplying spending by 25)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between Lean FIRE and Fat FIRE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lean FIRE typically targets annual spending under $40,000 and a smaller portfolio, while Fat FIRE targets $80,000-$120,000 or more in annual spending and a correspondingly larger portfolio. Both use the same underlying withdrawal-rate math, just applied to a different lifestyle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What withdrawal rate should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "4% is the traditional starting point based on the Trinity Study, designed for a 30-year retirement. Because early retirees often face 40- to 50-year time horizons, many use a more conservative 3% to 3.5% withdrawal rate instead, which requires a larger portfolio for the same spending."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator account for healthcare costs before Medicare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not separately — healthcare should be included in your annual spending estimate. Early retirees typically need to budget an extra line item for health insurance premiums before Medicare eligibility at 65, since this is one of the most commonly underestimated costs in early retirement planning."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="/"><span class="nav-dot"></span>DebtFreePathways</a>
+  <ul class="nav-links">
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/blog/" aria-label="Blog — personal finance articles and guides">Blog</a></li>
+  </ul>
+  <button class="nav-back" id="nav-back" onclick="window.location.href='/'">← <span id="nav-back-label">Back to home</span></button>
+  <button class="nav-cta" onclick="window.location.href='/#tools'">Browse Tools</button>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <ul class="nav-mobile-links">
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/blog/" aria-label="Blog — personal finance articles and guides">Blog</a></li>
+  </ul>
+  <button class="nav-mobile-cta" onclick="window.location.href='/#tools'">Browse Tools</button>
+</div>
+
+<main id="main-content">
+<div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="/#tools">Calculators</a>
+        <span class="breadcrumb-sep">/</span>
+        <span style="color:rgba(255,255,255,.75)">FIRE Number Calculator</span>
+      </div>
+      <h1>FIRE Number Calculator</h1>
+      <p class="tool-hero-sub">Find your financial independence number, see how many years until you reach it, and compare Lean FIRE, your number, and Fat FIRE side by side.</p>
+      <div class="tool-hero-tags">
+        <span class="tool-hero-tag">🔥 FIRE number</span>
+        <span class="tool-hero-tag">📈 Years to FIRE</span>
+        <span class="tool-hero-tag">⚖️ Lean vs Fat FIRE</span>
+        <span class="tool-hero-tag">🎯 Withdrawal rate</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tool-layout">
+      <div class="tool-main">
+
+        <!-- INPUT CARD 1: You -->
+        <div class="calc-card">
+          <div class="calc-card-title"><div class="calc-card-icon">👤</div>Your starting point</div>
+          <div class="input-grid">
+            <div class="input-group">
+              <label>Current age</label>
+              <div class="input-wrap"><input type="number" id="fire-current-age" aria-label="Current age" value="32" min="18" max="70" oninput="fireCalc()"></div>
+            </div>
+            <div class="input-group">
+              <label>Current invested assets</label>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="fire-current-assets" aria-label="Current invested assets in dollars" value="50000" min="0" oninput="fireCalc()"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- INPUT CARD 2: Savings -->
+        <div class="calc-card">
+          <div class="calc-card-title"><div class="calc-card-icon">💰</div>Your savings rate</div>
+          <div class="input-group" style="margin-bottom:16px">
+            <label>Monthly investment contribution</label>
+            <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="fire-monthly-contribution" aria-label="Monthly investment contribution in dollars" value="2000" min="0" oninput="fireCalc()"></div>
+          </div>
+          <div class="slider-row">
+            <label>Expected annual return <span class="slider-val" id="fire-return-rate-val">7%</span></label>
+            <input type="range" id="fire-return-rate" aria-label="Expected annual return percentage slider" min="3" max="10" step="0.5" value="7" oninput="fireUpdateSlider('fire-return-rate','fire-return-rate-val','%');fireCalc()">
+          </div>
+          <div class="input-hint" style="margin-top:-12px;margin-bottom:4px">7% is a common long-term average for a stock-heavy portfolio; use a lower rate to be more conservative.</div>
+        </div>
+
+        <!-- INPUT CARD 3: FIRE target -->
+        <div class="calc-card">
+          <div class="calc-card-title"><div class="calc-card-icon">🎯</div>Your FIRE target</div>
+          <div class="input-group" style="margin-bottom:16px">
+            <label>Desired annual spending in retirement (today's dollars)</label>
+            <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="fire-annual-spending" aria-label="Desired annual retirement spending in today's dollars" value="60000" min="0" oninput="fireCalc()"></div>
+          </div>
+          <div class="slider-row">
+            <label>Withdrawal rate <span class="slider-val" id="fire-withdrawal-rate-val">4%</span></label>
+            <input type="range" id="fire-withdrawal-rate" aria-label="Withdrawal rate percentage slider" min="3" max="5" step="0.1" value="4" oninput="fireUpdateSlider('fire-withdrawal-rate','fire-withdrawal-rate-val','%');fireCalc()">
+          </div>
+          <div class="input-hint" style="margin-top:-8px">4% is the traditional starting point; many early retirees use 3-3.5% given longer time horizons. See our <a href="/blog/4-percent-rule-retirement/" style="color:var(--blue)">4% rule explainer</a>.</div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="results-panel" id="fire-results-panel">
+
+          <div class="results-strip">
+            <div class="results-strip-title">Your FIRE number</div>
+            <div class="metrics-row">
+              <div class="metric-box"><div class="metric-val green" id="fire-m-number">—</div><div class="metric-label">FIRE number needed</div></div>
+              <div class="metric-box"><div class="metric-val" id="fire-m-years">—</div><div class="metric-label">Years to FIRE</div></div>
+              <div class="metric-box"><div class="metric-val" id="fire-m-age">—</div><div class="metric-label">Projected FIRE age</div></div>
+            </div>
+          </div>
+
+          <div class="savings-banner show" id="fire-target-banner">
+            <div>
+              <div class="savings-banner-text" id="fire-target-label" style="font-weight:600;color:var(--navy)">—</div>
+              <div class="savings-banner-text" id="fire-target-sub">—</div>
+            </div>
+          </div>
+
+          <div class="calc-card" style="margin-bottom:16px">
+            <div class="calc-card-title"><div class="calc-card-icon">📊</div>Progress toward your FIRE number</div>
+            <div style="height:10px;border-radius:99px;overflow:hidden;margin-bottom:10px;background:var(--gray-100)">
+              <div id="fire-progress-bar" style="background:var(--green);width:0%;height:100%"></div>
+            </div>
+            <div style="font-size:0.85rem;color:var(--gray-500)" id="fire-progress-label">—</div>
+          </div>
+
+          <div class="compare-card show" style="margin-bottom:16px">
+            <div class="compare-title">Lean FIRE vs your number vs Fat FIRE</div>
+            <div style="overflow-x:auto">
+              <table class="compare-table">
+                <thead><tr><th>Scenario</th><th>FIRE number</th><th>Years to reach</th></tr></thead>
+                <tbody id="fire-scenario-body"></tbody>
+              </table>
+            </div>
+            <div style="font-size:0.8rem;color:var(--gray-400);margin-top:10px">See <a href="/blog/lean-fire-vs-fat-fire/" style="color:var(--blue)">Lean FIRE vs Fat FIRE</a> for what each lifestyle actually looks like.</div>
+          </div>
+
+          <div class="calc-card">
+            <div class="calc-card-title"><div class="calc-card-icon">📍</div>Projected balance on the way to FIRE</div>
+            <div class="ef-milestone-list" id="fire-milestones"></div>
+          </div>
+
+          <div class="disclaimer"><p><strong>Disclaimer:</strong> Estimates only, based on the assumptions you enter. Actual investment returns and spending will vary, and this calculator does not model market volatility, sequence-of-returns risk, or healthcare cost changes. For informational purposes only — not financial advice. Consult a financial professional for personalized guidance.</p></div>
+        </div>
+
+        <!-- How to Use -->
+        <div class="calc-card" style="margin-top:32px">
+          <div class="calc-card-title"><div class="calc-card-icon">🔥</div>How to use the FIRE Number Calculator</div>
+          <div style="margin-top:4px">
+            <div style="display:flex;gap:16px;align-items:flex-start;padding:14px 0;border-bottom:0.5px solid var(--gray-100)">
+              <div style="width:28px;height:28px;border-radius:50%;background:#0DBF7E;color:#fff;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">1</div>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;margin-bottom:3px">Enter your age and current invested assets</div>
+                <div style="font-size:0.875rem;color:var(--gray-500);line-height:1.6">Include all brokerage, retirement, and investment accounts combined — not cash savings or home equity.</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start;padding:14px 0;border-bottom:0.5px solid var(--gray-100)">
+              <div style="width:28px;height:28px;border-radius:50%;background:#0DBF7E;color:#fff;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">2</div>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;margin-bottom:3px">Add your monthly investment contribution</div>
+                <div style="font-size:0.875rem;color:var(--gray-500);line-height:1.6">This is what drives how quickly your projected balance grows toward your FIRE number.</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start;padding:14px 0;border-bottom:0.5px solid var(--gray-100)">
+              <div style="width:28px;height:28px;border-radius:50%;background:#0DBF7E;color:#fff;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">3</div>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;margin-bottom:3px">Enter your desired annual spending</div>
+                <div style="font-size:0.875rem;color:var(--gray-500);line-height:1.6">In today's dollars, including a realistic healthcare budget if you plan to retire before 65.</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start;padding:14px 0">
+              <div style="width:28px;height:28px;border-radius:50%;background:#0DBF7E;color:#fff;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">4</div>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;margin-bottom:3px">Compare Lean FIRE, your number, and Fat FIRE</div>
+                <div style="font-size:0.875rem;color:var(--gray-500);line-height:1.6">See how the years-to-FIRE changes across spending levels before committing to a target lifestyle.</div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:16px;padding:14px 16px;background:var(--gray-50);border-radius:8px;border-left:3px solid #0DBF7E;font-size:0.875rem;color:var(--gray-600);line-height:1.6">
+            <strong style="color:var(--gray-800)">💡 Pro tip:</strong> If you plan to retire before 65, budget for health insurance before Medicare eligibility — see our <a href="/blog/early-retirement-healthcare-before-medicare/" style="color:var(--blue)">healthcare bridge guide</a> for the main options.
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="calc-card" style="margin-top:20px">
+          <div class="calc-card-title"><div class="calc-card-icon">❓</div>FIRE calculator FAQs</div>
+          <div class="faq-list" style="max-width:100%">
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What is a FIRE number?<span class="faq-icon">+</span></button><div class="faq-a">Your FIRE number is the portfolio size needed to sustain your desired annual spending indefinitely, calculated by dividing your annual spending by your chosen withdrawal rate (commonly 4%, which is the same as multiplying spending by 25).</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What's the difference between Lean FIRE and Fat FIRE?<span class="faq-icon">+</span></button><div class="faq-a">Lean FIRE typically targets annual spending under $40,000 and a smaller portfolio, while Fat FIRE targets $80,000-$120,000 or more in annual spending and a correspondingly larger portfolio. Both use the same underlying withdrawal-rate math, just applied to a different lifestyle.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What withdrawal rate should I use?<span class="faq-icon">+</span></button><div class="faq-a">4% is the traditional starting point based on the Trinity Study, designed for a 30-year retirement. Because early retirees often face 40- to 50-year time horizons, many use a more conservative 3% to 3.5% withdrawal rate instead, which requires a larger portfolio for the same spending.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Does this calculator account for healthcare costs before Medicare?<span class="faq-icon">+</span></button><div class="faq-a">Not separately — healthcare should be included in your annual spending estimate. Early retirees typically need to budget an extra line item for health insurance premiums before Medicare eligibility at 65, since this is one of the most commonly underestimated costs in early retirement planning.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="tool-sidebar">
+        <div class="sidebar-widget" id="fire-summary-widget">
+          <div class="sidebar-widget-title">🔥 Your FIRE snapshot</div>
+          <div class="stat-row"><div class="stat-row-label">FIRE number</div><div class="stat-row-val" id="fire-sw-number">—</div></div>
+          <div class="stat-row"><div class="stat-row-label">Years to FIRE</div><div class="stat-row-val" id="fire-sw-years">—</div></div>
+          <div class="stat-row"><div class="stat-row-label">Progress</div><div class="stat-row-val" id="fire-sw-progress">—</div></div>
+        </div>
+        <div class="motive-widget">
+          <div class="motive-icon">🔥</div>
+          <div class="motive-text">Not sure which FIRE variant fits your lifestyle? See <a href="/blog/lean-fire-vs-fat-fire/" style="color:#8B5C00;font-weight:600">Lean FIRE vs Fat FIRE</a> or <a href="/blog/barista-fire-explained/" style="color:#8B5C00;font-weight:600">Barista FIRE explained</a>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#f8fafc;padding:32px 0;border-top:1px solid var(--gray-100)">
+    <div class="container">
+      <div style="max-width:720px;margin:0 auto">
+        <p style="font-weight:600;color:var(--gray-800);margin-bottom:12px">Related guides:</p>
+        <ul style="padding-left:20px;color:var(--gray-600);line-height:2;list-style:disc">
+          <li style="margin-bottom:6px"><a href="/blog/lean-fire-vs-fat-fire/" style="color:#0DBF7E;text-decoration:none">Lean FIRE vs Fat FIRE: Which Early Retirement Path Fits You?</a></li>
+          <li style="margin-bottom:6px"><a href="/blog/barista-fire-explained/" style="color:#0DBF7E;text-decoration:none">Barista FIRE Explained: Semi-Retirement With Part-Time Work</a></li>
+          <li style="margin-bottom:6px"><a href="/blog/early-retirement-healthcare-before-medicare/" style="color:#0DBF7E;text-decoration:none">How to Bridge Healthcare Before Medicare When You Retire Early</a></li>
+          <li style="margin-bottom:6px"><a href="/blog/4-percent-rule-retirement/" style="color:#0DBF7E;text-decoration:none">The 4% Rule for Retirement: How It Works and Its Limits</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO content block -->
+  <section class="calc-content-block">
+    <div class="container">
+      <h2 class="calc-content-h2">How This FIRE Number Calculator Works</h2>
+      <p class="calc-content-p">This calculator divides your desired annual retirement spending by your chosen withdrawal rate to arrive at your FIRE number — the portfolio size needed to sustain that spending indefinitely. It then works forward from your current invested assets and monthly contribution, compounded monthly at your expected return, to estimate how many years it will take to reach that number and at what age.</p>
+      <h3 class="calc-content-h3">Why the Withdrawal Rate Matters So Much</h3>
+      <p class="calc-content-p">A lower withdrawal rate produces a larger FIRE number for the same spending, because it assumes a longer or more conservative retirement horizon. Moving from a 4% to a 3.5% withdrawal rate increases your required portfolio by about 14% — worth checking against your own risk tolerance and expected retirement length rather than defaulting to 4% automatically.</p>
+      <h3 class="calc-content-h3">Why We Show Lean, Your Number, and Fat FIRE Together</h3>
+      <p class="calc-content-p">FIRE isn't one target — it's a spectrum of lifestyles. Seeing how many years separate a Lean FIRE number from a Fat FIRE number, holding your savings rate constant, makes the real trade-off visible: a leaner lifestyle gets you there faster, but a fatter one gives you more room to live comfortably once you arrive.</p>
+    </div>
+  </section>
+
+  <!-- Newsletter signup -->
+  <section class="newsletter-section">
+    <div class="newsletter-inner">
+      <div class="newsletter-text">
+        <h2 class="newsletter-title">Get smarter about debt — free</h2>
+        <p class="newsletter-desc">One email a month. Practical tips on paying off debt faster, cutting interest, and building financial freedom. No spam, unsubscribe anytime.</p>
+      </div>
+      <form class="newsletter-form" id="newsletter-form" onsubmit="newsletterSubmit(event)">
+        <div class="newsletter-fields">
+          <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Your email address" aria-label="Email address for newsletter" required autocomplete="email">
+          <button type="submit" class="newsletter-btn" id="newsletter-btn">Subscribe — it's free</button>
+        </div>
+        <input type="text" name="b_13ee9faad15c1ec950a1636a5_c14a1a25f2" tabindex="-1" value="" style="position:absolute;left:-5000px;top:-5000px;" aria-hidden="true">
+        <p class="newsletter-privacy">🔒 No spam. Unsubscribe at any time.</p>
+        <p class="newsletter-success" id="newsletter-success" style="display:none">🎉 You're in! Check your inbox to confirm.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div><div class="footer-brand"><span class="footer-dot"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a href="/debt-payoff-calculator/">Debt Payoff</a></li><li><a href="/mortgage-calculator/">Mortgage</a></li><li><a href="/loan-amortization-calculator/">Loan Amortization</a></li><li><a href="/interest-rate-comparator/">Interest Compare</a></li><li><a href="/debt-avalanche-vs-snowball/">Debt Avalanche</a></li><li><a href="/emergency-fund-calculator/">Emergency Fund</a></li><li><a href="/retirement-savings-calculator/">Retirement Savings</a></li><li><a href="/fire-number-calculator/">FIRE Number</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/blog/" aria-label="Blog — personal finance articles and guides">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-use/">Terms of Use</a></li><li><a href="/disclaimer/">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr">2026</span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</main>
+
+<script src="../core.js" defer></script>
+<script src="../calc-fire.js" defer></script>
+<script>
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770';
+    s.crossOrigin = 'anonymous';
+    document.body.appendChild(s);
+  });
+</script>
+</body>
+</html>
