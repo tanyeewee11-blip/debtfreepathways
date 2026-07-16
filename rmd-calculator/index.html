@@ -85,6 +85,14 @@
         "@type": "Answer",
         "text": "Yes. A qualified charitable distribution sent directly from your IRA to a qualified charity counts toward your RMD (up to $111,000 in 2026) without being included in your taxable income."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator work for an inherited IRA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This calculator uses the Uniform Lifetime Table, which applies to your own retirement account. Inherited IRAs follow a different framework — most non-spouse beneficiaries must empty the account within 10 years of the original owner's death, sometimes with annual RMDs required along the way based on the beneficiary's own life expectancy."
+      }
     }
   ]
 }
@@ -156,6 +164,7 @@
             </div>
           </div>
           <div class="input-hint" style="margin-bottom:16px">RMDs start at age 73 (born 1951-1959) or 75 (born 1960+) under SECURE 2.0. If you're aggregating multiple traditional IRAs, sum all balances together.</div>
+          <div class="input-hint" style="margin-bottom:16px;color:#8B5C00;background:var(--amber-light);padding:10px 14px;border-radius:8px">⚠️ <strong>This calculator is for your own retirement account only.</strong> If you inherited this IRA or 401(k) from someone else, entirely different rules apply — most non-spouse beneficiaries must follow a 10-year depletion rule, not the Uniform Lifetime Table below. See our <a href="/blog/inherited-ira-rmd-rules/" style="color:#8B5C00;text-decoration:underline">inherited IRA RMD guide</a> instead.</div>
 
           <div class="extra-toggle" onclick="rmdToggleSpouse()">
             <div>
@@ -261,6 +270,7 @@
             <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What balance should I enter?<span class="faq-icon">+</span></button><div class="faq-a">Enter your account balance as of December 31 of the prior year. For IRAs, sum all traditional IRA balances (including SEP and SIMPLE IRAs) together — 401(k) and other employer plan balances are calculated separately per plan.</div></div>
             <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What happens if I don't take my full RMD?<span class="faq-icon">+</span></button><div class="faq-a">The IRS charges a 25% excise tax on the shortfall, reduced to 10% if you correct the mistake within the IRS's correction window (generally two years). File Form 5329 to report and request any penalty reduction.</div></div>
             <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can a QCD reduce my RMD?<span class="faq-icon">+</span></button><div class="faq-a">Yes. A qualified charitable distribution sent directly from your IRA to a qualified charity counts toward your RMD (up to $111,000 in 2026) without being included in your taxable income.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Does this calculator work for an inherited IRA?<span class="faq-icon">+</span></button><div class="faq-a">No. This calculator uses the Uniform Lifetime Table, which applies to your own retirement account. Inherited IRAs follow a different framework — most non-spouse beneficiaries must empty the account within 10 years of the original owner's death, sometimes with annual RMDs required along the way based on the beneficiary's own life expectancy. See our <a href="/blog/inherited-ira-rmd-rules/" style="color:var(--blue)">inherited IRA RMD guide</a> for the rules that actually apply.</div></div>
           </div>
         </div>
       </div>
