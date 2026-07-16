@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CXQCGBWSN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9CXQCGBWSN');
+</script>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Free RMD Calculator — Required Minimum Distribution 2026 | DebtFreePathways</title>
+<meta name="description" content="Free RMD calculator using the IRS Uniform Lifetime Table — find your required minimum distribution for 2026, your distribution period, and a 10-year projection.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://debtfreepathways.com/rmd-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DebtFreePathways">
+<meta property="og:title" content="Free RMD Calculator — Required Minimum Distribution 2026 | DebtFreePathways">
+<meta property="og:description" content="Free RMD calculator using the IRS Uniform Lifetime Table — find your required minimum distribution for 2026, your distribution period, and a 10-year projection.">
+<meta property="og:url" content="https://debtfreepathways.com/rmd-calculator/">
+<meta property="og:image" content="https://debtfreepathways.com/og/rmd-calculator.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free RMD Calculator — Required Minimum Distribution 2026 | DebtFreePathways">
+<meta name="twitter:description" content="Free RMD calculator using the IRS Uniform Lifetime Table — find your required minimum distribution for 2026, your distribution period, and a 10-year projection.">
+<link rel="preload" href="/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/styles.css"></noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "RMD Calculator",
+  "description": "Calculate your required minimum distribution using the IRS Uniform Lifetime Table, see your distribution period, and project your RMDs for the next 10 years.",
+  "url": "https://debtfreepathways.com/rmd-calculator/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DebtFreePathways",
+    "url": "https://debtfreepathways.com/"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What table does this RMD calculator use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This calculator uses the IRS Uniform Lifetime Table (Table III), which applies to most retirement account owners. If your spouse is your sole beneficiary and more than 10 years younger, the IRS Joint and Last Survivor Table produces a longer distribution period (and a smaller RMD) — this calculator flags that situation but does not compute the joint table."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What balance should I enter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your account balance as of December 31 of the prior year. For IRAs, sum all traditional IRA balances (including SEP and SIMPLE IRAs) together — 401(k) and other employer plan balances are calculated separately per plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I don't take my full RMD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The IRS charges a 25% excise tax on the shortfall, reduced to 10% if you correct the mistake within the IRS's correction window (generally two years). File Form 5329 to report and request any penalty reduction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a QCD reduce my RMD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A qualified charitable distribution sent directly from your IRA to a qualified charity counts toward your RMD (up to $111,000 in 2026) without being included in your taxable income."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="/"><span class="nav-dot"></span>DebtFreePathways</a>
+  <ul class="nav-links">
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/blog/" aria-label="Blog — personal finance articles and guides">Blog</a></li>
+  </ul>
+  <button class="nav-back" id="nav-back" onclick="window.location.href='/'">← <span id="nav-back-label">Back to home</span></button>
+  <button class="nav-cta" onclick="window.location.href='/#tools'">Browse Tools</button>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <ul class="nav-mobile-links">
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/blog/" aria-label="Blog — personal finance articles and guides">Blog</a></li>
+  </ul>
+  <button class="nav-mobile-cta" onclick="window.location.href='/#tools'">Browse Tools</button>
+</div>
+
+<main id="main-content">
+<div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="/#tools">Calculators</a>
+        <span class="breadcrumb-sep">/</span>
+        <span style="color:rgba(255,255,255,.75)">RMD Calculator</span>
+      </div>
+      <h1>RMD Calculator</h1>
+      <p class="tool-hero-sub">Find your required minimum distribution using the IRS Uniform Lifetime Table, see your exact distribution period, and project the next 10 years.</p>
+      <div class="tool-hero-tags">
+        <span class="tool-hero-tag">📋 IRS Uniform Lifetime Table</span>
+        <span class="tool-hero-tag">📅 2026 rules</span>
+        <span class="tool-hero-tag">📈 10-year projection</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tool-layout">
+      <div class="tool-main">
+
+        <!-- INPUT CARD 1: You -->
+        <div class="calc-card">
+          <div class="calc-card-title"><div class="calc-card-icon">👤</div>Your account</div>
+          <div class="input-grid">
+            <div class="input-group">
+              <label>Your age this year</label>
+              <div class="input-wrap"><input type="number" id="rmd-current-age" aria-label="Current age" value="74" min="73" max="120" oninput="rmdCalc()"></div>
+            </div>
+            <div class="input-group">
+              <label>Account balance (Dec 31 prior year)</label>
+              <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="rmd-balance" aria-label="Account balance as of December 31 of the prior year" value="500000" min="0" oninput="rmdCalc()"></div>
+            </div>
+          </div>
+          <div class="input-hint" style="margin-bottom:16px">RMDs start at age 73 (born 1951-1959) or 75 (born 1960+) under SECURE 2.0. If you're aggregating multiple traditional IRAs, sum all balances together.</div>
+
+          <div class="extra-toggle" onclick="rmdToggleSpouse()">
+            <div>
+              <div class="extra-toggle-label">💍 Spouse is sole beneficiary, 10+ years younger</div>
+              <div class="extra-toggle-sub">A different IRS table applies and produces a smaller RMD</div>
+            </div>
+            <div class="toggle-switch" id="rmd-spouse-switch"><div class="toggle-knob"></div></div>
+          </div>
+          <div class="input-hint" id="rmd-spouse-note" style="display:none;color:#8B5C00;background:var(--amber-light);padding:10px 14px;border-radius:8px;margin-top:-8px">⚠️ This calculator uses the Uniform Lifetime Table, which produces a <em>larger</em> RMD than the Joint and Last Survivor Table that actually applies to your situation. The number below is a conservative upper estimate — consult a tax professional or IRS Publication 590-B for your exact figure.</div>
+        </div>
+
+        <!-- INPUT CARD 2: Projection assumptions -->
+        <div class="calc-card">
+          <div class="calc-card-title"><div class="calc-card-icon">📈</div>Projection assumptions</div>
+          <div class="slider-row">
+            <label>Expected annual return on remaining balance <span class="slider-val" id="rmd-growth-rate-val">5%</span></label>
+            <input type="range" id="rmd-growth-rate" aria-label="Expected annual return percentage slider" min="0" max="10" step="0.5" value="5" oninput="rmdUpdateSlider('rmd-growth-rate','rmd-growth-rate-val','%');rmdCalc()">
+          </div>
+          <div class="input-hint" style="margin-top:-12px">Used only to project future years — a more conservative rate (3-5%) is reasonable since this money is actively being withdrawn.</div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="results-panel" id="rmd-results-panel">
+
+          <div class="results-strip">
+            <div class="results-strip-title">Your RMD this year</div>
+            <div class="metrics-row">
+              <div class="metric-box"><div class="metric-val green" id="rmd-m-amount">—</div><div class="metric-label">Required distribution</div></div>
+              <div class="metric-box"><div class="metric-val" id="rmd-m-divisor">—</div><div class="metric-label">Distribution period</div></div>
+              <div class="metric-box"><div class="metric-val" id="rmd-m-pct">—</div><div class="metric-label">% of balance</div></div>
+            </div>
+          </div>
+
+          <div class="savings-banner show" id="rmd-target-banner">
+            <div>
+              <div class="savings-banner-text" id="rmd-target-label" style="font-weight:600;color:var(--navy)">—</div>
+              <div class="savings-banner-text" id="rmd-target-sub">—</div>
+            </div>
+          </div>
+
+          <div class="compare-card show" style="margin-bottom:16px">
+            <div class="compare-title">10-year RMD projection</div>
+            <div style="overflow-x:auto">
+              <table class="compare-table">
+                <thead><tr><th>Age</th><th>Balance (start)</th><th>Divisor</th><th>RMD</th><th>% of balance</th></tr></thead>
+                <tbody id="rmd-projection-body"></tbody>
+              </table>
+            </div>
+            <div style="font-size:0.8rem;color:var(--gray-400);margin-top:10px">Projection assumes the balance grows at your chosen rate after each year's RMD is withdrawn. Actual future balances will vary with market performance.</div>
+          </div>
+
+          <div class="calc-card" style="margin-bottom:0">
+            <div class="calc-card-title"><div class="calc-card-icon">💚</div>Reduce your taxable RMD</div>
+            <div style="font-size:0.875rem;color:var(--gray-600);line-height:1.7">A <a href="/blog/what-is-a-qualified-charitable-distribution/" style="color:var(--blue)">qualified charitable distribution (QCD)</a> sent directly from your IRA to a charity counts toward your RMD (up to $111,000 in 2026) without counting as taxable income. See our <a href="/blog/rmd-rules-2026/" style="color:var(--blue)">full RMD rules guide</a> for the 2026 age thresholds, penalty rules, and first-year deadline traps.</div>
+          </div>
+
+          <div class="disclaimer"><p><strong>Disclaimer:</strong> Estimates only. This calculator uses the IRS Uniform Lifetime Table, which applies to most account owners but not all situations (see the spousal note above). Actual RMD rules, tables, and penalty amounts are set by the IRS and may change. For informational purposes only — not tax or financial advice. Consult a tax professional for your exact figure.</p></div>
+        </div>
+
+        <!-- How to Use -->
+        <div class="calc-card" style="margin-top:32px">
+          <div class="calc-card-title"><div class="calc-card-icon">📋</div>How to use the RMD Calculator</div>
+          <div style="margin-top:4px">
+            <div style="display:flex;gap:16px;align-items:flex-start;padding:14px 0;border-bottom:0.5px solid var(--gray-100)">
+              <div style="width:28px;height:28px;border-radius:50%;background:#0DBF7E;color:#fff;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">1</div>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;margin-bottom:3px">Enter your age for this distribution year</div>
+                <div style="font-size:0.875rem;color:var(--gray-500);line-height:1.6">Use the age you turn (or have turned) during the calendar year the RMD applies to.</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start;padding:14px 0;border-bottom:0.5px solid var(--gray-100)">
+              <div style="width:28px;height:28px;border-radius:50%;background:#0DBF7E;color:#fff;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">2</div>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;margin-bottom:3px">Enter your prior year-end balance</div>
+                <div style="font-size:0.875rem;color:var(--gray-500);line-height:1.6">Sum all traditional IRAs together; calculate 401(k) and other employer plans separately per plan.</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start;padding:14px 0;border-bottom:0.5px solid var(--gray-100)">
+              <div style="width:28px;height:28px;border-radius:50%;background:#0DBF7E;color:#fff;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">3</div>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;margin-bottom:3px">Flag the spousal exception if it applies</div>
+                <div style="font-size:0.875rem;color:var(--gray-500);line-height:1.6">If your sole beneficiary is a spouse 10+ years younger, your actual RMD will be smaller than what this calculator shows.</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start;padding:14px 0">
+              <div style="width:28px;height:28px;border-radius:50%;background:#0DBF7E;color:#fff;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">4</div>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;margin-bottom:3px">Check the 10-year projection</div>
+                <div style="font-size:0.875rem;color:var(--gray-500);line-height:1.6">See how your required withdrawal percentage climbs each year as the distribution period shortens.</div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:16px;padding:14px 16px;background:var(--gray-50);border-radius:8px;border-left:3px solid #0DBF7E;font-size:0.875rem;color:var(--gray-600);line-height:1.6">
+            <strong style="color:var(--gray-800)">💡 Pro tip:</strong> If this is your first-ever RMD, you can delay it to April 1 of next year — but that stacks two RMDs into one tax year. See our <a href="/blog/rmd-rules-2026/" style="color:var(--blue)">RMD rules guide</a> for why most people are better off not delaying.
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="calc-card" style="margin-top:20px">
+          <div class="calc-card-title"><div class="calc-card-icon">❓</div>RMD calculator FAQs</div>
+          <div class="faq-list" style="max-width:100%">
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What table does this RMD calculator use?<span class="faq-icon">+</span></button><div class="faq-a">This calculator uses the IRS Uniform Lifetime Table (Table III), which applies to most retirement account owners. If your spouse is your sole beneficiary and more than 10 years younger, the IRS Joint and Last Survivor Table produces a longer distribution period (and a smaller RMD) — this calculator flags that situation but does not compute the joint table.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What balance should I enter?<span class="faq-icon">+</span></button><div class="faq-a">Enter your account balance as of December 31 of the prior year. For IRAs, sum all traditional IRA balances (including SEP and SIMPLE IRAs) together — 401(k) and other employer plan balances are calculated separately per plan.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What happens if I don't take my full RMD?<span class="faq-icon">+</span></button><div class="faq-a">The IRS charges a 25% excise tax on the shortfall, reduced to 10% if you correct the mistake within the IRS's correction window (generally two years). File Form 5329 to report and request any penalty reduction.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can a QCD reduce my RMD?<span class="faq-icon">+</span></button><div class="faq-a">Yes. A qualified charitable distribution sent directly from your IRA to a qualified charity counts toward your RMD (up to $111,000 in 2026) without being included in your taxable income.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="tool-sidebar">
+        <div class="sidebar-widget" id="rmd-summary-widget">
+          <div class="sidebar-widget-title">📋 Your RMD snapshot</div>
+          <div class="stat-row"><div class="stat-row-label">This year's RMD</div><div class="stat-row-val" id="rmd-sw-amount">—</div></div>
+          <div class="stat-row"><div class="stat-row-label">Distribution period</div><div class="stat-row-val" id="rmd-sw-divisor">—</div></div>
+          <div class="stat-row"><div class="stat-row-label">% of balance</div><div class="stat-row-val" id="rmd-sw-pct">—</div></div>
+        </div>
+        <div class="motive-widget">
+          <div class="motive-icon">💚</div>
+          <div class="motive-text">Charitably inclined? See our <a href="/blog/what-is-a-qualified-charitable-distribution/" style="color:#8B5C00;font-weight:600">QCD explainer</a> to satisfy your RMD tax-free.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#f8fafc;padding:32px 0;border-top:1px solid var(--gray-100)">
+    <div class="container">
+      <div style="max-width:720px;margin:0 auto">
+        <p style="font-weight:600;color:var(--gray-800);margin-bottom:12px">Related guides:</p>
+        <ul style="padding-left:20px;color:var(--gray-600);line-height:2;list-style:disc">
+          <li style="margin-bottom:6px"><a href="/blog/rmd-rules-2026/" style="color:#0DBF7E;text-decoration:none">RMD Rules 2026: SECURE 2.0 Changes, Ages, and Penalties Explained</a></li>
+          <li style="margin-bottom:6px"><a href="/blog/what-is-a-qualified-charitable-distribution/" style="color:#0DBF7E;text-decoration:none">What Is a Qualified Charitable Distribution (QCD)?</a></li>
+          <li style="margin-bottom:6px"><a href="/blog/is-social-security-taxable/" style="color:#0DBF7E;text-decoration:none">Is Social Security Taxable? 2026 Thresholds Explained</a></li>
+          <li style="margin-bottom:6px"><a href="/blog/how-much-do-you-need-to-retire/" style="color:#0DBF7E;text-decoration:none">How Much Do You Need to Retire?</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO content block -->
+  <section class="calc-content-block">
+    <div class="container">
+      <h2 class="calc-content-h2">How This RMD Calculator Works</h2>
+      <p class="calc-content-p">This calculator divides your prior year-end account balance by the distribution period from the IRS Uniform Lifetime Table for your age, which is the standard method used by most retirement account owners under Treasury Regulation §1.401(a)(9)-9. The table has not changed since 2022, though the RMD starting age rose to 73 (or 75 for those born in 1960 or later) under the SECURE 2.0 Act.</p>
+      <h3 class="calc-content-h3">Why the Required Percentage Rises Every Year</h3>
+      <p class="calc-content-p">The distribution period shortens by roughly one year for each year you age, while your account balance doesn't necessarily shrink at the same pace — especially if it's still earning a positive return. This means the required withdrawal percentage climbs steadily: about 3.8% of your balance at age 73, rising past 6% by your mid-80s and into double digits by your mid-90s.</p>
+      <h3 class="calc-content-h3">When This Table Doesn't Apply</h3>
+      <p class="calc-content-p">If your sole beneficiary is a spouse more than 10 years younger than you, the IRS Joint and Last Survivor Table applies instead and produces a longer distribution period — meaning a smaller required withdrawal. This calculator flags that situation but uses the standard Uniform Lifetime Table figure as a conservative estimate; consult IRS Publication 590-B or a tax professional for your exact joint-table figure.</p>
+    </div>
+  </section>
+
+  <!-- Newsletter signup -->
+  <section class="newsletter-section">
+    <div class="newsletter-inner">
+      <div class="newsletter-text">
+        <h2 class="newsletter-title">Get smarter about debt — free</h2>
+        <p class="newsletter-desc">One email a month. Practical tips on paying off debt faster, cutting interest, and building financial freedom. No spam, unsubscribe anytime.</p>
+      </div>
+      <form class="newsletter-form" id="newsletter-form" onsubmit="newsletterSubmit(event)">
+        <div class="newsletter-fields">
+          <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Your email address" aria-label="Email address for newsletter" required autocomplete="email">
+          <button type="submit" class="newsletter-btn" id="newsletter-btn">Subscribe — it's free</button>
+        </div>
+        <input type="text" name="b_13ee9faad15c1ec950a1636a5_c14a1a25f2" tabindex="-1" value="" style="position:absolute;left:-5000px;top:-5000px;" aria-hidden="true">
+        <p class="newsletter-privacy">🔒 No spam. Unsubscribe at any time.</p>
+        <p class="newsletter-success" id="newsletter-success" style="display:none">🎉 You're in! Check your inbox to confirm.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div><div class="footer-brand"><span class="footer-dot"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a href="/debt-payoff-calculator/">Debt Payoff</a></li><li><a href="/mortgage-calculator/">Mortgage</a></li><li><a href="/loan-amortization-calculator/">Loan Amortization</a></li><li><a href="/interest-rate-comparator/">Interest Compare</a></li><li><a href="/debt-avalanche-vs-snowball/">Debt Avalanche</a></li><li><a href="/emergency-fund-calculator/">Emergency Fund</a></li><li><a href="/retirement-savings-calculator/">Retirement Savings</a></li><li><a href="/fire-number-calculator/">FIRE Number</a></li><li><a href="/rmd-calculator/">RMD Calculator</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/blog/" aria-label="Blog — personal finance articles and guides">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-use/">Terms of Use</a></li><li><a href="/disclaimer/">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr">2026</span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</main>
+
+<script src="../core.js" defer></script>
+<script src="../calc-rmd.js" defer></script>
+<script>
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770';
+    s.crossOrigin = 'anonymous';
+    document.body.appendChild(s);
+  });
+</script>
+</body>
+</html>
