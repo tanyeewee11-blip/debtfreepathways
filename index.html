@@ -17,7 +17,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
 .nav-back{display:none}.nav-hamburger{display:none}
 .skip-to-content{position:absolute;top:-100px;left:16px;background:var(--navy);color:#fff;padding:10px 16px;border-radius:0 0 8px 8px;font-size:14px;font-weight:600;text-decoration:none;z-index:10000}
 .skip-to-content:focus{top:0}
-.hero{background:var(--navy);padding:90px 2rem 70px;text-align:center;overflow:hidden;position:relative}
+.hero{background:var(--navy);padding:90px 2rem 70px;text-align:center;overflow:hidden;position:relative;contain:layout style;min-height:600px}
 .hero::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(26,111,232,.2) 0%,transparent 65%);pointer-events:none}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(13,191,126,.15);border:1px solid rgba(13,191,126,.3);color:var(--green);font-size:12px;font-weight:500;padding:5px 14px;border-radius:99px;margin-bottom:24px}
 .hero-badge-dot{width:6px;height:6px;background:var(--green);border-radius:50%}
@@ -28,7 +28,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
 .btn-primary{background:var(--green);color:var(--navy);font-family:var(--font-display);font-size:14px;font-weight:600;padding:13px 28px;border-radius:10px;text-decoration:none;border:none;cursor:pointer;display:inline-block}
 .btn-ghost{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.85);font-size:14px;padding:13px 28px;border-radius:10px;text-decoration:none;cursor:pointer}
 .container{max-width:1100px;margin:0 auto;padding:0 2rem}
-@media(max-width:768px){.nav-links,.nav-cta{display:none}.nav-hamburger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;background:none;border:none;cursor:pointer;padding:4px}.nav-hamburger span{display:block;width:20px;height:2px;background:var(--navy);border-radius:99px}.hero{padding:60px 1.25rem 48px}.hero h1{font-size:30px}.hero-actions{flex-direction:column;align-items:center}.btn-primary,.btn-ghost{width:100%;text-align:center}}
+@media(max-width:768px){.nav-links,.nav-cta{display:none}.nav-hamburger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;background:none;border:none;cursor:pointer;padding:4px}.nav-hamburger span{display:block;width:20px;height:2px;background:var(--navy);border-radius:99px}.hero{padding:60px 1.25rem 48px;min-height:500px}.hero h1{font-size:30px}.hero-actions{flex-direction:column;align-items:center}.btn-primary,.btn-ghost{width:100%;text-align:center}}
 </style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -272,7 +272,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-
           <img src="/images/marcus-avatar.png" alt="Marcus Sheldon" width="40" height="40" class="author-avatar" loading="eager">
         </picture>
         <div class="text-left">
-          <p class="author-name">Calculators and guides written by <a href="/about/" style="color:var(--blue);text-decoration:none">Marcus Sheldon</a></p>
+          <p class="author-name">Calculators and guides written by <a href="/about/" style="color:#155ec7;text-decoration:none">Marcus Sheldon</a></p>
           <p class="author-meta">8+ years writing about debt, mortgages, and credit · every formula checked against standard lending math</p>
         </div>
       </div>
