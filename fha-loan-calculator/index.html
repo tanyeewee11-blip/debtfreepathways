@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9CXQCGBWSN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9CXQCGBWSN');
+</script>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>FHA Loan Calculator: Payment & MIP Estimate — DebtFreePathways</title>
+<meta name="description" content="Free calculator — estimate your FHA loan payment including upfront and annual mortgage insurance premium (MIP), and see how it compares to a conventional loan.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://debtfreepathways.com/fha-loan-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DebtFreePathways">
+<meta property="og:title" content="FHA Loan Calculator: Payment & MIP Estimate — DebtFreePathways">
+<meta property="og:description" content="Free calculator — estimate your FHA loan payment including upfront and annual mortgage insurance premium (MIP), and see how it compares to a conventional loan.">
+<meta property="og:url" content="https://debtfreepathways.com/fha-loan-calculator/">
+<meta property="og:image" content="https://debtfreepathways.com/og/fha-loan-calculator.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FHA Loan Calculator: Payment & MIP Estimate — DebtFreePathways">
+<meta name="twitter:description" content="Free calculator — estimate your FHA loan payment including upfront and annual mortgage insurance premium (MIP), and see how it compares to a conventional loan.">
+<link rel="preload" href="/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/styles.css"></noscript>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://debtfreepathways.com/"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://debtfreepathways.com/#tools"},{"@type":"ListItem","position":3,"name":"FHA Loan Calculator","item":"https://debtfreepathways.com/fha-loan-calculator/"}]}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FHA Loan Calculator",
+  "description": "Estimate FHA loan monthly payments including upfront and annual mortgage insurance premium (MIP), compared against an estimated conventional loan with PMI.",
+  "url": "https://debtfreepathways.com/fha-loan-calculator/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "publisher": {"@type": "Organization", "name": "DebtFreePathways", "url": "https://debtfreepathways.com/"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What is FHA mortgage insurance premium (MIP)?", "acceptedAnswer": {"@type": "Answer", "text": "MIP has two parts: an upfront premium of 1.75% of the loan amount, paid at closing or financed into the loan, and an annual premium (commonly 0.55% for most 30-year loans) paid monthly as part of your mortgage payment."}},
+    {"@type": "Question", "name": "How much down payment do I need for an FHA loan?", "acceptedAnswer": {"@type": "Answer", "text": "As little as 3.5% with a credit score of 580 or higher. Borrowers with credit scores between 500 and 579 typically need at least 10% down."}},
+    {"@type": "Question", "name": "Does FHA mortgage insurance ever go away?", "acceptedAnswer": {"@type": "Answer", "text": "If your down payment was less than 10%, annual MIP typically lasts for the life of the loan unless you refinance into a different loan type. With 10% or more down, MIP can be cancelled after 11 years."}},
+    {"@type": "Question", "name": "Is FHA or conventional better?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your credit score and down payment. FHA often has more flexible credit requirements and a lower minimum down payment, but conventional loans can be cheaper overall if you qualify, especially once you have 20% down and no longer need mortgage insurance at all."}},
+    {"@type": "Question", "name": "Can I roll the FHA upfront MIP into my loan?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — most borrowers finance the upfront MIP into their total loan amount rather than paying it in cash at closing, which slightly increases the loan balance and monthly payment but reduces upfront cash needed."}}
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+<nav>
+  <a class="nav-logo" href="/"><span class="nav-dot"></span>DebtFreePathways</a>
+  <ul class="nav-links">
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/blog/" aria-label="Blog — personal finance articles and guides">Blog</a></li>
+  </ul>
+  <button class="nav-back" id="nav-back" onclick="window.location.href='/'">← <span id="nav-back-label">Back to home</span></button>
+  <button class="nav-cta" onclick="window.location.href='/#tools'">Browse Tools</button>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <ul class="nav-mobile-links">
+    <li><a href="/#tools">Calculators</a></li>
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/blog/" aria-label="Blog — personal finance articles and guides">Blog</a></li>
+  </ul>
+  <button class="nav-mobile-cta" onclick="window.location.href='/#tools'">Browse Tools</button>
+</div>
+
+<main id="main-content">
+<div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="/#tools">Calculators</a>
+        <span class="breadcrumb-sep">/</span>
+        <span style="color:rgba(255,255,255,.75)">FHA Loan</span>
+      </div>
+      <h1>FHA Loan Calculator</h1>
+      <p class="tool-hero-sub">Estimate your FHA monthly payment including upfront and annual mortgage insurance premium (MIP) — and see how it stacks up against a conventional loan.</p>
+      <div class="tool-hero-tags">
+        <span class="tool-hero-tag">🏠 3.5% down payment</span>
+        <span class="tool-hero-tag">📋 MIP included</span>
+        <span class="tool-hero-tag">📊 vs conventional</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tool-layout">
+      <div class="tool-main">
+
+        <!-- INPUT CARD 1 -->
+        <div class="calc-card">
+          <div class="calc-card-title"><div class="calc-card-icon">🏠</div>Home price & down payment</div>
+          <div class="input-group">
+            <label>Home price</label>
+            <div class="input-wrap has-prefix"><span class="input-prefix">$</span><input type="number" id="fha-price" aria-label="Home price in dollars" value="300000" min="0" oninput="fhaCalc()"></div>
+          </div>
+          <div class="slider-row" style="margin-top:16px">
+            <label>Down payment <span class="slider-val" id="fha-down-val">3.5%</span></label>
+            <input type="range" id="fha-down" aria-label="Down payment percentage slider" min="3.5" max="20" step="0.5" value="3.5" oninput="fhaUpdateSlider('fha-down','fha-down-val','%');fhaCalc()">
+          </div>
+          <div class="input-hint" style="margin-top:-8px">FHA allows as little as 3.5% down with a credit score of 580+ (10% minimum for scores 500-579).</div>
+        </div>
+
+        <!-- INPUT CARD 2 -->
+        <div class="calc-card">
+          <div class="calc-card-title"><div class="calc-card-icon">🏦</div>Loan details</div>
+          <div class="input-grid">
+            <div class="input-group">
+              <label>Loan term</label>
+              <div class="input-wrap has-suffix"><input type="number" id="fha-term" aria-label="Loan term in years" value="30" min="10" max="30" oninput="fhaCalc()"><span class="input-suffix">yrs</span></div>
+            </div>
+          </div>
+          <div class="slider-row" style="margin-top:16px">
+            <label>Interest rate <span class="slider-val" id="fha-rate-val">6.5%</span></label>
+            <input type="range" id="fha-rate" aria-label="Interest rate percentage slider" min="3" max="9" step="0.125" value="6.5" oninput="fhaUpdateSlider('fha-rate','fha-rate-val','%');fhaCalc()">
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="results-panel" id="fha-results-panel">
+
+          <div class="results-strip">
+            <div class="results-strip-title">Your estimated monthly payment</div>
+            <div class="metrics-row">
+              <div class="metric-box"><div class="metric-val green" id="fha-m-payment">—</div><div class="metric-label">Total monthly (P&I + MIP)</div></div>
+              <div class="metric-box"><div class="metric-val" id="fha-m-upfront-mip">—</div><div class="metric-label">Upfront MIP</div></div>
+              <div class="metric-box"><div class="metric-val" id="fha-m-loan">—</div><div class="metric-label">Total loan (incl. MIP)</div></div>
+            </div>
+          </div>
+
+          <div class="calc-card" style="margin-top:16px">
+            <div class="calc-card-title"><div class="calc-card-icon">🧾</div>Payment breakdown</div>
+            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--gray-100)"><span style="color:var(--gray-600);font-size:0.9rem">Principal & interest</span><span style="font-weight:600" id="fha-pi-val">—</span></div>
+            <div style="display:flex;justify-content:space-between;padding:10px 0"><span style="color:var(--gray-600);font-size:0.9rem">Annual MIP (monthly)</span><span style="font-weight:600" id="fha-mip-val">—</span></div>
+            <div style="margin-top:12px;padding:10px 14px;background:var(--gray-50);border-radius:8px;font-size:0.82rem;color:var(--gray-600)" id="fha-mip-note">—</div>
+          </div>
+
+          <div class="compare-card show" style="margin-top:16px;margin-bottom:12px">
+            <div class="compare-title">FHA vs. estimated conventional loan</div>
+            <div style="overflow-x:auto">
+              <table class="compare-table">
+                <thead><tr><th>Loan type</th><th>P&I</th><th>Mortgage insurance</th><th>Total</th></tr></thead>
+                <tbody id="fha-compare-body"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="savings-banner show"><div><div class="savings-banner-text" id="fha-compare-note" style="font-weight:500;color:var(--gray-700)">—</div></div></div>
+
+          <div class="disclaimer" style="margin-top:16px"><p><strong>Disclaimer:</strong> This calculator provides an estimate using standard 2026 FHA MIP rates and a typical conventional PMI assumption for comparison. Actual MIP rates depend on your specific loan amount, term, and LTV; actual conventional PMI depends on your credit score and lender. FHA loan limits also vary by county. For informational purposes only — not financial or lending advice. Consult a mortgage lender for exact figures.</p></div>
+        </div>
+
+        <!-- How to Use -->
+        <div class="calc-card" style="margin-top:32px">
+          <div class="calc-card-title"><div class="calc-card-icon">📖</div>How to use this calculator</div>
+          <div style="margin-top:4px">
+            <div style="display:flex;gap:16px;align-items:flex-start;padding:14px 0;border-bottom:0.5px solid var(--gray-100)">
+              <div style="width:28px;height:28px;border-radius:50%;background:#0DBF7E;color:#fff;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">1</div>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;margin-bottom:3px">Enter the home price and your planned down payment</div>
+                <div style="font-size:0.875rem;color:var(--gray-500);line-height:1.6">Remember: under 10% down means MIP applies for the life of the loan.</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start;padding:14px 0;border-bottom:0.5px solid var(--gray-100)">
+              <div style="width:28px;height:28px;border-radius:50%;background:#0DBF7E;color:#fff;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">2</div>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;margin-bottom:3px">Set your rate and term</div>
+                <div style="font-size:0.875rem;color:var(--gray-500);line-height:1.6">Use a rate you've been quoted for the most accurate result.</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:16px;align-items:flex-start;padding:14px 0">
+              <div style="width:28px;height:28px;border-radius:50%;background:#0DBF7E;color:#fff;font-size:0.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">3</div>
+              <div>
+                <div style="font-weight:600;font-size:0.9rem;margin-bottom:3px">Check the FHA vs. conventional comparison</div>
+                <div style="font-size:0.875rem;color:var(--gray-500);line-height:1.6">If you could qualify for a conventional loan too, this shows roughly how the ongoing costs compare.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="calc-card" style="margin-top:20px">
+          <div class="calc-card-title"><div class="calc-card-icon">❓</div>FAQs</div>
+          <div class="faq-list" style="max-width:100%">
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">What is FHA mortgage insurance premium (MIP)?<span class="faq-icon">+</span></button><div class="faq-a">MIP has two parts: an upfront premium of 1.75% of the loan amount, paid at closing or financed into the loan, and an annual premium (commonly 0.55% for most 30-year loans) paid monthly as part of your mortgage payment.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">How much down payment do I need for an FHA loan?<span class="faq-icon">+</span></button><div class="faq-a">As little as 3.5% with a credit score of 580 or higher. Borrowers with credit scores between 500 and 579 typically need at least 10% down.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Does FHA mortgage insurance ever go away?<span class="faq-icon">+</span></button><div class="faq-a">If your down payment was less than 10%, annual MIP typically lasts for the life of the loan unless you refinance into a different loan type. With 10% or more down, MIP can be cancelled after 11 years.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Is FHA or conventional better?<span class="faq-icon">+</span></button><div class="faq-a">It depends on your credit score and down payment. FHA often has more flexible credit requirements and a lower minimum down payment, but conventional loans can be cheaper overall if you qualify, especially once you have 20% down and no longer need mortgage insurance at all.</div></div>
+            <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can I roll the FHA upfront MIP into my loan?<span class="faq-icon">+</span></button><div class="faq-a">Yes — most borrowers finance the upfront MIP into their total loan amount rather than paying it in cash at closing, which slightly increases the loan balance and monthly payment but reduces upfront cash needed.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="tool-sidebar">
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-title">📋 Quick facts (2026)</div>
+          <div class="stat-row"><div class="stat-row-label">Min. down payment</div><div class="stat-row-val">3.5%</div></div>
+          <div class="stat-row"><div class="stat-row-label">Upfront MIP</div><div class="stat-row-val">1.75% of loan</div></div>
+          <div class="stat-row"><div class="stat-row-label">Typical annual MIP</div><div class="stat-row-val">0.55%</div></div>
+        </div>
+        <div class="motive-widget">
+          <div class="motive-icon">🎯</div>
+          <div class="motive-text">Not sure FHA is right for you? See our general <a href="/mortgage-calculator/" style="color:#8B5C00;font-weight:600">mortgage calculator</a> to compare against a standard loan.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#f8fafc;padding:32px 0;border-top:1px solid var(--gray-100)">
+    <div class="container">
+      <div style="max-width:720px;margin:0 auto">
+        <p style="font-weight:600;color:var(--gray-800);margin-bottom:12px">Related guides:</p>
+        <ul style="padding-left:20px;color:var(--gray-600);line-height:2;list-style:disc">
+          <li style="margin-bottom:6px"><a href="/blog/how-much-house-can-i-afford/" style="color:#0DBF7E;text-decoration:none">How much house can I afford?</a></li>
+          <li style="margin-bottom:6px"><a href="/blog/fixed-vs-variable-rate-mortgage/" style="color:#0DBF7E;text-decoration:none">Fixed vs variable rate mortgage</a></li>
+          <li style="margin-bottom:6px"><a href="/blog/closing-costs-explained/" style="color:#0DBF7E;text-decoration:none">Closing costs explained</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO content block -->
+  <section class="calc-content-block">
+    <div class="container">
+      <h2 class="calc-content-h2">How This Calculator Works</h2>
+      <p class="calc-content-p">This calculator applies current 2026 FHA mortgage insurance premium rates: a 1.75% upfront premium (financed into your loan balance, as most borrowers choose) and a 0.55% annual premium for the most common scenario — a 30-year loan with a down payment under 10%. Your monthly payment combines standard principal-and-interest amortization on the total financed amount (including the upfront MIP) with the monthly portion of the annual MIP.</p>
+      <h3 class="calc-content-h3">Why the FHA vs. Conventional Comparison Matters</h3>
+      <p class="calc-content-p">FHA loans make homeownership accessible with a lower minimum down payment and more flexible credit requirements, but that accessibility comes at a real ongoing cost through MIP — which, unlike conventional PMI, often can't be cancelled once you build equity if your down payment was under 10%. The comparison table estimates how a conventional loan with private mortgage insurance would compare at the same down payment level, so you can weigh FHA's easier qualification against its longer-term insurance costs.</p>
+      <h3 class="calc-content-h3">A Note on FHA Loan Limits</h3>
+      <p class="calc-content-p">FHA loan limits vary by county and are updated annually based on local home prices, with both a national floor and ceiling. This calculator doesn't apply a specific county limit — if you're purchasing in a high-cost area, check current FHA loan limits for your specific county before assuming a given home price qualifies for FHA financing.</p>
+    </div>
+  </section>
+
+  <!-- Newsletter signup -->
+  <section class="newsletter-section">
+    <div class="newsletter-inner">
+      <div class="newsletter-text">
+        <h2 class="newsletter-title">Get smarter about debt — free</h2>
+        <p class="newsletter-desc">One email a month. Practical tips on paying off debt faster, cutting interest, and building financial freedom. No spam, unsubscribe anytime.</p>
+      </div>
+      <form class="newsletter-form" id="newsletter-form" onsubmit="newsletterSubmit(event)">
+        <div class="newsletter-fields">
+          <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Your email address" aria-label="Email address for newsletter" required autocomplete="email">
+          <button type="submit" class="newsletter-btn" id="newsletter-btn">Subscribe — it's free</button>
+        </div>
+        <input type="text" name="b_13ee9faad15c1ec950a1636a5_c14a1a25f2" tabindex="-1" value="" style="position:absolute;left:-5000px;top:-5000px;" aria-hidden="true">
+        <p class="newsletter-privacy">🔒 No spam. Unsubscribe at any time.</p>
+        <p class="newsletter-success" id="newsletter-success" style="display:none">🎉 You're in! Check your inbox to confirm.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div><div class="footer-brand"><span class="footer-dot"></span>DebtFreePathways</div><p class="footer-tagline">Free personal finance calculators to help you pay off debt, plan your mortgage, and build financial freedom.</p></div>
+      <div><div class="footer-col-title">Calculators</div><ul class="footer-links"><li><a href="/debt-payoff-calculator/">Debt Payoff</a></li><li><a href="/mortgage-calculator/">Mortgage</a></li><li><a href="/fha-loan-calculator/">FHA Loan</a></li><li><a href="/home-affordability-calculator/">Home Affordability</a></li><li><a href="/dti-calculator/">DTI Calculator</a></li><li><a href="/reverse-mortgage-calculator/">Reverse Mortgage</a></li><li><a href="/loan-amortization-calculator/">Loan Amortization</a></li><li><a href="/interest-rate-comparator/">Interest Compare</a></li><li><a href="/debt-avalanche-vs-snowball/">Debt Avalanche</a></li><li><a href="/emergency-fund-calculator/">Emergency Fund</a></li><li><a href="/retirement-savings-calculator/">Retirement Savings</a></li><li><a href="/how-long-will-my-money-last-calculator/">Money Longevity</a></li><li><a href="/fire-number-calculator/">FIRE Number</a></li><li><a href="/rmd-calculator/">RMD Calculator</a></li></ul></div>
+      <div><div class="footer-col-title">Company</div><ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/blog/" aria-label="Blog — personal finance articles and guides">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+      <div><div class="footer-col-title">Legal</div><ul class="footer-links"><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-of-use/">Terms of Use</a></li><li><a href="/disclaimer/">Disclaimer</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© <span class="yr">2026</span> DebtFreePathways. For informational purposes only.</span><span>Not financial advice.</span></div>
+  </footer>
+</main>
+
+<script src="/core.js" defer></script>
+<script src="/calc-fha.js" defer></script>
+<script src="/calc-qs.js" defer></script>
+<script>
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770';
+    s.crossOrigin = 'anonymous';
+    document.body.appendChild(s);
+  });
+</script>
+</body>
+</html>
