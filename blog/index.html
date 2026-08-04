@@ -898,5 +898,15 @@ function filterPosts(category) {
 }
 </script>
 
+<!-- AdSense loaded after page render to avoid blocking LCP -->
+<script>
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7723301737736770';
+    s.crossOrigin = 'anonymous';
+    document.body.appendChild(s);
+  });
+</script>
 </body>
 </html>

@@ -26,7 +26,7 @@ const PRIORITIES = {
 
 // Pages to skip
 const SKIP = [
-  '404.html', 'blog-index.html', '_headers', '_redirects',
+  '404.html', '_headers', '_redirects',
   'robots.txt', 'ads.txt', 'sitemap.xml'
 ];
 
